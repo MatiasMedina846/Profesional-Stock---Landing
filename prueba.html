@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8fafc">
+  <meta name="description" content="Conocé cómo activar gratis la prueba de 15 días de Profesional Stock.">
+  <title>Prueba gratis — Profesional Stock</title>
+  <link rel="icon" type="image/png" href="profesional-stock-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0f172a;
+      --muted: #64748b;
+      --blue: #2563eb;
+      --blue-dark: #1d4ed8;
+      --paper: #f8fafc;
+      --line: #e2e8f0;
+      --sans: "DM Sans", sans-serif;
+      --display: "Manrope", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    .scroll-progress { position: fixed; z-index: 20; inset: 0 0 auto; height: 3px; pointer-events: none; }
+    .scroll-progress span { display: block; width: 100%; height: 100%; background: linear-gradient(90deg, #60a5fa, var(--blue)); transform: scaleX(0); transform-origin: left; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .wrap { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
+    .topbar { height: 78px; display: flex; align-items: center; border-bottom: 1px solid rgba(23, 35, 30, .07); }
+    .nav { position: relative; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font: 800 16px var(--display); letter-spacing: -.7px; }
+    .brand-mark { width: 36px; height: 36px; display: block; flex: 0 0 auto; }
+    .brand-mark img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .nav-links { display: flex; align-items: center; gap: 34px; color: #536058; font-size: 13px; font-weight: 600; }
+    .nav-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+    .nav-links a[aria-current="page"] { color: var(--blue); }
+    .button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 0 20px; border: 0; border-radius: 9px; background: var(--blue); color: white; font-size: 13px; font-weight: 700; cursor: pointer; }
+    .button svg { width: 16px; height: 16px; }
+    .menu-toggle { display: none; border: 0; color: var(--ink); background: transparent; cursor: pointer; }
+    main { padding: 72px 0 88px; }
+    .intro { max-width: 680px; margin: 0 auto 38px; text-align: center; animation: content-in .7s ease-out both; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; }
+    .eyebrow::before { width: 7px; height: 7px; border-radius: 50%; background: #83ac41; box-shadow: 0 0 0 4px #83ac411c; content: ""; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin: 14px 0 12px; font: 800 clamp(34px, 5vw, 48px)/1.12 var(--display); letter-spacing: -2px; }
+    .intro p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
+    .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .step { overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #fff; box-shadow: 0 5px 20px #0f172a08; }
+    .step-image { height: 225px; display: grid; place-items: center; overflow: hidden; margin: 0; padding: 12px; background: #e8edf3; }
+    .step-image img { display: block; max-width: 100%; max-height: 100%; object-fit: contain; }
+    .step-copy { padding: 20px; }
+    .step-number { display: block; margin-bottom: 8px; color: var(--blue); font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+    .step h2 { margin: 0 0 9px; font: 800 16px/1.4 var(--display); }
+    .step p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+    .info { display: flex; align-items: flex-start; gap: 12px; max-width: 900px; margin: 22px auto 0; padding: 17px 19px; border: 1px solid #bfdbfe; border-radius: 10px; background: #eff6ff; color: #334155; font-size: 12px; line-height: 1.7; }
+    .info svg { flex: 0 0 auto; color: var(--blue); }
+    .info p { margin: 0; }
+    .info strong { color: var(--ink); }
+    .actions { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 14px; margin-top: 25px; }
+    .actions-note { color: var(--muted); font-size: 11px; }
+    footer { padding: 22px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    @keyframes content-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 0; transform: translate3d(0, 24px, 0); transition: opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1); transition-delay: var(--reveal-delay, 0ms); }
+    .reveal.visible { opacity: 1; transform: translate3d(0, 0, 0); }
+    @media (max-width: 900px) {
+      .menu-toggle { width: 42px; height: 42px; display: grid; place-items: center; }
+      .menu-toggle svg { width: 23px; height: 23px; }
+      .nav-links { position: absolute; z-index: 5; top: calc(100% + 8px); right: 0; display: none; width: min(320px, calc(100vw - 32px)); align-items: stretch; gap: 0; padding: 9px; border: 1px solid var(--line); border-radius: 12px; background: white; box-shadow: 0 15px 35px #1c30251c; }
+      .nav-links.open { display: flex; flex-direction: column; }
+      .nav-links a:not(.button) { padding: 12px 10px; }
+      .nav-links .button { margin-top: 5px; }
+      .steps { grid-template-columns: 1fr; }
+      .step { display: grid; grid-template-columns: minmax(220px, .8fr) 1fr; align-items: center; }
+      .step-image { height: 100%; min-height: 210px; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(calc(100% - 32px), 500px); }
+      .topbar { height: 68px; }
+      main { padding: 52px 0 64px; }
+      .intro { margin-bottom: 28px; }
+      h1 { font-size: clamp(34px, 10vw, 44px); letter-spacing: -1.8px; }
+      .step { display: block; }
+      .step-image { height: clamp(180px, 58vw, 240px); }
+      .info { padding: 15px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 360px) {
+      .wrap { width: min(calc(100% - 24px), 500px); }
+      .brand { gap: 7px; font-size: 14px; }
+      .brand-mark { width: 31px; height: 31px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <header class="topbar">
+    <nav class="nav wrap" aria-label="Navegación principal">
+      <a class="brand" href="index.html#inicio" aria-label="Profesional Stock, inicio">
+        <span class="brand-mark" aria-hidden="true"><img src="profesional-stock-icon.png" alt=""></span>
+        Profesional Stock
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html#funciones">Funciones</a>
+        <a href="index.html#sistema">El sistema</a>
+        <a href="prueba.html" aria-current="page">Prueba gratis</a>
+        <a href="index.html#planes">Planes</a>
+        <a href="index.html#preguntas">Preguntas frecuentes</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="wrap">
+      <header class="intro">
+        <span class="eyebrow">Probalo durante 15 días</span>
+        <h1>Empezá tu prueba gratis desde el programa.</h1>
+        <p>Descargá Profesional Stock y activá tu cuenta en unos pasos. No hace falta escribirnos para iniciar la prueba.</p>
+      </header>
+      <div class="steps">
+        <article class="step reveal">
+          <figure class="step-image">
+            <img src="prueba-paso-1.png" alt="Asistente inicial de puesta en marcha de Profesional Stock">
+          </figure>
+          <div class="step-copy">
+            <span class="step-number">Paso 1</span>
+            <h2>Descargá y abrí el programa</h2>
+            <p>Completá los datos iniciales del negocio si querés. El asistente se puede omitir; más adelante completarás el nombre del negocio y el CUIT para activar la prueba.</p>
+          </div>
+        </article>
+        <article class="step reveal">
+          <figure class="step-image">
+            <img src="prueba-paso-2.png" alt="Aviso del programa sin activar con la opción Activar ahora">
+          </figure>
+          <div class="step-copy">
+            <span class="step-number">Paso 2</span>
+            <h2>Elegí «Activar ahora»</h2>
+            <p>Cuando aparezca el aviso de programa sin activar, seleccioná «Activar ahora». También podés iniciar el proceso desde Sistema &gt; Licencia. Hasta activarlo, el programa queda en modo de solo lectura.</p>
+          </div>
+        </article>
+        <article class="step reveal">
+          <figure class="step-image">
+            <img src="prueba-paso-3.png" alt="Formulario de creación o activación de cuenta; el código de esta computadora está oculto">
+          </figure>
+          <div class="step-copy">
+            <span class="step-number">Paso 3</span>
+            <h2>Creá tu cuenta y empezá</h2>
+            <p>Elegí crear una cuenta o iniciar sesión con una existente. Para registrarte, completá email, contraseña, nombre del negocio y CUIT; después seguí las indicaciones para activar los 15 días.</p>
+          </div>
+        </article>
+      </div>
+      <aside class="info reveal">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.2 3.1 7.8 7.5 9.5 4.4-1.7 7.5-5.3 7.5-9.5V6L12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p><strong>Tu información, clara.</strong> La activación inicial requiere internet y asocia la cuenta con un código generado para esta computadora. Según indica el programa, los datos de ventas, productos y clientes no se envían al servidor. Una vez activado, podés trabajar sin conexión; también necesitás internet para pagar o renovar la licencia.</p>
+      </aside>
+      <div class="actions reveal">
+        <a class="button" href="ProfesionalStock-1.0.0.exe" download="ProfesionalStock-1.0.0.exe">Descargar <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <span class="actions-note">La prueba comienza al activar tu cuenta desde el programa.</span>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner wrap">
+      <a href="index.html#inicio">← Volver a Profesional Stock</a>
+      <span>© <span id="year"></span> Profesional Stock.</span>
+    </div>
+  </footer>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Abrir menú" : "Cerrar menú");
+      navLinks.classList.toggle("open", !isOpen);
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Abrir menú");
+      });
+    });
+
+    document.querySelector("#year").textContent = new Date().getFullYear();
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const steps = document.querySelector(".steps");
+    [...steps.children].forEach((step, index) => {
+      step.style.setProperty("--reveal-delay", `${index * 100}ms`);
+    });
+
+    if ("IntersectionObserver" in window && !reduceMotion) {
+      const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            currentObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: "0px 0px -6% 0px" });
+      document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+    } else {
+      document.querySelectorAll(".reveal").forEach((element) => element.classList.add("visible"));
+    }
+
+    const progressBar = document.querySelector(".scroll-progress span");
+    let progressUpdateRequested = false;
+    const updateScrollProgress = () => {
+      if (progressUpdateRequested) return;
+      progressUpdateRequested = true;
+      window.requestAnimationFrame(() => {
+        const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollableHeight > 0 ? window.scrollY / scrollableHeight : 0;
+        progressBar.style.transform = `scaleX(${Math.min(1, Math.max(0, progress))})`;
+        progressUpdateRequested = false;
+      });
+    };
+    window.addEventListener("scroll", updateScrollProgress, { passive: true });
+    window.addEventListener("resize", updateScrollProgress);
+    updateScrollProgress();
+  </script>
+</body>
+</html>
