@@ -293,11 +293,13 @@
       .module-icon svg { width: 26px; height: 26px; }
       .section-head { margin-bottom: 28px; }
       .section-head h2 { font-size: 32px; letter-spacing: -1.3px; }
+      #funciones .section-head h2 { font-size: clamp(18px, 5.5vw, 23px); line-height: 1.35; letter-spacing: -.7px; }
+      #funciones .section-head h2 span { display: block; }
+      #funciones .section-head h2 span + span { margin-top: 3px; }
       .features { grid-template-columns: 1fr; gap: 10px; }
       .plans-grid { grid-template-columns: 1fr; gap: 20px; }
       .rubros-grid { grid-template-columns: 1fr; gap: 10px; }
       .solutions-grid { grid-template-columns: 1fr; gap: 10px; }
-      .solutions-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
       .solution-card { padding: 8px; }
       .solution-visual { height: 92px; }
       .solution-pair { gap: 6px; padding: 7px 2px 2px; }
@@ -328,10 +330,7 @@
       .module-chip { padding: 8px 9px; font-size: 9px; }
       .feature { grid-template-columns: 36px minmax(0, 1fr); column-gap: 10px; padding: 15px; }
       .feature-icon { width: 36px; height: 36px; }
-      .solutions-grid { grid-template-columns: 1fr; }
-      .solution-visual { height: 108px; }
-      .solution-label { font-size: 8px; }
-      .solution-part h3 { font-size: 11px; }
+      .solution-visual { height: 100px; }
       .faq-list summary { padding-right: 26px; font-size: 12px; }
       .footer-copy, .footer-tagline { line-height: 1.6; }
     }
@@ -424,7 +423,7 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div class="eyebrow"><span class="eyebrow-dot"></span> Beneficios para tu día a día</div>
-          <h2>Menos tiempo ordenando.<br>Más claridad para decidir.</h2>
+          <h2><span>Menos tiempo ordenando.</span><span>Más claridad para decidir.</span></h2>
           <p>Más orden en cada tarea cotidiana del local.</p>
         </div>
         <div class="features">
@@ -636,7 +635,7 @@
             <div class="rubro-caption"><div><h3>Electrónica y accesorios</h3><p>Modelos y existencias a la vista.</p></div></div>
           </article>
         </div>
-        <p class="plans-footnote reveal">Son ejemplos, no una lista cerrada. Si tu comercio vende productos y querés confirmar si el sistema se adapta a tu forma de trabajo, <a href="https://wa.me/5435347778891?text=Hola%2C%20quiero%20consultar%20si%20Profesional%20Stock%20se%20adapta%20a%20mi%20rubro" target="_blank" rel="noopener noreferrer">consultanos por WhatsApp</a>.</p>
+        <p class="plans-footnote reveal">Son ejemplos, no una lista cerrada. Si tu comercio vende productos y querés confirmar si el sistema se adapta a tu forma de trabajo, <a href="https://wa.me/543534778891?text=Hola%2C%20quiero%20consultar%20si%20Profesional%20Stock%20se%20adapta%20a%20mi%20rubro" target="_blank" rel="noopener noreferrer">consultanos por WhatsApp</a>.</p>
       </div>
     </section>
 
@@ -659,7 +658,7 @@
               <li>Uso sin conexión y datos locales</li>
               <li>Soporte incluido durante la suscripción</li>
             </ul>
-            <a class="button button-light" href="https://wa.me/5435347778891?text=Hola%2C%20quiero%20consultar%20por%20la%20suscripci%C3%B3n%20mensual%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Consultar este plan</a>
+            <a class="button button-light" href="https://wa.me/543534778891?text=Hola%2C%20quiero%20consultar%20por%20la%20suscripci%C3%B3n%20mensual%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Consultar este plan</a>
           </article>
           <article class="plan-card reveal">
             <p class="plan-duration">3 meses</p>
@@ -672,7 +671,7 @@
               <li>Uso sin conexión y datos locales</li>
               <li>Soporte incluido durante la suscripción</li>
             </ul>
-            <a class="button button-light" href="https://wa.me/5435347778891?text=Hola%2C%20quiero%20consultar%20por%20la%20suscripci%C3%B3n%20de%203%20meses%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Consultar este plan</a>
+            <a class="button button-light" href="https://wa.me/543534778891?text=Hola%2C%20quiero%20consultar%20por%20la%20suscripci%C3%B3n%20de%203%20meses%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Consultar este plan</a>
           </article>
           <article class="plan-card featured reveal">
             <span class="plan-badge">Mayor ahorro</span>
@@ -686,7 +685,7 @@
               <li>Uso sin conexión y datos locales</li>
               <li>Soporte incluido durante la suscripción</li>
             </ul>
-            <a class="button" href="https://wa.me/5435347778891?text=Hola%2C%20quiero%20consultar%20por%20la%20suscripci%C3%B3n%20anual%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Elegir plan anual</a>
+            <a class="button" href="https://wa.me/543534778891?text=Hola%2C%20quiero%20consultar%20por%20la%20suscripci%C3%B3n%20anual%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Elegir plan anual</a>
           </article>
         </div>
         <p class="plans-footnote reveal">Los 15 días de prueba se ofrecen antes de contratar una suscripción. Los importes corresponden al período completo; el ahorro se calcula comparando con pagar $99.999 ARS por mes durante el mismo período. Consultá por WhatsApp las condiciones de activación y el medio de pago.</p>
@@ -700,7 +699,7 @@
           <h2>Lo importante, claro desde el principio.</h2>
           <p>Compatibilidad, funcionamiento, prueba y precios: la información que necesitás para decidir si Profesional Stock es para tu negocio.</p>
           <div class="faq-contact">
-            <a class="button button-light" href="https://wa.me/5435347778891?text=Hola%2C%20quiero%20consultar%20sobre%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
+            <a class="button button-light" href="https://wa.me/543534778891?text=Hola%2C%20quiero%20consultar%20sobre%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
             <span class="faq-contact-note">Te ayudamos con la prueba y la licencia.</span>
           </div>
         </div>
@@ -711,7 +710,7 @@
           </details>
           <details>
             <summary>¿Para qué tipos de comercios sirve?</summary>
-            <p>Puede servir para comercios que venden productos, como almacenes, kioscos, locales de indumentaria, ferreterías, librerías y más. <a href="#rubros">Ver ejemplos de rubros</a>. Si tu negocio tiene procesos particulares, <a href="https://wa.me/5435347778891?text=Hola%2C%20quiero%20consultar%20si%20Profesional%20Stock%20se%20adapta%20a%20mi%20comercio" target="_blank" rel="noopener noreferrer">consultanos</a> y te ayudamos a confirmar si se adapta a tu operación.</p>
+            <p>Puede servir para comercios que venden productos, como almacenes, kioscos, locales de indumentaria, ferreterías, librerías y más. <a href="#rubros">Ver ejemplos de rubros</a>. Si tu negocio tiene procesos particulares, <a href="https://wa.me/543534778891?text=Hola%2C%20quiero%20consultar%20si%20Profesional%20Stock%20se%20adapta%20a%20mi%20comercio" target="_blank" rel="noopener noreferrer">consultanos</a> y te ayudamos a confirmar si se adapta a tu operación.</p>
           </details>
           <details>
             <summary>¿En qué sistemas operativos puedo instalarlo?</summary>
@@ -739,11 +738,11 @@
           </details>
           <details>
             <summary>¿Dónde se guardan mis datos? ¿Puedo cambiar de computadora?</summary>
-            <p>La información se almacena en una base de datos local. Si vas a cambiar de computadora, <a href="https://wa.me/5435347778891?text=Hola%2C%20necesito%20ayuda%20para%20respaldar%20o%20trasladar%20mis%20datos%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">consultanos antes por WhatsApp</a> para confirmar el procedimiento y cuidar tus datos.</p>
+            <p>La información se almacena en una base de datos local. Si vas a cambiar de computadora, <a href="https://wa.me/543534778891?text=Hola%2C%20necesito%20ayuda%20para%20respaldar%20o%20trasladar%20mis%20datos%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">consultanos antes por WhatsApp</a> para confirmar el procedimiento y cuidar tus datos.</p>
           </details>
           <details>
             <summary>¿Qué incluye el soporte?</summary>
-            <p>La suscripción incluye soporte en caso de que lo necesites. Podés escribirnos a <a href="https://wa.me/5435347778891?text=Hola%2C%20necesito%20soporte%20para%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">+54 35347778891</a> o <a href="https://wa.me/5491141952101?text=Hola%2C%20necesito%20soporte%20para%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">+54 9 11 4195-2101</a>.</p>
+            <p>La suscripción incluye soporte en caso de que lo necesites. Podés escribirnos a <a href="https://wa.me/543534778891?text=Hola%2C%20necesito%20soporte%20para%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">+54 3534 778891</a> o <a href="https://wa.me/5491141952101?text=Hola%2C%20necesito%20soporte%20para%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">+54 9 11 4195-2101</a>.</p>
           </details>
           <details>
             <summary>¿Las cifras y productos de la vista previa son reales?</summary>
