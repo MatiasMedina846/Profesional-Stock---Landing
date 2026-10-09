@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://matiasmedina846.github.io/Profesional-Stock---Landing/sitemap.xml

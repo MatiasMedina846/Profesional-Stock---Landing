@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fafc">
+  <meta name="description" content="Descargá Profesional Stock para Windows. Consultá la versión, los requisitos y verificá el instalador con su checksum SHA-256.">
+  <title>Descargar Profesional Stock para Windows</title>
+  <link rel="canonical" href="https://matiasmedina846.github.io/Profesional-Stock---Landing/descargar.html">
+  <link rel="icon" type="image/png" href="profesional-stock-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E0QTQK1FD9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-E0QTQK1FD9");
+  </script>
+  <style>
+    :root { --ink: #0f172a; --muted: #475569; --brand: #2563eb; --paper: #f8fafc; --line: #e2e8f0; --sans: "DM Sans", sans-serif; --display: "Manrope", sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); line-height: 1.65; }
+    a { color: #1d4ed8; text-underline-offset: 3px; }
+    :focus-visible { outline: 3px solid #1d4ed8; outline-offset: 3px; }
+    .wrap { width: min(820px, calc(100% - 36px)); margin-inline: auto; }
+    .topbar { padding: 16px 0; border-bottom: 1px solid var(--line); background: #fff; }
+    .brand { color: var(--ink); font: 800 15px var(--display); text-decoration: none; }
+    main { padding-block: 48px 72px; }
+    .eyebrow { color: var(--brand); font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+    h1, h2 { font-family: var(--display); line-height: 1.2; }
+    h1 { margin: 9px 0 12px; font-size: clamp(32px, 6vw, 46px); letter-spacing: -1.7px; }
+    .intro { max-width: 650px; margin: 0 0 27px; color: var(--muted); }
+    .card { padding: clamp(20px, 5vw, 32px); border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 12px 32px #0f172a0b; }
+    .details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px; margin: 0 0 24px; }
+    .details div { min-width: 0; padding: 14px; border-radius: 11px; background: #f8fafc; }
+    dt { color: var(--muted); font-size: 12px; font-weight: 700; }
+    dd { margin: 4px 0 0; font-size: 14px; font-weight: 700; overflow-wrap: anywhere; }
+    .actions { display: flex; flex-wrap: wrap; gap: 11px; margin: 20px 0 25px; }
+    .button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; padding: 0 18px; border: 1px solid var(--brand); border-radius: 9px; color: #fff; background: var(--brand); font-weight: 700; text-decoration: none; }
+    .button-light { color: var(--ink); border-color: var(--line); background: #fff; }
+    h2 { margin: 25px 0 8px; font-size: 19px; }
+    p, li { color: var(--muted); font-size: 14px; }
+    .hash { display: block; padding: 12px; border-radius: 8px; color: #334155; background: #f1f5f9; font-size: 12px; overflow-wrap: anywhere; }
+    .notice { padding: 15px; border-left: 3px solid #f59e0b; border-radius: 5px; background: #fffbeb; }
+    footer { padding: 20px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+    @media (max-width: 520px) { .details { grid-template-columns: 1fr; gap: 10px; } .actions { align-items: stretch; flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="wrap"><a class="brand" href="index.html">Profesional Stock</a></div></header>
+  <main class="wrap">
+    <span class="eyebrow">Descarga oficial</span>
+    <h1>Profesional Stock para Windows</h1>
+    <p class="intro">Descargá el instalador desde esta página. Antes de ejecutarlo, revisá los datos del archivo y su huella digital.</p>
+    <article class="card">
+      <dl class="details">
+        <div><dt>Archivo</dt><dd>ProfesionalStock-1.0.0.exe</dd></div>
+        <div><dt>Versión</dt><dd>1.0.0</dd></div>
+        <div><dt>Tamaño</dt><dd>91,8 MB (87,5 MiB)</dd></div>
+        <div><dt>Requisitos</dt><dd>Windows 10 o superior</dd></div>
+      </dl>
+      <div class="actions">
+        <a class="button" id="download-link" href="ProfesionalStock-1.0.0.exe" download="ProfesionalStock-1.0.0.exe">Descargar para Windows</a>
+        <a class="button button-light" id="trial-link" href="prueba.html">Ver cómo activar la prueba gratis</a>
+      </div>
+      <h2>Verificar el archivo (SHA-256)</h2>
+      <p>En PowerShell, desde la carpeta donde guardaste el instalador, ejecutá:</p>
+      <code class="hash">Get-FileHash ProfesionalStock-1.0.0.exe -Algorithm SHA256</code>
+      <p>El resultado esperado es:</p>
+      <code class="hash">7ED7AAA497FD5BC366B46A19DF798341945574B685E247322612C5A747B270A5</code>
+      <h2>Si Windows muestra SmartScreen</h2>
+      <p class="notice">La versión actual no tiene firma digital, por lo que Windows puede mostrar una advertencia. Comprobá que descargaste el archivo de esta página y que el SHA-256 coincide antes de continuar. Si decidís abrirlo, en el aviso de SmartScreen elegí «Más información» y luego «Ejecutar de todas formas».</p>
+      <!-- Se recomienda obtener un certificado de firma de código (por ejemplo, Sectigo, DigiCert o Certum) para firmar futuras versiones. No se firma el instalador actual. -->
+      <p>Si no estás seguro de la procedencia o el hash no coincide, no ejecutes el archivo y escribinos por <a href="https://wa.me/5493534778891?text=Hola%2C%20tengo%20una%20consulta%20sobre%20la%20descarga%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">WhatsApp</a>.</p>
+    </article>
+  </main>
+  <footer><div class="wrap"><a href="index.html">Volver al inicio</a> · <a href="privacidad.html">Privacidad</a> · <a href="terminos.html">Términos</a></div></footer>
+  <script>
+    document.querySelector("#download-link").addEventListener("click", () => {
+      window.gtag("event", "download_click", { file_name: "ProfesionalStock-1.0.0.exe", link_location: "download_page" });
+    });
+    document.querySelector("#trial-link").addEventListener("click", () => {
+      window.gtag("event", "trial_cta_click", { link_location: "download_page" });
+    });
+  </script>
+</body>
+</html>
