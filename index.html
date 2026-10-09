@@ -135,9 +135,12 @@
     .rubro-arrow svg { width: 16px; height: 16px; }
 
     .plans-section { padding: 96px 0; background: #fff; }
-    .plans-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+    .plans-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; align-items: stretch; }
     .plan-card { position: relative; display: flex; flex-direction: column; padding: 27px 25px 24px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
     .plan-card.featured { border: 2px solid var(--green); box-shadow: 0 15px 40px #2563eb14; }
+    .plan-card-custom { border-color: #cbd5e1; background: linear-gradient(160deg, #f8fafc, #fff 72%); }
+    .plan-card-custom .plan-price { font-size: clamp(23px, 2.1vw, 29px); letter-spacing: -1px; white-space: normal; }
+    .plan-card-custom .plan-includes { gap: 10px; }
     .plan-badge { position: absolute; top: -13px; left: 22px; padding: 6px 10px; border-radius: 999px; color: white; background: var(--green); font-size: 10px; font-weight: 700; }
     .plan-duration { margin: 0 0 8px; color: var(--muted); font-size: 12px; font-weight: 700; }
     .plan-price { margin: 0; font: 800 clamp(25px, 2.8vw, 34px)/1.2 var(--display); letter-spacing: -1.3px; white-space: nowrap; }
@@ -297,6 +300,7 @@
       .nav-links.open { display: flex; flex-direction: column; }
       .nav-links a:not(.button) { padding: 12px 10px; }
       .nav-links .button { margin-top: 5px; }
+      .plans-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 900px) {
       .footer-inner { grid-template-columns: 1fr; gap: 24px; }
@@ -320,7 +324,6 @@
       .faq-grid { grid-template-columns: 1fr; gap: 25px; }
       .plans-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .rubros-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .plan-card:last-child { grid-column: 1 / -1; }
       .plan-price { font-size: clamp(25px, 4vw, 34px); }
     }
     @media (max-width: 640px) {
@@ -396,7 +399,6 @@
       .solution-pair { gap: 6px; padding: 7px 2px 2px; }
       .solution-label { font-size: 7px; }
       .solution-part h3 { font-size: 9px; }
-      .plan-card:last-child { grid-column: auto; }
       .plan-price { font-size: clamp(30px, 8vw, 36px); }
       .feature { display: grid; grid-template-columns: 42px 1fr; column-gap: 14px; padding: 18px; }
       .feature-icon { grid-row: span 2; margin: 0; }
@@ -816,13 +818,13 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div class="eyebrow"><span class="eyebrow-dot"></span> Precios claros</div>
-          <h2>Probalo 15 días.<br>Elegí cuánto querés ahorrar.</h2>
-          <p>La prueba va primero. Después elegís la duración de la suscripción que mejor se adapta a tu negocio.</p>
+          <h2>Probalo 15 días.<br>Encontrá tu plan ideal.</h2>
+          <p>Elegí una suscripción o conversemos sobre una propuesta personalizada para tu empresa.</p>
         </div>
         <div class="plans-grid">
           <article class="plan-card reveal">
             <p class="plan-duration">1 mes</p>
-            <h3 class="plan-price">$99.999</h3>
+            <h3 class="plan-price">$100.000</h3>
             <div class="plan-currency">ARS · por el período</div>
             <p class="plan-saving muted">Flexibilidad mes a mes</p>
             <div class="plan-divider"></div>
@@ -835,9 +837,9 @@
           </article>
           <article class="plan-card reveal">
             <p class="plan-duration">3 meses</p>
-            <h3 class="plan-price">$269.999</h3>
+            <h3 class="plan-price">$270.000</h3>
             <div class="plan-currency">ARS · por el período</div>
-            <p class="plan-saving">Ahorrás $29.998 vs. 3 pagos mensuales</p>
+            <p class="plan-saving">Ahorrás $30.000 vs. 3 pagos mensuales</p>
             <div class="plan-divider"></div>
             <ul class="plan-includes">
               <li>Acceso a las funciones del sistema</li>
@@ -849,9 +851,9 @@
           <article class="plan-card featured reveal">
             <span class="plan-badge">Mayor ahorro</span>
             <p class="plan-duration">12 meses</p>
-            <h3 class="plan-price">$999.999</h3>
+            <h3 class="plan-price">$1.000.000</h3>
             <div class="plan-currency">ARS · por el período</div>
-            <p class="plan-saving">Ahorrás $199.989 vs. 12 pagos mensuales</p>
+            <p class="plan-saving">Ahorrás $200.000 vs. 12 pagos mensuales</p>
             <div class="plan-divider"></div>
             <ul class="plan-includes">
               <li>Acceso a las funciones del sistema</li>
@@ -860,8 +862,21 @@
             </ul>
             <a class="button" href="https://wa.me/543534778891?text=Hola%2C%20quiero%20consultar%20por%20la%20suscripci%C3%B3n%20anual%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Elegir plan anual</a>
           </article>
+          <article class="plan-card plan-card-custom reveal">
+            <p class="plan-duration">Para empresas</p>
+            <h3 class="plan-price">Plan personalizado</h3>
+            <div class="plan-currency">Una propuesta según tu operación</div>
+            <p class="plan-saving muted">Conversemos sobre tu proyecto</p>
+            <div class="plan-divider"></div>
+            <ul class="plan-includes">
+              <li>Relevamos las necesidades de tu empresa</li>
+              <li>Evaluamos ajustes y funciones a medida</li>
+              <li>Recibís una propuesta y presupuesto personalizado</li>
+            </ul>
+            <a class="button button-light" href="https://wa.me/543534778891?text=Hola%2C%20me%20interesa%20un%20plan%20personalizado%20de%20Profesional%20Stock%20para%20mi%20empresa" target="_blank" rel="noopener noreferrer">Hablemos de tu proyecto</a>
+          </article>
         </div>
-        <p class="plans-footnote reveal">Los 15 días de prueba se ofrecen antes de contratar una suscripción. Los importes corresponden al período completo; el ahorro se calcula comparando con pagar $99.999 ARS por mes durante el mismo período. Consultá por WhatsApp las condiciones de activación y el medio de pago.</p>
+        <p class="plans-footnote reveal">Los 15 días de prueba se ofrecen antes de contratar una suscripción. Los importes corresponden al período completo; el ahorro se calcula comparando con pagar $100.000 ARS por mes durante el mismo período. Consultá por WhatsApp las condiciones de activación y el medio de pago.</p>
       </div>
     </section>
 
@@ -895,7 +910,7 @@
           </details>
           <details>
             <summary>¿Cuánto cuesta la suscripción?</summary>
-            <p>Después de la prueba de 15 días, podés elegir <strong>1 mes por $99.999 ARS</strong>, <strong>3 meses por $269.999 ARS</strong> o <strong>12 meses por $999.999 ARS</strong>. Los planes de 3 y 12 meses tienen descuento frente al pago mensual. <a href="#planes">Ver planes y ahorro</a>.</p>
+            <p>Después de la prueba de 15 días, podés elegir <strong>1 mes por $100.000 ARS</strong>, <strong>3 meses por $270.000 ARS</strong> o <strong>12 meses por $1.000.000 ARS</strong>. Los planes de 3 y 12 meses tienen descuento frente al pago mensual. <a href="#planes">Ver planes y ahorro</a>.</p>
           </details>
           <details>
             <summary>¿Qué incluye cada plan?</summary>
