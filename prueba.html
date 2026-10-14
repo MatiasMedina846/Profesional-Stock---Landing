@@ -110,6 +110,21 @@
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
       .reveal { opacity: 1; transform: none; }
     }
+    /* Botones estilo Windows 11 (Fluent) */
+    :root { --fluent: "Segoe UI Variable Text", "Segoe UI Variable Display", "Segoe UI", var(--sans); }
+    .button { min-height: 48px; gap: 8px; padding: 0 24px; border: 1px solid; border-color: #ffffff1f #ffffff1f #00000059; border-radius: 6px; box-shadow: 0 1px 2px #0f172a1a, 0 8px 22px #2563eb4d; font: 600 15px/1 var(--fluent); transition: background-color .12s ease, color .12s ease, transform .12s ease; }
+    .button:hover { background: color-mix(in srgb, var(--blue) 90%, #fff); }
+    .button:active { border-color: transparent; color: #ffffffc7; background: color-mix(in srgb, var(--blue) 80%, #fff); box-shadow: none; transform: scale(.985); }
+    .button:focus-visible { outline: 2px solid #000000e4; outline-offset: 2px; box-shadow: 0 0 0 1px #fff; }
+    .actions { flex-direction: column; }
+    .actions-note { font-size: 12px; text-align: center; }
+    .actions-note a { color: var(--blue-dark); font-weight: 700; text-decoration: underline; }
+    .demo-video { max-width: 760px; margin: 36px auto 0; }
+    .demo-video-frame { position: relative; overflow: hidden; aspect-ratio: 16 / 9; display: grid; place-items: center; border-radius: 12px; background: #0f172a; }
+    .demo-video-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .75; }
+    .demo-video-frame button { position: relative; z-index: 1; width: 58px; height: 58px; display: grid; place-items: center; border: 0; border-radius: 50%; color: #fff; background: var(--blue); box-shadow: 0 8px 24px #0f172a55; cursor: pointer; }
+    .demo-video-frame button svg { width: 22px; height: 22px; margin-left: 3px; }
+    .demo-video-note { margin: 8px 0 0; color: var(--muted); font-size: 12px; text-align: center; }
   </style>
 </head>
 <body>
@@ -125,20 +140,20 @@
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
       </button>
       <div class="nav-links" id="nav-links">
+        <a href="index.html#presentacion">El sistema</a>
         <a href="index.html#funciones">Funciones</a>
-        <a href="index.html#sistema">El sistema</a>
-        <a href="prueba.html" aria-current="page">Prueba gratis</a>
-        <a href="index.html#planes">Planes</a>
-        <a href="index.html#preguntas">Preguntas frecuentes</a>
+        <a href="prueba.html" aria-current="page">Cómo activar</a>
+        <a href="index.html#planes">Precios</a>
+        <a href="index.html#preguntas">Preguntas</a>
       </div>
     </nav>
   </header>
   <main id="contenido">
     <div class="wrap">
       <header class="intro">
-        <span class="eyebrow">Probalo durante 15 días</span>
-        <h1>Empezá tu prueba gratis desde el programa.</h1>
-        <p>Descargá Profesional Stock y activá tu cuenta en unos pasos. No hace falta escribirnos para iniciar la prueba.</p>
+        <span class="eyebrow">Guía de activación</span>
+        <h1>Tu prueba gratis, lista en 3 pasos.</h1>
+        <p>No hace falta llamarnos ni cargar una tarjeta. Descargás, instalás y activás los 15 días desde el mismo programa.</p>
       </header>
       <div class="steps">
         <article class="step">
@@ -147,7 +162,7 @@
           </figure>
           <div class="step-copy">
             <span class="step-number">Paso 1</span>
-            <h2>Descargá y abrí el programa</h2>
+            <h2>Descargá e instalá</h2>
             <p>Completá los datos iniciales del negocio si querés. El asistente se puede omitir; más adelante completás el nombre del negocio y el CUIT para activar la prueba.</p>
           </div>
         </article>
@@ -157,7 +172,7 @@
           </figure>
           <div class="step-copy">
             <span class="step-number">Paso 2</span>
-            <h2>Elegí «Activar ahora»</h2>
+            <h2>Tocá «Activar ahora»</h2>
             <p>Cuando aparezca el aviso de programa sin activar, seleccioná «Activar ahora». También podés iniciar el proceso desde Sistema &gt; Licencia. Hasta activarlo, el programa queda en modo de solo lectura.</p>
           </div>
         </article>
@@ -167,7 +182,7 @@
           </figure>
           <div class="step-copy">
             <span class="step-number">Paso 3</span>
-            <h2>Creá tu cuenta y empezá</h2>
+            <h2>Creá tu cuenta y vendé</h2>
             <p>Elegí crear una cuenta o iniciar sesión con una existente. Para registrarte, completá email, contraseña, nombre del negocio y CUIT; después seguí las indicaciones para activar los 15 días.</p>
           </div>
         </article>
@@ -177,8 +192,17 @@
         <p><strong>Tu información, clara.</strong> La activación inicial requiere internet y asocia la cuenta con un código generado para esta computadora. Según indica el programa, los datos de ventas, productos y clientes no se envían al servidor. Una vez activado, podés trabajar sin conexión; también necesitás internet para pagar o renovar la licencia. <a href="privacidad.html">Leé la política de privacidad</a>.</p>
       </aside>
       <div class="actions">
-        <a class="button" href="ProfesionalStock-1.0.0.exe" download="ProfesionalStock-1.0.0.exe">Descargar <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <span class="actions-note">La prueba comienza al activar tu cuenta desde el programa.</span>
+        <a class="button" href="ProfesionalStock-1.0.0.exe" download="ProfesionalStock-1.0.0.exe">Descargar prueba gratis <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <span class="actions-note">Windows 10 o superior · 91,8 MB · ¿Te trabaste? <a href="https://wa.me/5493534778891?text=Hola%2C%20necesito%20ayuda%20para%20activar%20la%20prueba%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Te ayudamos por WhatsApp</a></span>
+      </div>
+      <div class="demo-video" id="demo-video" hidden>
+        <div class="demo-video-frame" id="demo-video-frame">
+          <img src="prueba-paso-1.png" width="581" height="532" loading="lazy" decoding="async" alt="">
+          <button type="button" id="demo-video-play" aria-label="Reproducir video de demostración de Profesional Stock">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.7c0-.8.9-1.3 1.6-.9l9.1 5.3a1 1 0 0 1 0 1.8l-9.1 5.3a1 1 0 0 1-1.6-.9V5.7Z"/></svg>
+          </button>
+        </div>
+        <p class="demo-video-note" id="demo-video-note" aria-live="polite">Mirá cómo funciona en 90 segundos.</p>
       </div>
     </div>
   </main>
@@ -230,6 +254,21 @@
         });
       });
     });
+
+    const demoVideoId = ""; // [PENDIENTE: ID del video de YouTube; mientras esté vacío, el video no se muestra]
+    if (demoVideoId) {
+      document.querySelector("#demo-video").hidden = false;
+      document.querySelector("#demo-video-play").addEventListener("click", () => {
+        window.gtag("event", "demo_video_click");
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(demoVideoId)}?autoplay=1&rel=0`;
+        iframe.title = "Demostración de Profesional Stock";
+        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        iframe.allowFullscreen = true;
+        iframe.style.cssText = "position:absolute;inset:0;width:100%;height:100%;border:0";
+        document.querySelector("#demo-video-frame").replaceChildren(iframe);
+      });
+    }
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const steps = document.querySelector(".steps");
