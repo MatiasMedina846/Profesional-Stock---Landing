@@ -88,10 +88,10 @@
         },
         {
           "@type": "Question",
-          "name": "¿Qué medios de pago aceptan para la suscripción?",
+          "name": "¿Qué medios de pago aceptan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "La suscripción se abona mediante un link de Mercado Pago. Podés pagar con tarjeta de crédito, débito, transferencia o efectivo en Rapipago."
+            "text": "La licencia se abona mediante un link de Mercado Pago. Podés pagar con tarjeta de crédito, débito, transferencia o efectivo en Rapipago."
           }
         },
         {
@@ -107,7 +107,7 @@
           "name": "¿Hay capacitación o soporte para aprender a usar el sistema?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "El sistema incluye un manual y la suscripción incluye soporte por WhatsApp y email, de lunes a sábado, de 9 a 18 h. El tiempo de respuesta puede variar según la consulta y la demanda."
+            "text": "El sistema incluye un manual y todos los planes incluyen 12 meses de soporte por WhatsApp y email, de lunes a sábado, de 9 a 18 h. El tiempo de respuesta puede variar según la consulta y la demanda."
           }
         },
         {
@@ -115,7 +115,7 @@
           "name": "¿La licencia es por computadora o por usuario?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "La licencia es por computadora. La activación y el pago se administran con la cuenta del negocio. Consultanos si necesitás usarlo en más de una PC o sucursal."
+            "text": "La licencia es por computadora: el plan Básico habilita 1, Negocio hasta 3 y Empresarial hasta 10. La activación se administra con la cuenta del negocio."
           }
         },
         {
@@ -128,10 +128,10 @@
         },
         {
           "@type": "Question",
-          "name": "¿Qué pasa cuando vence la suscripción?",
+          "name": "¿Qué pasa después de los 12 meses?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "El programa queda en modo de solo lectura: podés consultar la información, pero no registrar nuevas operaciones ni modificar datos. Al renovar, recuperás las funciones de uso."
+            "text": "El programa sigue funcionando para siempre con la versión que tengas. Si querés seguir recibiendo versiones nuevas y soporte, podés renovar las actualizaciones; es opcional."
           }
         }
       ]
@@ -778,7 +778,6 @@
     .composer .email-capture-consent { display: block; }
     .composer .email-capture-consent input { margin: 0 6px 0 0; vertical-align: -2px; }
     .composer .email-capture-status { color: var(--muted); font-weight: 400; }
-    @media (max-width: 640px) { .billing-toggle button small { display: none; } }
     .shot-stage { position: relative; }
     .shot-arrow { position: absolute; z-index: 4; top: 50%; width: 52px; height: 52px; display: grid; place-items: center; padding: 0; border: 1px solid var(--line); border-radius: 50%; color: var(--ink); background: #fff; box-shadow: 0 10px 26px #0f172a29; cursor: pointer; transform: translateY(-50%); transition: transform .25s var(--ease), background .2s ease, color .2s ease, box-shadow .2s ease; }
     .shot-arrow:hover { color: #fff; background: var(--brand); border-color: var(--brand); box-shadow: 0 12px 28px #2563eb59; }
@@ -1161,6 +1160,173 @@
     @media (prefers-reduced-motion: reduce) {
       .marquee-track { animation-duration: 110s !important; animation-iteration-count: infinite !important; }
     }
+    /* Precios: aviso de lanzamiento y plan a medida */
+    .launch-pill { display: flex; align-items: center; justify-content: center; gap: 8px; width: fit-content; max-width: 100%; margin: -8px auto 30px; padding: 8px 16px; border: 1px solid #fde68a; border-radius: 999px; color: #92400e; background: #fffbeb; font-size: 13.5px; text-align: center; }
+    .launch-pill svg { flex: 0 0 auto; width: 16px; height: 16px; color: #d97706; }
+    .launch-pill b { color: #78350f; }
+    .plan-custom { display: flex; align-items: center; gap: 14px; max-width: 1060px; margin: 20px auto 0; padding: 16px 18px; border: 1px dashed #cbd5e1; border-radius: 16px; background: #f8fafc; }
+    .plan-custom p { flex: 1; margin: 0; color: var(--muted); font-size: 14px; }
+    .plan-custom b { color: var(--ink); }
+    .plan-custom .button { flex: 0 0 auto; }
+    @media (max-width: 760px) {
+      .launch-pill { border-radius: 14px; }
+      .plan-custom { flex-direction: column; max-width: 440px; text-align: center; }
+    }
+    /* ====== Asistente ====== */
+    .faq-section .faq-grid { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 56px; align-items: center; }
+    .faq-intro p { font-size: 15px; }
+    .as-topics { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; padding: 0; list-style: none; }
+    .as-topics li { padding: 5px 11px; border: 1px solid var(--line); border-radius: 999px; color: #475569; background: #fff; font-size: 12.5px; font-weight: 600; }
+    .assistant { display: flex; flex-direction: column; overflow: hidden; border: 1px solid #0000001a; border-radius: 12px; background: #fff; box-shadow: 0 32px 64px #0f172a1f, 0 2px 21px #0f172a12; font-family: var(--fluent); }
+    .as-bar { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 1px solid #0000000d; background: linear-gradient(180deg, #f7f9fc, #f3f3f3); }
+    .as-avatar { position: relative; width: 38px; height: 38px; flex: 0 0 auto; }
+    .as-avatar img { width: 100%; height: 100%; border-radius: 10px; }
+    .as-title { display: grid; gap: 2px; }
+    .as-title b { font-size: 14px; }
+    .as-title small { display: flex; align-items: center; gap: 6px; color: #15803d; font-size: 12px; }
+    .as-title small i { width: 7px; height: 7px; border-radius: 50%; background: #16a34a; box-shadow: 0 0 0 3px #16a34a26; }
+    .as-log { display: flex; flex-direction: column; gap: 10px; height: 340px; overflow-y: auto; padding: 18px 16px; background: #fafbfc; scroll-behavior: smooth; overscroll-behavior: contain; }
+    .as-msg { display: grid; justify-items: start; gap: 8px; max-width: 86%; animation: ps-in .35s var(--ease) both; }
+    .as-msg p { margin: 0; padding: 10px 14px; border: 1px solid #e5e7eb; border-radius: 4px 14px 14px 14px; color: #1e293b; background: #fff; font-size: 14px; line-height: 1.5; box-shadow: 0 1px 2px #0f172a0a; }
+    .as-msg.user { align-self: flex-end; justify-items: end; }
+    .as-msg.user p { border-color: transparent; border-radius: 14px 4px 14px 14px; color: #fff; background: var(--brand); }
+    .as-msg.typing p { display: flex; gap: 4px; padding: 13px 14px; }
+    .as-msg.typing i { width: 7px; height: 7px; border-radius: 50%; background: #94a3b8; animation: as-dot 1s ease-in-out infinite; }
+    .as-msg.typing i:nth-child(2) { animation-delay: .15s; } .as-msg.typing i:nth-child(3) { animation-delay: .3s; }
+    .as-actions { display: flex; flex-wrap: wrap; gap: 6px; }
+    .as-action { display: inline-flex; align-items: center; min-height: 32px; padding: 0 12px; border: 1px solid; border-color: #ffffff1f #ffffff1f #00000059; border-radius: 6px; color: #fff; background: var(--brand); font-size: 13px; font-weight: 600; transition: background-color .12s ease; }
+    .as-action:hover { background: color-mix(in srgb, var(--brand) 90%, #fff); }
+    .as-action + .as-action { border-color: #0000000f #0000000f #00000029; color: #1a1a1a; background: #fbfbfb; }
+    .as-action + .as-action:hover { background: #f3f3f3; }
+    .as-chips { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 16px 0; border-top: 1px solid #f1f5f9; }
+    .as-chips:empty { display: none; }
+    .as-chips button { min-height: 32px; padding: 0 12px; border: 1px solid #bfdbfe; border-radius: 999px; color: var(--brand-dark); background: #eff6ff; font: 600 13px var(--fluent); cursor: pointer; transition: background-color .12s ease, border-color .12s ease; }
+    .as-chips button:hover { border-color: var(--brand); background: #dbeafe; }
+    .as-form { display: flex; gap: 8px; padding: 12px 16px; }
+    .as-form input { flex: 1; min-width: 0; height: 42px; padding: 0 12px; border: 1px solid; border-color: #0000000f #0000000f #00000072; border-radius: 6px; color: var(--ink); background: #fff; font: 14px var(--fluent); }
+    .as-form input:focus { border-bottom: 2px solid var(--brand); outline: none; }
+    .as-send { width: 42px; height: 42px; display: grid; flex: 0 0 auto; place-items: center; border: 1px solid; border-color: #ffffff1f #ffffff1f #00000059; border-radius: 6px; color: #fff; background: var(--brand); cursor: pointer; }
+    .as-send:hover { background: color-mix(in srgb, var(--brand) 90%, #fff); }
+    .as-send svg { width: 18px; height: 18px; }
+    .as-note { margin: 0; padding: 0 16px 14px; color: var(--muted); font-size: 12px; }
+    .as-note a { color: var(--brand-dark); font-weight: 600; text-decoration: underline; }
+    @keyframes as-dot { 0%, 100% { opacity: .35; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-3px); } }
+
+    .faq-all { margin-top: 40px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+    .faq-all > summary { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; color: var(--ink); font: 700 14px var(--display); list-style: none; cursor: pointer; }
+    .faq-all > summary::-webkit-details-marker { display: none; }
+    .faq-all > summary::after { color: var(--brand); font: 600 20px var(--sans); content: "+"; }
+    .faq-all[open] > summary::after { content: "−"; }
+    .faq-all .faq-list { margin: 0 20px 6px; }
+    @media (max-width: 900px) {
+      .faq-section .faq-grid { grid-template-columns: 1fr; gap: 26px; }
+      .as-log { height: 320px; }
+    }
+    /* ====== Stocky, asistente flotante ====== */
+    .sticky-cta { right: auto; left: max(18px, env(safe-area-inset-left)); }
+    .mascot { position: fixed; z-index: 45; right: max(20px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); font-family: var(--fluent); }
+    .mascot-btn { position: relative; width: 72px; height: 72px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 24px; background: #fff; box-shadow: 0 14px 34px #1d4ed84d, 0 0 0 1px #0f172a0f; cursor: pointer; transition: transform .3s var(--ease-spring), box-shadow .25s ease; animation: mascot-bob 3.6s ease-in-out infinite; }
+    .mascot-btn:hover { transform: scale(1.08) rotate(-4deg); box-shadow: 0 18px 40px #1d4ed866, 0 0 0 1px #0f172a0f; }
+    .mascot-btn:focus-visible { outline: 2px solid #000000e4; outline-offset: 3px; }
+    .stocky-art { width: 58px; height: 58px; overflow: visible; }
+    .mascot-dot { position: absolute; top: 4px; right: 4px; width: 14px; height: 14px; border: 2px solid #fff; border-radius: 50%; background: #22c55e; }
+    .mascot-dot::after { position: absolute; inset: -2px; border-radius: 50%; background: #22c55e; content: ""; animation: dot-ping 2s ease-out infinite; }
+    .mascot.open .mascot-btn { animation: none; }
+    .mascot.open .mascot-dot { display: none; }
+    #stocky .st-eyes { transform-box: fill-box; transform-origin: center; animation: st-blink 5s infinite; }
+    #stocky .st-light { animation: st-light 2.4s ease-in-out infinite; }
+
+    .mascot-bubble { position: absolute; right: 0; bottom: 88px; width: 250px; display: grid; gap: 3px; padding: 14px 34px 14px 16px; border: 1px solid #0000001a; border-radius: 14px 14px 4px 14px; color: #475569; background: #fff; box-shadow: 0 18px 40px #0f172a26; font-size: 13.5px; line-height: 1.45; cursor: pointer; animation: bubble-in .45s var(--ease-spring) both; }
+    .mascot-bubble b { color: var(--ink); font-size: 15px; }
+    .mascot-bubble::after { position: absolute; right: 26px; bottom: -7px; width: 12px; height: 12px; border-right: 1px solid #0000001a; border-bottom: 1px solid #0000001a; background: #fff; transform: rotate(45deg); content: ""; }
+    .mb-close { position: absolute; top: 8px; right: 8px; width: 24px; height: 24px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 6px; color: #64748b; background: transparent; cursor: pointer; }
+    .mb-close:hover { color: var(--ink); background: #f1f5f9; }
+    .mb-close svg { width: 9px; height: 9px; }
+
+    .mascot .assistant { position: absolute; right: 0; bottom: 88px; width: min(380px, calc(100vw - 32px)); height: min(560px, calc(100vh - 130px)); transform-origin: bottom right; animation: panel-open .35s var(--ease) both; }
+    .mascot .assistant[hidden] { display: none; }
+    .mascot .as-bar { gap: 10px; padding: 12px 8px 12px 14px; }
+    .mascot .as-avatar { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 12px; background: #fff; box-shadow: inset 0 0 0 1px #0000000f; }
+    .mascot .as-avatar svg { width: 34px; height: 34px; }
+    .mascot .as-title b { font-size: 15px; }
+    .as-close { width: 36px; height: 36px; display: grid; place-items: center; margin-left: auto; border: 0; border-radius: 6px; color: #1a1a1a; background: transparent; cursor: pointer; }
+    .as-close:hover { background: #0000000d; }
+    .as-close svg { width: 11px; height: 11px; }
+    .mascot .as-log { flex: 1; height: auto; min-height: 0; }
+    .faq-intro .button-stocky { gap: 10px; padding-left: 8px; }
+    .faq-intro .button-stocky svg { width: 30px; height: 30px; }
+
+    @keyframes mascot-bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -6px; } }
+    @keyframes st-blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
+    @keyframes st-light { 50% { opacity: .45; } }
+    @keyframes dot-ping { from { opacity: .7; transform: scale(1); } to { opacity: 0; transform: scale(2.4); } }
+    @keyframes bubble-in { from { opacity: 0; transform: translateY(10px) scale(.9); } to { opacity: 1; transform: none; } }
+    @keyframes panel-open { from { opacity: 0; transform: translateY(14px) scale(.94); } to { opacity: 1; transform: none; } }
+    @media (max-width: 640px) {
+      .sticky-cta { left: max(12px, env(safe-area-inset-left)); right: auto; }
+      .mascot { right: max(12px, env(safe-area-inset-right)); bottom: max(10px, env(safe-area-inset-bottom)); }
+      .mascot-btn { width: 60px; height: 60px; border-radius: 20px; }
+      .stocky-art { width: 48px; height: 48px; }
+      .mascot-bubble { bottom: 74px; width: 220px; }
+      .mascot .assistant { position: fixed; right: 8px; bottom: 80px; left: 8px; width: auto; height: min(560px, calc(100dvh - 100px)); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .mascot-btn, #stocky .st-eyes, #stocky .st-light, .mascot-dot::after { animation: none !important; }
+    }
+    /* Stocky más chico, con más presencia */
+    .mascot-btn { width: 58px; height: 58px; border-radius: 50%; background: radial-gradient(circle at 32% 26%, #fff 0, #eaf2ff 55%, #d4e4ff 100%); box-shadow: 0 0 0 3px #fff, 0 0 0 5px #3b82f6, 0 12px 28px #2563eb66; }
+    .mascot-btn:hover { transform: scale(1.1) rotate(-6deg); box-shadow: 0 0 0 3px #fff, 0 0 0 5px #2563eb, 0 16px 34px #2563eb80; }
+    .mascot-btn::before { position: absolute; inset: -5px; border: 2px solid #3b82f6; border-radius: 50%; content: ""; animation: stocky-halo 2.6s ease-out infinite; pointer-events: none; }
+    .mascot.open .mascot-btn::before { display: none; }
+    .stocky-art { width: 46px; height: 46px; margin-top: 2px; }
+    .mascot-dot { top: 0; right: 0; width: 13px; height: 13px; }
+    .mascot-bubble { bottom: 76px; width: auto; max-width: 200px; gap: 1px; padding: 9px 30px 10px 13px; border-radius: 12px 12px 4px 12px; font-size: 12.5px; white-space: nowrap; box-shadow: 0 10px 26px #0f172a24; }
+    .mascot-bubble b { font-size: 13.5px; }
+    .mascot-bubble::after { right: 22px; bottom: -6px; width: 10px; height: 10px; }
+    .mb-close { top: 6px; right: 6px; width: 20px; height: 20px; }
+    .mascot .assistant { bottom: 78px; }
+    @keyframes stocky-halo { 0% { opacity: .7; transform: scale(1); } 70%, 100% { opacity: 0; transform: scale(1.32); } }
+    @media (max-width: 640px) {
+      .mascot-btn { width: 52px; height: 52px; border-radius: 50%; }
+      .stocky-art { width: 42px; height: 42px; }
+      .mascot-bubble { bottom: 70px; }
+      .mascot .assistant { bottom: 74px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .mascot-btn::before { animation: none; opacity: 0; } }
+    /* Stocky minimalista: la mascota sola, sin marco */
+    .mascot-btn { width: 50px; height: 50px; border-radius: 16px; background: transparent; box-shadow: none; }
+    .mascot-btn:hover { background: transparent; box-shadow: none; transform: scale(1.12) rotate(-6deg); }
+    .mascot-btn::before, .mascot-dot { display: none; }
+    .stocky-art { width: 50px; height: 50px; margin: 0; filter: drop-shadow(0 6px 10px #1d4ed84d); }
+    .mascot-bubble { display: block; bottom: 60px; max-width: none; padding: 7px 28px 7px 12px; border-radius: 999px 999px 4px 999px; font-size: 12.5px; }
+    .mascot-bubble[hidden] { display: none; }
+    .mascot-bubble b { font-size: 12.5px; }
+    .mascot-bubble::after { right: 16px; bottom: -5px; width: 9px; height: 9px; }
+    .mb-close { top: 50%; right: 6px; transform: translateY(-50%); }
+    .mascot .assistant { bottom: 64px; }
+    @media (max-width: 640px) {
+      .mascot-btn { width: 46px; height: 46px; }
+      .stocky-art { width: 46px; height: 46px; }
+      .mascot-bubble { bottom: 56px; }
+      .mascot .assistant { bottom: 62px; }
+    }
+    /* Stocky cajita: la etiqueta se balancea y el ticket se mueve */
+    #stocky .st-ticket { transform-origin: 32.5px 16px; animation: st-ticket 2.8s ease-in-out infinite; }
+    @keyframes st-tag { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(10deg); } }
+    @keyframes st-ticket { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(5deg) translateY(-.6px); } }
+    @media (prefers-reduced-motion: reduce) { #stocky .st-tag, #stocky .st-ticket { animation: none; } }
+    /* Stocky a la izquierda; el acceso rápido a la prueba vuelve a la derecha */
+    .sticky-cta { right: max(18px, env(safe-area-inset-right)); left: auto; }
+    .mascot { right: auto; left: max(20px, env(safe-area-inset-left)); }
+    .mascot-bubble { right: auto; left: 0; border-radius: 999px 999px 999px 4px; }
+    .mascot-bubble::after { right: auto; left: 18px; }
+    .mascot .assistant { right: auto; left: 0; transform-origin: bottom left; }
+    .mascot-btn:hover { transform: scale(1.12) rotate(6deg); }
+    @media (max-width: 640px) {
+      .sticky-cta { right: max(12px, env(safe-area-inset-right)); left: auto; }
+      .mascot { right: auto; left: max(12px, env(safe-area-inset-left)); }
+      .mascot .assistant { right: 8px; left: 8px; }
+    }
   </style>
 </head>
 <body>
@@ -1516,69 +1682,67 @@
       <div class="wrap">
         <div class="section-head plans-head">
           <div class="eyebrow"><span class="eyebrow-dot"></span> Precios</div>
-          <h2><span class="grad-text">Probalo gratis 15 días.</span><br>Pagá solo si te sirve.</h2>
-          <p>Precios en pesos y sin costos ocultos. Empezás gratis y elegís cómo seguir recién cuando decidís quedarte.</p>
-        </div>
-        <div class="billing-wrap">
-          <div class="billing-toggle" id="billing-toggle" data-mode="mensual" role="group" aria-label="Forma de pago del Plan Pro">
-            <span class="pill" aria-hidden="true"></span>
-            <button type="button" data-mode="mensual" aria-pressed="true">Mensual</button>
-            <button type="button" data-mode="anual" aria-pressed="false">Anual <small>2 meses gratis</small></button>
-          </div>
+          <h2><span class="grad-text">Pagás una vez.</span><br>Es tuyo para siempre.</h2>
+          <p>Elegí el plan según cuántas computadoras usás. Sin cuotas ni vencimientos, y con 15 días de prueba gratis antes de decidir.</p>
         </div>
         <div class="plans-grid">
           <article class="plan">
-            <span class="plan-chip">Licencia Única</span>
-            <p class="plan-price">$100.000 <small>pago único</small></p>
-            <p class="plan-desc">Pagás una vez y la licencia es tuya para siempre en una computadora.</p>
+            <span class="plan-chip">Básico</span>
+            <p class="plan-price">$129.000 <small>pago único</small></p>
+            <p class="plan-desc">Para el comercio que vende desde una sola caja.</p>
             <div class="plan-box">
-              <span class="plan-box-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M15 8l2 2"/></svg></span>
-              <span><b>Sin cuotas</b><small>ni vencimientos mensuales</small></span>
+              <span class="plan-box-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>
+              <span><b>1 computadora</b><small>licencia para siempre</small></span>
             </div>
             <ul class="plan-list">
-              <li>1 computadora</li>
-              <li>Versión 1 para siempre</li>
-              <li>3 meses de soporte</li>
-              <li class="no">Sin módulos nuevos</li>
+              <li>Todo el sistema</li>
+              <li>12 meses de actualizaciones</li>
+              <li>12 meses de soporte por WhatsApp y email</li>
+              <li>Funciona sin internet</li>
             </ul>
-            <a class="button button-light plan-cta" data-pay="unica" href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20comprar%20la%20Licencia%20%C3%9Anica%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Comprar licencia</a>
+            <a class="button button-light plan-cta" data-pay="basico" href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20comprar%20el%20plan%20B%C3%A1sico%20de%20Profesional%20Stock%20(1%20computadora)" target="_blank" rel="noopener noreferrer">Elegir Básico</a>
           </article>
 
           <article class="plan featured">
-            <div class="plan-top"><span class="plan-chip">Plan Pro</span><span class="plan-badge">Recomendado</span></div>
-            <p class="plan-price" id="pro-price" aria-live="polite"><span id="pro-amount">$14.900</span> <small id="pro-period">/mes</small></p>
-            <p class="plan-desc" id="pro-note">O $149.000 al año: 2 meses gratis</p>
+            <div class="plan-top"><span class="plan-chip">Negocio</span><span class="plan-badge">Recomendado</span></div>
+            <p class="plan-price">$299.000 <small>pago único</small></p>
+            <p class="plan-desc">Para locales con más de una caja o un equipo en el depósito.</p>
             <div class="plan-box">
-              <span class="plan-box-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-14 5.3M4 12A8 8 0 0 1 18 6.7"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></span>
-              <span><b>Siempre actualizado</b><small>cada módulo nuevo, incluido</small></span>
+              <span class="plan-box-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="13" height="9" rx="1.5"/><rect x="9" y="3" width="13" height="9" rx="1.5"/><path d="M6 19h6M9 15v4"/></svg></span>
+              <span><b>Hasta 3 computadoras</b><small>menos de $100.000 por equipo</small></span>
             </div>
             <ul class="plan-list">
-              <li>1 computadora</li>
-              <li>Actualizaciones y módulos nuevos</li>
-              <li>Soporte mientras tengas el plan</li>
-              <li>Cancelás cuando quieras</li>
+              <li>Todo el sistema</li>
+              <li>12 meses de actualizaciones</li>
+              <li>12 meses de soporte por WhatsApp y email</li>
+              <li>Te ayudamos a instalarlo en cada equipo</li>
             </ul>
-            <a class="button plan-cta" id="pro-cta" data-pay="proMensual" href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20contratar%20el%20Plan%20Pro%20mensual%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Suscribirme al Plan Pro</a>
+            <a class="button plan-cta" data-pay="negocio" href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20comprar%20el%20plan%20Negocio%20de%20Profesional%20Stock%20(hasta%203%20computadoras)" target="_blank" rel="noopener noreferrer">Elegir Negocio</a>
           </article>
 
           <article class="plan">
-            <span class="plan-chip dark">Personalizado</span>
-            <p class="plan-price">A medida</p>
-            <p class="plan-desc">Para varias computadoras, sucursales o funciones especiales. Lo armamos con vos.</p>
+            <span class="plan-chip dark">Empresarial</span>
+            <p class="plan-price">$499.000 <small>pago único</small></p>
+            <p class="plan-desc">Para comercios grandes o con varias sucursales.</p>
             <div class="plan-box">
-              <span class="plan-box-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="8" height="6" rx="1"/><rect x="13" y="4" width="8" height="6" rx="1"/><rect x="3" y="14" width="8" height="6" rx="1"/><rect x="13" y="14" width="8" height="6" rx="1"/></svg></span>
-              <span><b>Varias PCs</b><small>o sucursales, en un solo plan</small></span>
+              <span class="plan-box-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6M9 11h.01M15 11h.01"/></svg></span>
+              <span><b>Hasta 10 computadoras</b><small>menos de $50.000 por equipo</small></span>
             </div>
             <ul class="plan-list">
-              <li>Todo lo del Plan Pro</li>
-              <li>Funciones o ajustes a medida</li>
+              <li>Todo el sistema</li>
+              <li>12 meses de actualizaciones</li>
+              <li>12 meses de soporte por WhatsApp y email</li>
               <li>Puesta en marcha acompañada</li>
-              <li>Precio según tu negocio</li>
             </ul>
-            <a class="button button-light plan-cta" href="https://wa.me/5493534778891?text=Hola%2C%20me%20interesa%20un%20plan%20personalizado%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Hablar con nosotros</a>
+            <a class="button button-light plan-cta" data-pay="empresarial" href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20comprar%20el%20plan%20Empresarial%20de%20Profesional%20Stock%20(hasta%2010%20computadoras)" target="_blank" rel="noopener noreferrer">Elegir Empresarial</a>
           </article>
         </div>
-        <p class="plans-foot"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.3"/></svg>Pago seguro con Mercado Pago: tarjeta, transferencia o efectivo en Rapipago. <a href="terminos.html">Ver condiciones</a></p>
+        <div class="plan-custom">
+          <span class="plan-box-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="8" height="6" rx="1"/><rect x="13" y="4" width="8" height="6" rx="1"/><rect x="3" y="14" width="8" height="6" rx="1"/><rect x="13" y="14" width="8" height="6" rx="1"/></svg></span>
+          <p><b>¿Más de 10 computadoras?</b> Armamos un plan a medida para tu empresa.</p>
+          <a class="button button-light" href="https://wa.me/5493534778891?text=Hola%2C%20necesito%20un%20plan%20para%20m%C3%A1s%20de%2010%20computadoras%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Hablar con nosotros</a>
+        </div>
+        <p class="plans-foot"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.3"/></svg>Pago seguro con Mercado Pago: tarjeta, transferencia o efectivo en Rapipago. Precios en pesos argentinos. Pasados los 12 meses, el programa sigue funcionando y la renovación de actualizaciones es opcional. <a href="terminos.html">Ver condiciones</a></p>
       </div>
     </section>
 
@@ -1587,16 +1751,16 @@
         <div class="faq-intro">
           <div class="eyebrow"><span class="eyebrow-dot"></span> Preguntas frecuentes</div>
           <h2>Lo importante, claro desde el principio.</h2>
-          <p>Lo que conviene saber antes de empezar.</p>
+          <p>Lo que conviene saber antes de empezar. ¿No encontrás tu respuesta? Preguntale a Stocky, abajo a la derecha.</p>
           <div class="faq-contact">
-            <a class="button button-light" href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20consultar%20sobre%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
-            <span class="faq-contact-note">¿Otra duda? Te respondemos nosotros.</span>
+            <button class="button button-light button-stocky" type="button" data-open-assistant><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#stocky"/></svg>Preguntale a Stocky</button>
+            <span class="faq-contact-note">Nuestro asistente virtual te responde al instante.</span>
           </div>
         </div>
         <div class="faq-list">
           <details>
             <summary>¿Cuánto cuesta?</summary>
-            <p>Los primeros 15 días son gratis. Después podés elegir la <strong>Licencia Única por $100.000 ARS</strong>, en un solo pago, o el <strong>Plan Pro por $14.900 ARS por mes</strong> ($149.000 ARS si pagás el año). La Licencia Única incluye la versión actual y 3 meses de soporte; el Plan Pro suma todas las actualizaciones, módulos nuevos y soporte mientras lo tengas. Si necesitás varias computadoras o algo a medida, armamos un plan personalizado. <a href="#planes">Ver planes</a>.</p>
+            <p>Los primeros 15 días son gratis. Después pagás una sola vez según cuántas computadoras usás: <strong>Básico $129.000 ARS</strong> (1 computadora), <strong>Negocio $299.000 ARS</strong> (hasta 3) o <strong>Empresarial $499.000 ARS</strong> (hasta 10). Todos incluyen el sistema completo, la licencia para siempre y 12 meses de actualizaciones y soporte. Para más de 10 computadoras armamos un plan a medida. <a href="#planes">Ver planes</a>.</p>
           </details>
           <details>
             <summary>¿Puedo probarlo antes de pagar?</summary>
@@ -1619,24 +1783,24 @@
             <p>Es posible importar información. La compatibilidad con Excel depende del formato y las columnas de la planilla; revisamos tu archivo antes de confirmar la migración. <a href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20consultar%20por%20la%20importaci%C3%B3n%20de%20productos" target="_blank" rel="noopener noreferrer">Escribinos antes de migrar</a>.</p>
           </details>
           <details>
-            <summary>¿Qué medios de pago aceptan para la suscripción?</summary>
-            <p>La suscripción se abona mediante un link de Mercado Pago. Podés pagar con tarjeta de crédito, débito, transferencia o efectivo en Rapipago.</p>
+            <summary>¿Qué medios de pago aceptan?</summary>
+            <p>La licencia se abona mediante un link de Mercado Pago. Podés pagar con tarjeta de crédito, débito, transferencia o efectivo en Rapipago.</p>
           </details>
           <details>
             <summary>¿La licencia es por computadora o por usuario?</summary>
-            <p>La licencia es por computadora. La activación y el pago se administran con la cuenta de tu negocio. Si necesitás usarlo en más de una PC o en varias sucursales, <a href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20consultar%20por%20licencias%20para%20varias%20computadoras" target="_blank" rel="noopener noreferrer">consultanos antes de contratar</a>.</p>
+            <p>Es por computadora: el plan Básico habilita 1, Negocio hasta 3 y Empresarial hasta 10. La activación se administra con la cuenta de tu negocio. Si tenés dudas sobre qué plan te conviene, <a href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20consultar%20qu%C3%A9%20plan%20me%20conviene" target="_blank" rel="noopener noreferrer">consultanos antes de comprar</a>.</p>
           </details>
           <details>
             <summary>¿Hay capacitación o soporte para aprender a usarlo?</summary>
-            <p>El sistema incluye un manual y la suscripción incluye soporte por WhatsApp y email, de lunes a sábado, de 9 a 18 h. El tiempo de respuesta puede variar según la consulta y la demanda. Escribinos al <a href="https://wa.me/5493534778891?text=Hola%2C%20necesito%20soporte%20para%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">WhatsApp +54 9 3534 778891</a> o a <!-- TODO: migrar a un correo con dominio propio cuando esté disponible. --><a href="mailto:soporte.profesionalstock@gmail.com">soporte.profesionalstock@gmail.com</a>.</p>
+            <p>El sistema incluye un manual y todos los planes incluyen 12 meses de soporte por WhatsApp y email, de lunes a sábado, de 9 a 18 h. El tiempo de respuesta puede variar según la consulta y la demanda. Escribinos al <a href="https://wa.me/5493534778891?text=Hola%2C%20necesito%20soporte%20para%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">WhatsApp +54 9 3534 778891</a> o a <!-- TODO: migrar a un correo con dominio propio cuando esté disponible. --><a href="mailto:soporte.profesionalstock@gmail.com">soporte.profesionalstock@gmail.com</a>.</p>
           </details>
           <details>
             <summary>¿Dónde se guardan mis datos? ¿Puedo cambiar de computadora?</summary>
             <p>Los datos se guardan en tu computadora. Desde el programa podés generar una copia de seguridad y elegir dónde guardarla. Hacé copias con regularidad y antes de cambiar de equipo; guardalas también fuera de la computadora, como en una unidad externa. Para restaurarlas en otra PC, <a href="https://wa.me/5493534778891?text=Hola%2C%20necesito%20ayuda%20para%20restaurar%20una%20copia%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">escribinos por WhatsApp</a>.</p>
           </details>
           <details>
-            <summary>¿Qué pasa cuando vence la suscripción?</summary>
-            <p>El programa queda en modo de solo lectura: podés consultar la información, pero no registrar nuevas operaciones ni modificar datos. Al renovar, recuperás las funciones de uso.</p>
+            <summary>¿Qué pasa después de los 12 meses?</summary>
+            <p>El programa sigue funcionando para siempre con la versión que tengas. Si querés seguir recibiendo versiones nuevas y soporte, podés renovar las actualizaciones; es opcional.</p>
           </details>
         </div>
       </div>
@@ -1730,6 +1894,91 @@
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 9c.4 2 2 3.6 4 4l1.2-1 2 1c-.3 1.5-1.2 2.2-2.6 2.2-3.3-.5-5.7-2.8-6.2-6.1C7.4 7.7 8.2 7 9 7l1 2-1 1Z" fill="currentColor"/></svg>
     </a>
   </aside>
+
+  <!-- Stocky: asistente virtual flotante -->
+  <div class="mascot" id="mascot">
+    <svg class="icon-library" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="st-mochi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1f6ff"/><stop offset="1" stop-color="#a9c9ff"/></linearGradient>
+        <linearGradient id="st-suit" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34508f"/><stop offset="1" stop-color="#1b2a55"/></linearGradient>
+        <linearGradient id="st-tie" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fb7185"/><stop offset="1" stop-color="#e11d48"/></linearGradient>
+        <clipPath id="st-clip"><path d="M8 42C8 25 18.5 13 32 13s24 12 24 29c0 11-8.5 17-24 17S8 53 8 42z"/></clipPath>
+      </defs>
+      <!-- Stocky: un mochi de atención al cliente de traje y corbata, con un ticket de caja como jopo
+           y una tablet con los reportes de ventas en las manos -->
+      <symbol id="stocky" viewBox="0 0 64 64">
+        <ellipse cx="32" cy="61.5" rx="18" ry="2.2" fill="#0f172a" opacity=".14"/>
+        <g class="st-ticket">
+          <path d="M28.5 16V3.8l1.45 1.2 1.45-1.2 1.45 1.2 1.45-1.2 1.45 1.2 1.45-1.2 1.45 1.2V16z" fill="#fff" stroke="#b9cdee" stroke-width=".9" stroke-linejoin="round"/>
+          <path d="M30.6 8.2h4.6M30.6 10.8h3.2" stroke="#93c5fd" stroke-width="1.1" stroke-linecap="round"/>
+        </g>
+        <path d="M8 42C8 25 18.5 13 32 13s24 12 24 29c0 11-8.5 17-24 17S8 53 8 42z" fill="url(#st-mochi)"/>
+        <g clip-path="url(#st-clip)">
+          <path d="M0 44.5q32-5 64 0V64H0z" fill="url(#st-suit)"/>
+          <path d="M26 43.6 32 51.5l6-7.9q-6-.9-12 0z" fill="#fff"/>
+          <path d="M26 43.6 32 51.5l-5.6 3.4-3.6-10.8z" fill="#22356a"/>
+          <path d="M38 43.6 32 51.5l5.6 3.4 3.6-10.8z" fill="#22356a"/>
+        </g>
+        <path d="M8 42C8 25 18.5 13 32 13s24 12 24 29c0 11-8.5 17-24 17S8 53 8 42z" fill="none" stroke="#8fb6ff" stroke-width="1.2"/>
+        <path d="M30.4 44.2h3.2l-.5 2.4h-2.2z" fill="#be123c"/>
+        <path d="M30.9 46.6h2.2l1.1 4.6-2.2 2.2-2.2-2.2z" fill="url(#st-tie)"/>
+        <ellipse cx="21.5" cy="21" rx="6.2" ry="3" fill="#fff" opacity=".9" transform="rotate(-28 21.5 21)"/>
+        <path d="M12.6 33C12.6 21 21 14.6 32 14.6S51.4 21 51.4 33" fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linecap="round"/>
+        <rect x="7.6" y="28" width="7" height="11.5" rx="3.5" fill="#2563eb"/>
+        <rect x="49.4" y="28" width="7" height="11.5" rx="3.5" fill="#2563eb"/>
+        <path d="M53 39.5q.4 4.4-6 5.4" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="46.4" cy="45" r="1.8" fill="#1d4ed8"/>
+        <g class="st-eyes">
+          <ellipse cx="25" cy="31.5" rx="3.5" ry="4.3" fill="#0b1736"/><ellipse cx="39" cy="31.5" rx="3.5" ry="4.3" fill="#0b1736"/>
+          <circle cx="26.3" cy="29.8" r="1.45" fill="#fff"/><circle cx="40.3" cy="29.8" r="1.45" fill="#fff"/>
+          <circle cx="24.1" cy="33.4" r=".65" fill="#fff"/><circle cx="38.1" cy="33.4" r=".65" fill="#fff"/>
+        </g>
+        <ellipse cx="18.8" cy="38" rx="3.2" ry="2.1" fill="#fda4af" opacity=".9"/>
+        <ellipse cx="45.2" cy="38" rx="3.2" ry="2.1" fill="#fda4af" opacity=".9"/>
+        <path d="M29.2 37q2.8 3.4 5.6 0z" fill="#0b1736"/>
+        <path d="M30.6 38.6q1.4-.9 2.8 0q-1.4.8-2.8 0z" fill="#fb7185"/>
+        <g class="st-tablet">
+          <rect x="23.5" y="50" width="17" height="11.5" rx="2.2" fill="#0f172a"/>
+          <rect x="24.8" y="51.2" width="14.4" height="9.1" rx="1.3" fill="#eff6ff"/>
+          <rect x="26.2" y="56.4" width="2" height="3.2" rx=".5" fill="#93c5fd"/>
+          <rect x="29.2" y="54.6" width="2" height="5" rx=".5" fill="#60a5fa"/>
+          <rect x="32.2" y="55.6" width="2" height="4" rx=".5" fill="#60a5fa"/>
+          <rect x="35.2" y="52.6" width="2" height="7" rx=".5" fill="#2563eb"/>
+          <path d="M26 54.4 30.2 52.6l3 1.2 4.6-2.2" fill="none" stroke="#22c55e" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <ellipse cx="23.4" cy="56" rx="2.9" ry="2.6" fill="#dceaff" stroke="#8fb6ff" stroke-width="1"/>
+        <ellipse cx="40.6" cy="56" rx="2.9" ry="2.6" fill="#dceaff" stroke="#8fb6ff" stroke-width="1"/>
+      </symbol>
+    </svg>
+
+    <div class="mascot-bubble" id="mascot-bubble" hidden>
+      <button class="mb-close" type="button" aria-label="Cerrar aviso"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 1l8 8M9 1 1 9" stroke="currentColor" stroke-width="1.4"/></svg></button>
+      <b>¡Hola! Soy Stocky 👋</b> <span>¿Te ayudo?</span>
+    </div>
+
+    <button class="mascot-btn" id="mascot-btn" type="button" aria-expanded="false" aria-controls="assistant" aria-label="Abrir a Stocky, el asistente virtual">
+      <svg class="stocky-art" viewBox="0 0 64 64" aria-hidden="true"><use href="#stocky"/></svg>
+      <span class="mascot-dot" aria-hidden="true"></span>
+    </button>
+
+    <section class="assistant" id="assistant" role="dialog" aria-label="Stocky, asistente virtual" hidden>
+      <div class="as-bar">
+        <span class="as-avatar"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#stocky"/></svg></span>
+        <span class="as-title"><b>Stocky</b><small><i></i>Asistente virtual · responde al instante</small></span>
+        <button class="as-close" type="button" aria-label="Cerrar asistente"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 1l8 8M9 1 1 9" stroke="currentColor" stroke-width="1.2"/></svg></button>
+      </div>
+      <div class="as-log" id="as-log" role="log" aria-live="polite" aria-label="Conversación con Stocky">
+        <div class="as-msg bot"><p>¡Hola! Soy <b>Stocky</b>, el asistente de Profesional Stock. Tocá una pregunta o escribí la tuya.</p></div>
+      </div>
+      <div class="as-chips" id="as-chips" role="group" aria-label="Preguntas sugeridas"></div>
+      <form class="as-form" id="as-form">
+        <label class="sr-only" for="as-input">Escribí tu pregunta</label>
+        <input id="as-input" type="text" placeholder="Escribí tu pregunta…" autocomplete="off" maxlength="200">
+        <button class="as-send" type="submit" aria-label="Enviar pregunta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </form>
+      <p class="as-note">Asistente virtual · Si no puede resolverlo, te pasa con el equipo · <a href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20consultar%20sobre%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Hablar con una persona</a></p>
+    </section>
+  </div>
 
   <footer>
     <div class="footer-about wrap" id="nosotros">
@@ -2040,14 +2289,14 @@
 
     /* ======================================================
        LINKS DE PAGO DE MERCADO PAGO
-       Pegá acá el link de cada plan (Mercado Pago > Link de pago,
-       o Suscripciones para el Plan Pro). Mientras esté vacío,
+       Pegá acá el link de cada opción (Mercado Pago > Link de pago,
+       con el monto del plan). Mientras esté vacío,
        el botón abre WhatsApp para no perder la venta.
        ====================================================== */
     const PAYMENT_LINKS = {
-      unica: "",       // Licencia Única, $100.000
-      proMensual: "",  // Plan Pro mensual, $14.900 por mes
-      proAnual: ""     // Plan Pro anual, $149.000
+      basico: "",      // Básico, 1 computadora, $129.000 pago único
+      negocio: "",     // Negocio, hasta 3 computadoras, $299.000 pago único
+      empresarial: ""  // Empresarial, hasta 10 computadoras, $499.000 pago único
     };
     document.querySelectorAll("[data-pay]").forEach((button) => {
       const link = PAYMENT_LINKS[button.dataset.pay];
@@ -2056,35 +2305,302 @@
         if (typeof window.gtag === "function") window.gtag("event", "begin_checkout", { plan: button.dataset.pay, direct: Boolean(PAYMENT_LINKS[button.dataset.pay]) });
       });
     });
-    /* Selector mensual / anual */
-    const billingToggle = document.querySelector("#billing-toggle");
-    const proAmount = document.querySelector("#pro-amount");
-    const proPrice = document.querySelector("#pro-price");
-    const proPeriod = document.querySelector("#pro-period");
-    const proNote = document.querySelector("#pro-note");
-    const proCta = document.querySelector("#pro-cta");
-    const pricing = {
-      mensual: { pay: "proMensual", amount: 14900, period: "/mes", note: "O $149.000 al año: 2 meses gratis", text: "Hola%2C%20quiero%20contratar%20el%20Plan%20Pro%20mensual%20de%20Profesional%20Stock" },
-      anual: { pay: "proAnual", amount: 149000, period: "/año", note: "Equivale a <b>$12.417 por mes</b>", text: "Hola%2C%20quiero%20contratar%20el%20Plan%20Pro%20anual%20de%20Profesional%20Stock" }
-    };
-    let currentMode = "mensual";
-    billingToggle.querySelectorAll("button").forEach((button) => {
-      button.addEventListener("click", () => {
-        const mode = button.dataset.mode;
-        if (mode === currentMode) return;
-        const from = pricing[currentMode].amount;
-        currentMode = mode;
-        billingToggle.dataset.mode = mode;
-        billingToggle.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
-        proPeriod.textContent = pricing[mode].period;
-        proNote.innerHTML = pricing[mode].note;
-        proCta.dataset.pay = pricing[mode].pay;
-        proCta.href = PAYMENT_LINKS[pricing[mode].pay] || `https://wa.me/5493534778891?text=${pricing[mode].text}`;
-        replay(proPrice, "bump");
-        countTo(proAmount, from, pricing[mode].amount, 700, formatARS);
-        trackLandingEvent("billing_toggle", { mode });
+
+    /* Asistente: responde desde una base de respuestas propia (sin servidor ni IA).
+       Para sumar una respuesta, agregá un tema en ASSISTANT_TOPICS con sus palabras clave. */
+    const WHATSAPP_NUMBER = "5493534778891";
+    /* Dirección del servidor de Stocky con IA (carpeta stocky-worker). Vacía = responde solo con las respuestas de abajo. */
+    const ASSISTANT_API_URL = "";
+    const waLink = (text) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    const ASSISTANT_TOPICS = [
+      { id: "precio", chip: "¿Cuánto cuesta?",
+        keys: ["precio", "precios", "cuesta", "cuanto sale", "cuanto vale", "costo", "valor", "planes", "plan", "pago unico", "comprar", "cobran", "barato", "caro"],
+        answer: "Pagás <b>una sola vez</b> y es tuyo para siempre: <b>Básico $129.000</b> (1 computadora), <b>Negocio $299.000</b> (hasta 3) y <b>Empresarial $499.000</b> (hasta 10). Todos incluyen 12 meses de actualizaciones y soporte.",
+        actions: [{ label: "Ver planes", href: "#planes" }] },
+      { id: "prueba", chip: "¿Hay prueba gratis?",
+        keys: ["prueba", "probar", "gratis", "gratuita", "demo", "15 dias", "trial", "descargar", "descarga", "instalar", "activar", "activacion"],
+        answer: "Sí: tenés <b>15 días gratis</b>, sin tarjeta. Descargás el programa, tocás «Activar ahora» y creás tu cuenta. No hace falta llamarnos.",
+        actions: [{ kind: "download", label: "Descargar prueba" }, { label: "Cómo activarla", href: "prueba.html", newTab: true }] },
+      { id: "factura", chip: "¿Hace factura electrónica?",
+        keys: ["factura", "facturas", "facturacion", "facturar", "afip", "arca", "comprobante", "electronica", "fiscal", "monotributo"],
+        answer: "Por ahora <b>no emite factura electrónica</b> (ARCA): está en desarrollo. Si la necesitás sí o sí, escribinos y te contamos cómo viene.",
+        actions: [{ kind: "wa", label: "Consultar por WhatsApp", text: "Hola, quiero saber cómo viene la facturación electrónica en Profesional Stock." }] },
+      { id: "hardware", chip: "¿Funciona con lector de códigos?",
+        keys: ["lector", "codigo de barras", "codigos", "escaner", "scanner", "pistola", "impresora", "ticket", "tickets", "balanza", "cierre z", "hardware", "cajon"],
+        answer: "Por el momento <b>no se integra</b> con lectores de código de barras, impresoras fiscales, cierres Z ni balanzas. Las ventas se cargan buscando el producto por nombre o código." },
+      { id: "internet", chip: "¿Necesito internet?",
+        keys: ["internet", "conexion", "offline", "sin conexion", "wifi", "online", "nube", "se corta"],
+        answer: "Solo para activar la cuenta y comprar la licencia. Después <b>funciona sin internet</b>: todo se guarda en tu computadora." },
+      { id: "rubro", chip: "¿Sirve para mi rubro?",
+        keys: ["rubro", "sirve para", "mi negocio", "mi comercio", "kiosco", "almacen", "ferreteria", "ropa", "libreria", "perfumeria", "verduleria", "panaderia", "farmacia", "restaurante", "local"],
+        answer: "Sirve para <b>comercios que venden productos</b>: almacenes, kioscos, ropa, ferreterías, librerías, perfumerías y más. Si vendés por peso, todavía no se conecta con balanzas.",
+        actions: [{ label: "Ver rubros", href: "#rubros" }, { kind: "wa", label: "Consultar mi caso", text: "Hola, quiero saber si Profesional Stock sirve para mi comercio. Vendo: " }] },
+      { id: "equipos", chip: "¿Puedo usarlo en varias PCs?",
+        keys: ["computadoras", "computadora", "varias pc", "pcs", "pc", "equipos", "maquinas", "sucursal", "sucursales", "usuarios", "licencia", "cajas"],
+        answer: "La licencia es <b>por computadora</b>: Básico 1, Negocio hasta 3 y Empresarial hasta 10. Para más equipos armamos un plan a medida.",
+        actions: [{ label: "Ver planes", href: "#planes" }] },
+      { id: "excel", chip: "¿Puedo importar mi Excel?",
+        keys: ["excel", "importar", "migrar", "planilla", "cargar productos", "lista de precios", "otro sistema", "pasar mis productos"],
+        answer: "Sí, se puede importar. Depende de cómo esté armada tu planilla, así que <b>la revisamos con vos</b> antes de migrar.",
+        actions: [{ kind: "wa", label: "Mandar mi planilla", text: "Hola, quiero importar mis productos desde Excel a Profesional Stock." }] },
+      { id: "datos", chip: "¿Dónde se guardan mis datos?",
+        keys: ["datos", "copia", "backup", "respaldo", "seguridad", "donde se guardan", "cambiar de computadora", "se rompe", "perder", "privacidad", "cuit"],
+        answer: "Se guardan <b>en tu computadora</b>: tus ventas, productos y clientes no se envían a ningún servidor. El programa hace copias de seguridad donde elijas; te conviene guardarlas también en un pendrive." },
+      { id: "soporte", chip: "¿Quién me ayuda si me trabo?",
+        keys: ["soporte", "ayuda", "capacitacion", "aprender", "manual", "tutorial", "horario", "atencion", "me trabo", "problema", "error"],
+        answer: "Te atienden <b>Matías y Mateo</b>, que programan el sistema, por WhatsApp o email, de lunes a sábado de 9 a 18 h. También incluye un manual.",
+        actions: [{ kind: "wa", label: "Escribir por WhatsApp", text: "Hola, necesito ayuda con Profesional Stock." }] },
+      { id: "pagos", chip: "¿Cómo se paga?",
+        keys: ["mercado pago", "mercadopago", "tarjeta", "transferencia", "efectivo", "rapipago", "cuotas", "medios de pago", "debito", "credito", "como pago", "se paga"],
+        answer: "Con <b>Mercado Pago</b>: tarjeta de crédito, débito, transferencia o efectivo en Rapipago." },
+      { id: "renovar", chip: "¿Qué pasa después del año?",
+        keys: ["vence", "vencimiento", "renovar", "renovacion", "despues del ano", "12 meses", "actualizaciones", "actualizacion", "para siempre", "caduca"],
+        answer: "El programa <b>sigue funcionando para siempre</b>. Lo que dura 12 meses son las actualizaciones y el soporte incluidos; renovarlos es opcional." },
+      { id: "sistema", chip: "¿Funciona en Mac o celular?",
+        keys: ["windows", "mac", "macbook", "linux", "celular", "android", "iphone", "tablet", "telefono", "requisitos", "sistema operativo"],
+        answer: "Por ahora funciona en <b>Windows 10 o superior</b>. No hay versión para Mac, Linux ni celular." },
+      { id: "funciones", chip: "¿Qué hace el sistema?",
+        keys: ["que hace", "funciones", "que incluye", "modulos", "para que sirve", "stock", "inventario", "caja", "ventas", "compras", "proveedores", "clientes", "cuenta corriente", "reportes", "agenda"],
+        answer: "Incluye <b>ventas</b> y venta rápida, <b>stock</b> con alertas, <b>caja</b>, compras y proveedores, clientes con cuenta corriente, reportes y agenda con recordatorios.",
+        actions: [{ label: "Ver los módulos", href: "#inicio" }] },
+      { id: "ubicacion", keys: ["donde estan", "donde quedan", "ubicados", "ubicacion", "direccion", "local fisico", "para ir", "ir a verlos", "oficina", "visitar", "cordoba", "buenos aires", "rosario", "ciudad", "provincia"],
+        answer: "Somos un equipo de Argentina y atendemos <b>todo a distancia</b>, por WhatsApp o email. No hace falta ir a ningún lado: el programa se descarga desde esta página.",
+        actions: [{ kind: "wa", label: "Escribir por WhatsApp", text: "Hola, quiero consultar sobre Profesional Stock." }] },
+      { id: "humano", keys: ["alguien", "pasas con", "pasame", "atenderme", "persona", "humano", "asesor", "vendedor", "hablar con", "llamar", "telefono", "contacto", "whatsapp", "mail", "email"],
+        answer: "¡Claro! Te paso con el equipo por WhatsApp.",
+        actions: [{ kind: "wa", label: "Abrir WhatsApp", text: "Hola, quiero consultar sobre Profesional Stock." }] },
+      { id: "gracias", keys: ["gracias", "genial", "perfecto", "buenisimo", "excelente", "dale"],
+        answer: "¡De nada! Si querés, probalo gratis durante 15 días.",
+        actions: [{ kind: "download", label: "Descargar prueba" }] },
+      { id: "saludo", keys: ["hola", "buenas", "buen dia", "buenas tardes", "buenas noches", "que tal"],
+        answer: "¡Hola! ¿En qué te ayudo? Podés tocar una de las preguntas de abajo o escribir la tuya." }
+    ];
+    const assistantLog = document.querySelector("#as-log");
+    const assistantChips = document.querySelector("#as-chips");
+    const assistantForm = document.querySelector("#as-form");
+    const assistantInput = document.querySelector("#as-input");
+    const askedTopics = new Set();
+    const normalize = (text) => ` ${text.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9ñ ]+/g, " ").replace(/\s+/g, " ").trim()} `;
+    const findTopic = (question) => {
+      const text = normalize(question);
+      let best = null;
+      let bestScore = 0;
+      ASSISTANT_TOPICS.forEach((topic) => {
+        const score = topic.keys.reduce((sum, key) => sum + (text.includes(` ${key} `) || (key.length > 5 && text.includes(key)) ? (key.includes(" ") ? 3 : 2) : 0), 0);
+        if (score > bestScore) { best = topic; bestScore = score; }
       });
+      return best;
+    };
+    const buildAction = (action, question) => {
+      const link = document.createElement("a");
+      link.className = "as-action";
+      link.textContent = action.label;
+      if (action.kind === "download" && !isMobileDevice) {
+        link.href = "ProfesionalStock-3.0.51.exe";
+        link.download = "ProfesionalStock-3.0.51.exe";
+        link.addEventListener("click", () => trackLandingEvent("download_click", { file_name: link.download, link_location: "assistant" }));
+      } else if (action.kind === "download" || action.kind === "wa") {
+        const text = action.kind === "download" ? "Hola, quiero el link para descargar la prueba gratis de Profesional Stock en mi PC." : action.text || `Hola, tengo una consulta: ${question}`;
+        link.href = waLink(text);
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        if (action.kind === "download") link.textContent = "Pedir el link para mi PC";
+        link.addEventListener("click", () => trackLandingEvent("whatsapp_click", { link_location: "assistant" }));
+      } else {
+        link.href = action.href;
+        if (action.newTab) { link.target = "_blank"; link.rel = "noopener"; }
+      }
+      return link;
+    };
+    const addMessage = (who, html, actions = [], question = "") => {
+      const message = document.createElement("div");
+      message.className = `as-msg ${who}`;
+      const bubble = document.createElement("p");
+      if (who === "user") bubble.textContent = html; else bubble.innerHTML = html;
+      message.append(bubble);
+      if (actions.length) {
+        const row = document.createElement("div");
+        row.className = "as-actions";
+        actions.forEach((action) => row.append(buildAction(action, question)));
+        message.append(row);
+      }
+      assistantLog.append(message);
+      assistantLog.scrollTo({ top: assistantLog.scrollHeight, behavior: reduceMotion ? "auto" : "smooth" });
+      return message;
+    };
+    const renderChips = () => {
+      const pending = ASSISTANT_TOPICS.filter((topic) => topic.chip && !askedTopics.has(topic.id)).slice(0, 4);
+      assistantChips.replaceChildren(...pending.map((topic) => {
+        const chip = document.createElement("button");
+        chip.type = "button";
+        chip.textContent = topic.chip;
+        chip.addEventListener("click", () => ask(topic.chip, topic, "chip"));
+        return chip;
+      }));
+    };
+    let assistantBusy = false;
+    /* Conversación que se envía a la IA (texto plano, sin HTML) */
+    const aiHistory = [];
+    const plainText = (html) => { const box = document.createElement("div"); box.innerHTML = html; return box.textContent.trim(); };
+    const escapeHtml = (text) => text.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const formatReply = (text) => escapeHtml(text)
+      .replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
+      .replace(/^\s*[-•]\s+/gm, "• ")
+      .replace(/\n/g, "<br>");
+    const LOCAL_FALLBACK = "Esa todavía no la sé responder. ¿Te la paso al equipo por WhatsApp? Te responden de lunes a sábado.";
+    const answerLocally = (question, topic) => {
+      if (topic) addMessage("bot", topic.answer, topic.actions || [], question);
+      else addMessage("bot", LOCAL_FALLBACK, [{ kind: "wa", label: "Preguntar por WhatsApp" }], question);
+      aiHistory.push({ role: "assistant", content: topic ? plainText(topic.answer) : LOCAL_FALLBACK });
+    };
+    const finishTurn = () => { renderChips(); assistantBusy = false; };
+    /* Stocky marca los casos para el equipo con [[DERIVAR: resumen]]: se oculta y se convierte en botones */
+    const HANDOFF = /\[\[DERIVAR:\s*([\s\S]*?)\]\]/;
+    const visibleReply = (text) => text.replace(HANDOFF, "").replace(/\[\[[^\]]*$/, "").trim();
+    const handoffActions = (summary) => {
+      const text = `${summary.replace(/\s+/g, " ").trim().slice(0, 560)} (Enviado desde Stocky)`;
+      const wa = buildAction({ kind: "wa", label: "Enviar el caso por WhatsApp", text }, "");
+      const mail = document.createElement("a");
+      mail.className = "as-action";
+      mail.textContent = "Enviar por email";
+      mail.href = `mailto:soporte.profesionalstock@gmail.com?subject=${encodeURIComponent("Consulta desde Stocky")}&body=${encodeURIComponent(text)}`;
+      mail.addEventListener("click", () => trackLandingEvent("assistant_handoff", { channel: "email" }));
+      wa.addEventListener("click", () => trackLandingEvent("assistant_handoff", { channel: "whatsapp" }));
+      return [wa, mail];
+    };
+
+    /* Respuesta con IA: lee la respuesta del servidor de Stocky a medida que llega */
+    const askAI = async (question, topic, typing) => {
+      let reply = "";
+      let bubble = null;
+      let errorCode = null;
+      try {
+        const response = await fetch(ASSISTANT_API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ messages: aiHistory.slice(-12) })
+        });
+        if (!response.ok || !response.body) throw new Error(response.status === 429 ? "rate_limit" : "http");
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = "";
+        for (;;) {
+          const { value, done } = await reader.read();
+          if (done) break;
+          buffer += decoder.decode(value, { stream: true });
+          const events = buffer.split("\n\n");
+          buffer = events.pop();
+          for (const event of events) {
+            if (!event.startsWith("data: ")) continue;
+            const data = JSON.parse(event.slice(6));
+            if (data.error) errorCode = data.error;
+            if (data.t) {
+              reply += data.t;
+              if (!bubble) { typing.remove(); bubble = addMessage("bot", "").querySelector("p"); }
+              bubble.innerHTML = formatReply(visibleReply(reply));
+              assistantLog.scrollTop = assistantLog.scrollHeight;
+            }
+          }
+        }
+      } catch (error) {
+        errorCode = error.message === "rate_limit" ? "rate_limit" : "network";
+      }
+      typing.remove();
+      if (!visibleReply(reply)) {
+        if (errorCode === "rate_limit") addMessage("bot", "Estoy recibiendo muchas preguntas a la vez. Probá de nuevo en un minuto, o escribile al equipo por WhatsApp.", [{ kind: "wa", label: "Escribir por WhatsApp" }], question);
+        else answerLocally(question, topic);
+        trackLandingEvent("assistant_ai_error", { error: errorCode || "empty" });
+        if (errorCode === "rate_limit") aiHistory.pop();
+        finishTurn();
+        return;
+      }
+      const handoff = reply.match(HANDOFF);
+      bubble.innerHTML = formatReply(visibleReply(reply));
+      aiHistory.push({ role: "assistant", content: reply.trim() });
+      if (handoff) {
+        const row = document.createElement("div");
+        row.className = "as-actions";
+        row.append(...handoffActions(handoff[1]));
+        bubble.closest(".as-msg").append(row);
+        assistantLog.scrollTop = assistantLog.scrollHeight;
+      } else if (topic && topic.actions) {
+        const row = document.createElement("div");
+        row.className = "as-actions";
+        topic.actions.forEach((action) => row.append(buildAction(action, question)));
+        bubble.closest(".as-msg").append(row);
+        assistantLog.scrollTop = assistantLog.scrollHeight;
+      }
+      finishTurn();
+    };
+
+    const ask = (question, knownTopic, source = "text") => {
+      question = question.trim().slice(0, 600);
+      if (assistantBusy || !question) return;
+      assistantBusy = true;
+      addMessage("user", question);
+      const topic = knownTopic || findTopic(question);
+      if (topic) askedTopics.add(topic.id);
+      aiHistory.push({ role: "user", content: question });
+      assistantChips.replaceChildren();
+      const typing = addMessage("bot typing", "<i></i><i></i><i></i>");
+      typing.setAttribute("aria-label", "Stocky está escribiendo");
+      const useAI = Boolean(ASSISTANT_API_URL) && !knownTopic;
+      trackLandingEvent("assistant_question", { topic: topic ? topic.id : "sin_respuesta", source, ai: useAI });
+      if (useAI) { askAI(question, topic, typing); return; }
+      window.setTimeout(() => {
+        typing.remove();
+        answerLocally(question, topic);
+        finishTurn();
+      }, reduceMotion ? 150 : 650);
+    };
+    assistantForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const question = assistantInput.value;
+      assistantInput.value = "";
+      ask(question);
     });
+    renderChips();
+
+    /* Stocky: botón flotante que abre el asistente y se presenta con un globito */
+    const mascot = document.querySelector("#mascot");
+    const mascotButton = document.querySelector("#mascot-btn");
+    const mascotBubble = document.querySelector("#mascot-bubble");
+    const assistantPanel = document.querySelector("#assistant");
+    const storage = {
+      get: (key) => { try { return window.localStorage.getItem(key); } catch { return null; } },
+      set: (key, value) => { try { window.localStorage.setItem(key, value); } catch { /* sin almacenamiento */ } }
+    };
+    const hideBubble = (remember) => {
+      mascotBubble.hidden = true;
+      if (remember) storage.set("stocky-bubble", "visto");
+    };
+    const setAssistantOpen = (open) => {
+      assistantPanel.hidden = !open;
+      mascot.classList.toggle("open", open);
+      mascotButton.setAttribute("aria-expanded", String(open));
+      mascotButton.setAttribute("aria-label", open ? "Cerrar a Stocky, el asistente virtual" : "Abrir a Stocky, el asistente virtual");
+      if (open) {
+        hideBubble(true);
+        trackLandingEvent("assistant_open");
+        if (window.matchMedia("(min-width: 641px)").matches) assistantInput.focus();
+      }
+    };
+    mascotButton.addEventListener("click", () => setAssistantOpen(assistantPanel.hidden));
+    assistantPanel.querySelector(".as-close").addEventListener("click", () => { setAssistantOpen(false); mascotButton.focus(); });
+    mascotBubble.addEventListener("click", (event) => {
+      if (event.target.closest(".mb-close")) { hideBubble(true); return; }
+      setAssistantOpen(true);
+    });
+    document.querySelectorAll("[data-open-assistant]").forEach((trigger) => trigger.addEventListener("click", (event) => {
+      event.preventDefault();
+      setAssistantOpen(true);
+    }));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !assistantPanel.hidden) { setAssistantOpen(false); mascotButton.focus(); }
+    });
+    if (!storage.get("stocky-bubble")) {
+      window.setTimeout(() => { if (assistantPanel.hidden) mascotBubble.hidden = false; }, 3500);
+    }
 
     /* Órbita de módulos: al tocar uno se abre una mini ventana con un ejemplo.
        Mientras nadie la toque, recorre los módulos sola. */

@@ -1,0 +1,17 @@
+{
+  "name": "stocky-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "conocimiento": "node scripts/armar-conocimiento.js",
+    "dev": "npm run conocimiento && wrangler dev",
+    "deploy": "npm run conocimiento && wrangler deploy",
+    "probar": "npm run conocimiento && node pruebas/probar.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.134.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.151.0"
+  }
+}

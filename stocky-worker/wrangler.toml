@@ -1,0 +1,19 @@
+name = "stocky"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Páginas que pueden usar a Stocky (separadas por coma). Agregá tu dominio propio cuando lo tengas.
+ALLOWED_ORIGINS = "https://matiasmedina846.github.io,http://localhost:5180"
+# Modelo de Claude. Para gastar menos podés usar "claude-haiku-5-5".
+MODEL = "claude-opus-5-5"
+
+# Límite por visitante: 8 preguntas por minuto por IP.
+[[ratelimits]]
+name = "LIMITER"
+namespace_id = "1001"
+simple = { limit = 8, period = 60 }
+
+# La clave de API NO va acá. Se carga como secreto con:
+#   npx wrangler secret put ANTHROPIC_API_KEY
