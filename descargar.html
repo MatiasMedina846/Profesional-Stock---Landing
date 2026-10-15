@@ -57,20 +57,20 @@
     <p class="intro">Descargá el instalador desde esta página. Antes de ejecutarlo, revisá los datos del archivo y su huella digital.</p>
     <article class="card">
       <dl class="details">
-        <div><dt>Archivo</dt><dd>ProfesionalStock-1.0.0.exe</dd></div>
-        <div><dt>Versión</dt><dd>1.0.0</dd></div>
-        <div><dt>Tamaño</dt><dd>91,8 MB (87,5 MiB)</dd></div>
+        <div><dt>Archivo</dt><dd>ProfesionalStock-3.0.51.exe</dd></div>
+        <div><dt>Versión</dt><dd>3.0.51</dd></div>
+        <div><dt>Tamaño</dt><dd>93,0 MB (88,7 MiB)</dd></div>
         <div><dt>Requisitos</dt><dd>Windows 10 o superior</dd></div>
       </dl>
       <div class="actions">
-        <a class="button" id="download-link" href="ProfesionalStock-1.0.0.exe" download="ProfesionalStock-1.0.0.exe">Descargar para Windows</a>
+        <a class="button" id="download-link" href="ProfesionalStock-3.0.51.exe" download="ProfesionalStock-3.0.51.exe">Descargar para Windows</a>
         <a class="button button-light" id="trial-link" href="prueba.html">Ver cómo activar la prueba gratis</a>
       </div>
       <h2>Verificar el archivo (SHA-256)</h2>
       <p>En PowerShell, desde la carpeta donde guardaste el instalador, ejecutá:</p>
-      <code class="hash">Get-FileHash ProfesionalStock-1.0.0.exe -Algorithm SHA256</code>
+      <code class="hash">Get-FileHash ProfesionalStock-3.0.51.exe -Algorithm SHA256</code>
       <p>El resultado esperado es:</p>
-      <code class="hash">7ED7AAA497FD5BC366B46A19DF798341945574B685E247322612C5A747B270A5</code>
+      <code class="hash">83BECCEA0CE04C7B026FA2127170190565E70238328D27000F7252D99FE26A68</code>
       <h2>Si Windows muestra SmartScreen</h2>
       <p class="notice">La versión actual no tiene firma digital, por lo que Windows puede mostrar una advertencia. Comprobá que descargaste el archivo de esta página y que el SHA-256 coincide antes de continuar. Si decidís abrirlo, en el aviso de SmartScreen elegí «Más información» y luego «Ejecutar de todas formas».</p>
       <!-- Se recomienda obtener un certificado de firma de código (por ejemplo, Sectigo, DigiCert o Certum) para firmar futuras versiones. No se firma el instalador actual. -->
@@ -80,7 +80,7 @@
   <footer><div class="wrap"><a href="index.html">Volver al inicio</a> · <a href="privacidad.html">Privacidad</a> · <a href="terminos.html">Términos</a></div></footer>
   <script>
     document.querySelector("#download-link").addEventListener("click", () => {
-      window.gtag("event", "download_click", { file_name: "ProfesionalStock-1.0.0.exe", link_location: "download_page" });
+      window.gtag("event", "download_click", { file_name: "ProfesionalStock-3.0.51.exe", link_location: "download_page" });
     });
     document.querySelector("#trial-link").addEventListener("click", () => {
       window.gtag("event", "trial_cta_click", { link_location: "download_page" });
