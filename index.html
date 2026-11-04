@@ -38,7 +38,7 @@
       "name": "Profesional Stock",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Windows 10 and later",
-      "softwareVersion": "3.0.51",
+      "softwareVersion": "3.0.80",
       "description": "Sistema de gestión y punto de venta para comercios. Permite organizar ventas, stock, caja, compras y agenda.",
       "url": "https://matiasmedina846.github.io/Profesional-Stock---Landing/",
       "image": "https://matiasmedina846.github.io/Profesional-Stock---Landing/profesional-stock-icon.png"
@@ -75,15 +75,15 @@
           "name": "¿Profesional Stock permite emitir factura electrónica?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "La función de facturación electrónica está en desarrollo y todavía no está disponible para emitir comprobantes desde Profesional Stock. Si es un requisito para tu negocio, consultanos por su estado actual."
+            "text": "Sí. Profesional Stock emite Factura A, B y C y notas de crédito electrónicas con CAE de ARCA, y el comprobante lleva su código QR. Se configura desde Sistema > Factura electrónica (ARCA): el programa arma el pedido del certificado y te guía paso a paso. Necesitás la clave fiscal del titular y un punto de venta para Web Services; podés ensayar primero en el entorno de pruebas."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Puedo usar lector de código de barras, impresora fiscal, cierre Z o balanza?",
+          "name": "¿Funciona con lector de código de barras, balanza, impresora y cierre Z?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Por el momento, Profesional Stock no está integrado con lectores de código de barras, impresoras fiscales, cierres Z ni balanzas."
+            "text": "Sí con lectores de código de barras, balanzas electrónicas, impresoras de tickets y cierre Z. No se integra con impresoras fiscales ni con controladores fiscales."
           }
         },
         {
@@ -99,7 +99,7 @@
           "name": "¿Puedo importar mis productos desde Excel u otro sistema?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Es posible importar información. La compatibilidad con Excel depende del formato y las columnas de la planilla; revisamos el archivo antes de confirmar la migración."
+            "text": "Sí. Desde Sistema > Importar datos cargás productos, clientes y proveedores desde Excel, CSV u otros programas, y también desde las exportaciones de Tiendanube, Shopify y Mercado Libre. Antes de guardar revisás fila por fila lo que se va a importar, y el programa hace una copia de seguridad. Si tu planilla es muy particular, te ayudamos."
           }
         },
         {
@@ -1376,9 +1376,9 @@
         <a href="prueba.html" target="_blank" rel="noopener">Cómo activar <svg class="ext" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M9 3h4v4M13 3 7 9M11 9.5V13H3V5h3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <a href="#planes">Precios</a>
         <a href="#preguntas">Preguntas</a>
-        <a class="button nav-mobile-cta" href="ProfesionalStock-3.0.51.exe" download="ProfesionalStock-3.0.51.exe" data-download><span data-download-label>Descargar prueba gratis</span></a>
+        <a class="button nav-mobile-cta" href="ProfesionalStock-3.0.80.exe" download="ProfesionalStock-3.0.80.exe" data-download><span data-download-label>Descargar prueba gratis</span></a>
       </div>
-      <a class="button nav-cta" href="ProfesionalStock-3.0.51.exe" download="ProfesionalStock-3.0.51.exe" data-download><span data-download-label>Descargar prueba gratis</span></a>
+      <a class="button nav-cta" href="ProfesionalStock-3.0.80.exe" download="ProfesionalStock-3.0.80.exe" data-download><span data-download-label>Descargar prueba gratis</span></a>
     </nav>
   </header>
 
@@ -1390,7 +1390,7 @@
           <h1>Tu negocio, <span>bajo control.</span></h1>
           <p class="hero-copy">Ventas, stock y caja en un solo programa para tu PC. Funciona sin internet.</p>
           <div class="hero-actions">
-            <a class="button button-lg" href="ProfesionalStock-3.0.51.exe" download="ProfesionalStock-3.0.51.exe" data-download><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-download-label>Probar gratis 15 días</span></a>
+            <a class="button button-lg" href="ProfesionalStock-3.0.80.exe" download="ProfesionalStock-3.0.80.exe" data-download><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-download-label>Probar gratis 15 días</span></a>
             <a class="button button-light button-lg hero-wa" href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20Profesional%20Stock" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Consultar</a>
           </div>
           <ul class="hero-checks">
@@ -1398,7 +1398,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Windows 10 o superior</li>
             <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Soporte en Argentina</li>
           </ul>
-          <p class="download-info" data-download-info>Versión 3.0.51 · 93,0 MB · <a href="prueba.html" target="_blank" rel="noopener">¿Cómo activo la prueba?</a></p>
+          <p class="download-info" data-download-info>Versión 3.0.80 · 83,5 MB · <a href="prueba.html" target="_blank" rel="noopener">¿Cómo activo la prueba?</a></p>
         </div>
 
         <div class="orbit" id="orbit">
@@ -1614,7 +1614,7 @@
           <input class="ba-range" id="ba-range" type="range" min="0" max="100" value="50" aria-label="Comparar: a la izquierda el cuaderno, a la derecha Profesional Stock">
         </div>
         <div class="section-cta">
-          <a class="button button-lg" href="ProfesionalStock-3.0.51.exe" download="ProfesionalStock-3.0.51.exe" data-download><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-download-label>Probar gratis 15 días</span></a>
+          <a class="button button-lg" href="ProfesionalStock-3.0.80.exe" download="ProfesionalStock-3.0.80.exe" data-download><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-download-label>Probar gratis 15 días</span></a>
           <span>15 días gratis · sin tarjeta · <a class="link" href="prueba.html" target="_blank" rel="noopener">¿Cómo se activa?</a></span>
         </div>
       </div>
@@ -1768,11 +1768,11 @@
           </details>
           <details>
             <summary>¿Profesional Stock permite emitir factura electrónica?</summary>
-            <p>La facturación electrónica está en desarrollo y todavía no está disponible para emitir comprobantes desde Profesional Stock. Si es un requisito para tu negocio, <a href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20consultar%20por%20la%20facturaci%C3%B3n%20electr%C3%B3nica%20en%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">consultanos por su estado</a>.</p>
+            <p>Sí. Emite <b>Factura A, B y C</b> y <b>notas de crédito electrónicas</b> con CAE de ARCA, y el comprobante lleva su código QR. Se configura desde <b>Sistema &gt; Factura electrónica (ARCA)</b>: el programa arma el pedido del certificado y te guía paso a paso; podés ensayar primero en el entorno de pruebas. Necesitás la clave fiscal del titular y un punto de venta para Web Services. <a href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20consultar%20por%20la%20facturaci%C3%B3n%20electr%C3%B3nica%20en%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Consultanos si necesitás ayuda con ARCA</a>.</p>
           </details>
           <details>
-            <summary>¿Puedo usar lector de código de barras, impresora fiscal, cierre Z o balanza?</summary>
-            <p>Por el momento, el sistema no está integrado con lectores de código de barras, impresoras fiscales, cierres Z ni balanzas. Las ventas se registran directamente desde el programa, buscando el producto por nombre o código.</p>
+            <summary>¿Funciona con lector de código de barras, balanza, impresora y cierre Z?</summary>
+            <p>Sí, con casi todo: funciona con <b>lectores de código de barras</b>, <b>balanzas electrónicas</b> (botón Pesar y etiquetas de balanza), <b>impresoras de tickets</b> y tiene <b>Cierre Z</b> de caja. Lo que no tiene es integración con <b>impresoras o controladores fiscales</b>: la factura se emite de forma electrónica con ARCA.</p>
           </details>
           <details>
             <summary>¿Necesito internet para usarlo?</summary>
@@ -1876,7 +1876,7 @@
         <h2>Tu negocio ordenado, desde hoy.</h2>
         <p>Descargá Profesional Stock y usalo gratis durante 15 días. Sin tarjeta y sin compromiso: si no te sirve, no pagás nada.</p>
         <div class="cta-actions">
-          <a class="button button-lg" href="ProfesionalStock-3.0.51.exe" download="ProfesionalStock-3.0.51.exe" data-download><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-download-label>Descargar prueba gratis</span></a>
+          <a class="button button-lg" href="ProfesionalStock-3.0.80.exe" download="ProfesionalStock-3.0.80.exe" data-download><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-download-label>Descargar prueba gratis</span></a>
           <a class="button button-light button-lg" href="#planes">Ver planes y precios</a>
         </div>
         <p class="cta-guide">¿Primera vez? <a href="prueba.html" target="_blank" rel="noopener">Mirá cómo activar la prueba en 3 pasos <svg class="ext" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M9 3h4v4M13 3 7 9M11 9.5V13H3V5h3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
@@ -1889,7 +1889,7 @@
       <strong>¿Querés conocer el sistema?</strong>
       <span>Probalo gratis durante 15 días.</span>
     </div>
-    <a class="button" href="ProfesionalStock-3.0.51.exe" download="ProfesionalStock-3.0.51.exe" data-download><span data-download-label>Descargar gratis</span></a>
+    <a class="button" href="ProfesionalStock-3.0.80.exe" download="ProfesionalStock-3.0.80.exe" data-download><span data-download-label>Descargar gratis</span></a>
     <a class="sticky-whatsapp" href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20probar%20Profesional%20Stock" target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 9c.4 2 2 3.6 4 4l1.2-1 2 1c-.3 1.5-1.2 2.2-2.6 2.2-3.3-.5-5.7-2.8-6.2-6.1C7.4 7.7 8.2 7 9 7l1 2-1 1Z" fill="currentColor"/></svg>
     </a>
@@ -2323,17 +2323,17 @@
         actions: [{ kind: "download", label: "Descargar prueba" }, { label: "Cómo activarla", href: "prueba.html", newTab: true }] },
       { id: "factura", chip: "¿Hace factura electrónica?",
         keys: ["factura", "facturas", "facturacion", "facturar", "afip", "arca", "comprobante", "electronica", "fiscal", "monotributo"],
-        answer: "Por ahora <b>no emite factura electrónica</b> (ARCA): está en desarrollo. Si la necesitás sí o sí, escribinos y te contamos cómo viene.",
-        actions: [{ kind: "wa", label: "Consultar por WhatsApp", text: "Hola, quiero saber cómo viene la facturación electrónica en Profesional Stock." }] },
+        answer: "Sí: emite <b>Factura A, B y C</b> y notas de crédito electrónicas con CAE de ARCA. Se configura desde Sistema &gt; Factura electrónica; necesitás la clave fiscal del titular y un punto de venta para Web Services. Podés ensayar primero en el entorno de pruebas.",
+        actions: [{ kind: "wa", label: "Ayuda con ARCA", text: "Hola, quiero configurar la facturación electrónica en Profesional Stock." }] },
       { id: "hardware", chip: "¿Funciona con lector de códigos?",
         keys: ["lector", "codigo de barras", "codigos", "escaner", "scanner", "pistola", "impresora", "ticket", "tickets", "balanza", "cierre z", "hardware", "cajon"],
-        answer: "Por el momento <b>no se integra</b> con lectores de código de barras, impresoras fiscales, cierres Z ni balanzas. Las ventas se cargan buscando el producto por nombre o código." },
+        answer: "Sí: funciona con <b>lectores de código de barras</b>, <b>balanzas electrónicas</b>, <b>impresoras de tickets</b> y tiene <b>Cierre Z</b>. No se integra con impresoras ni controladores fiscales (se factura electrónicamente con ARCA)." },
       { id: "internet", chip: "¿Necesito internet?",
         keys: ["internet", "conexion", "offline", "sin conexion", "wifi", "online", "nube", "se corta"],
         answer: "Solo para activar la cuenta y comprar la licencia. Después <b>funciona sin internet</b>: todo se guarda en tu computadora." },
       { id: "rubro", chip: "¿Sirve para mi rubro?",
         keys: ["rubro", "sirve para", "mi negocio", "mi comercio", "kiosco", "almacen", "ferreteria", "ropa", "libreria", "perfumeria", "verduleria", "panaderia", "farmacia", "restaurante", "local"],
-        answer: "Sirve para <b>comercios que venden productos</b>: almacenes, kioscos, ropa, ferreterías, librerías, perfumerías y más. Si vendés por peso, todavía no se conecta con balanzas.",
+        answer: "Sirve para <b>comercios que venden productos</b>: almacenes, kioscos, ropa, ferreterías, librerías, perfumerías y más. Si vendés por peso, se conecta con balanzas electrónicas.",
         actions: [{ label: "Ver rubros", href: "#rubros" }, { kind: "wa", label: "Consultar mi caso", text: "Hola, quiero saber si Profesional Stock sirve para mi comercio. Vendo: " }] },
       { id: "equipos", chip: "¿Puedo usarlo en varias PCs?",
         keys: ["computadoras", "computadora", "varias pc", "pcs", "pc", "equipos", "maquinas", "sucursal", "sucursales", "usuarios", "licencia", "cajas"],
@@ -2341,7 +2341,7 @@
         actions: [{ label: "Ver planes", href: "#planes" }] },
       { id: "excel", chip: "¿Puedo importar mi Excel?",
         keys: ["excel", "importar", "migrar", "planilla", "cargar productos", "lista de precios", "otro sistema", "pasar mis productos"],
-        answer: "Sí, se puede importar. Depende de cómo esté armada tu planilla, así que <b>la revisamos con vos</b> antes de migrar.",
+        answer: "Sí: en <b>Sistema &gt; Importar datos</b> cargás productos, clientes y proveedores desde Excel, CSV u otros programas, y revisás todo antes de guardar. Si tu planilla es rara, <b>la revisamos con vos</b>.",
         actions: [{ kind: "wa", label: "Mandar mi planilla", text: "Hola, quiero importar mis productos desde Excel a Profesional Stock." }] },
       { id: "datos", chip: "¿Dónde se guardan mis datos?",
         keys: ["datos", "copia", "backup", "respaldo", "seguridad", "donde se guardan", "cambiar de computadora", "se rompe", "perder", "privacidad", "cuit"],
@@ -2396,8 +2396,8 @@
       link.className = "as-action";
       link.textContent = action.label;
       if (action.kind === "download" && !isMobileDevice) {
-        link.href = "ProfesionalStock-3.0.51.exe";
-        link.download = "ProfesionalStock-3.0.51.exe";
+        link.href = "ProfesionalStock-3.0.80.exe";
+        link.download = "ProfesionalStock-3.0.80.exe";
         link.addEventListener("click", () => trackLandingEvent("download_click", { file_name: link.download, link_location: "assistant" }));
       } else if (action.kind === "download" || action.kind === "wa") {
         const text = action.kind === "download" ? "Hola, quiero el link para descargar la prueba gratis de Profesional Stock en mi PC." : action.text || `Hola, tengo una consulta: ${question}`;

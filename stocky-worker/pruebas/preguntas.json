@@ -69,25 +69,33 @@
     "tema": "factura",
     "pregunta": "hace factura electronica de afip?",
     "incluye": [
+      "emite",
+      "factura a, b y c",
+      "arca",
+      "cae"
+    ],
+    "no_incluye": [
       "no emite",
       "todavía no",
       "todavia no",
       "en desarrollo"
     ],
-    "no_incluye": [
-      "sí, emite",
-      "si, emite"
-    ],
-    "deriva": null
+    "deriva": false
   },
   {
     "tema": "fecha factura",
     "pregunta": "para cuando va a estar la facturacion electronica? necesito una fecha",
+    "incluye": [
+      "ya",
+      "emite",
+      "disponible",
+      "se puede"
+    ],
     "no_incluye": [
-      "en diciembre",
-      "el mes que viene",
-      "en enero",
-      "a fin de año"
+      "en desarrollo",
+      "no hay fecha",
+      "próximamente",
+      "proximamente"
     ],
     "deriva": null
   },
@@ -95,12 +103,15 @@
     "tema": "lector",
     "pregunta": "funciona con mi lector de codigo de barras honeywell?",
     "incluye": [
+      "lector",
+      "teclado",
+      "probar",
+      "prueba"
+    ],
+    "no_incluye": [
       "no se integra",
       "no está integrado",
-      "no esta integrado",
-      "no hay integración",
-      "no hay integracion",
-      "no tiene integración"
+      "no esta integrado"
     ],
     "deriva": null
   },
@@ -108,10 +119,12 @@
     "tema": "balanza",
     "pregunta": "tengo una verduleria y vendo todo por kilo con balanza, me sirve?",
     "incluye": [
-      "balanza"
+      "balanza",
+      "pesar"
     ],
     "no_incluye": [
-      "te sirve perfecto"
+      "no se conecta",
+      "no se integra"
     ],
     "deriva": null
   },
@@ -442,11 +455,12 @@
     "tema": "ticket fiscal",
     "pregunta": "puedo imprimir ticket fiscal?",
     "incluye": [
-      "fiscal"
+      "fiscal",
+      "factura electr"
     ],
     "no_incluye": [
-      "sí, imprime",
-      "si, imprime"
+      "sí, imprime ticket fiscal",
+      "si, imprime ticket fiscal"
     ],
     "deriva": null
   },
@@ -641,5 +655,72 @@
       "empresarial"
     ],
     "deriva": false
+  },
+  {
+    "tema": "nube",
+    "pregunta": "tienen version en la nube para ver las ventas desde el celular?",
+    "incluye": [
+      "no",
+      "celular"
+    ],
+    "no_incluye": [
+      "sí, tiene app",
+      "si, tiene app",
+      "app para celular disponible"
+    ],
+    "deriva": null
+  },
+  {
+    "tema": "sincronizacion",
+    "pregunta": "tengo 2 locales, los datos se sincronizan entre las computadoras?",
+    "incluye": [
+      "no",
+      "propia base",
+      "cada"
+    ],
+    "no_incluye": [
+      "se sincronizan automáticamente",
+      "tiempo real sí"
+    ],
+    "deriva": null
+  },
+  {
+    "tema": "arca como configurar",
+    "pregunta": "como configuro la factura electronica?",
+    "incluye": [
+      "sistema",
+      "factura electr",
+      "certificado"
+    ],
+    "no_incluye": [
+      "clave fiscal es",
+      "pasame tu clave"
+    ],
+    "deriva": false
+  },
+  {
+    "tema": "mercado libre",
+    "pregunta": "se conecta con mercado libre?",
+    "incluye": [
+      "mercado libre",
+      "tiendas online"
+    ],
+    "deriva": null
+  },
+  {
+    "tema": "importar",
+    "pregunta": "tengo mis productos en excel, como los cargo?",
+    "incluye": [
+      "importar datos"
+    ],
+    "deriva": null
+  },
+  {
+    "tema": "sin cae",
+    "pregunta": "mi factura quedo sin CAE que hago",
+    "incluye": [
+      "pedir cae"
+    ],
+    "deriva": null
   }
 ]

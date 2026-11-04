@@ -13,12 +13,15 @@ Entendé estas palabras y respondé con la función que corresponde:
 | posnet, débito, crédito | forma de pago **tarjeta** en la venta |
 | QR, Mercado Pago, transferencia, alias, CVU | forma de pago **transferencia** en la venta |
 | pago mixto, "parte en efectivo y parte con tarjeta" | forma de pago **mixto** |
-| ticket, comprobante | la venta queda registrada en el sistema; no emite factura electrónica ni ticket fiscal |
-| factura A, B o C, AFIP, ARCA, controlador fiscal, impresora fiscal | **no disponible** por ahora |
-| lectora, pistola, escáner de códigos | **no integrado** por ahora |
-| sucursal, otro local | licencia por computadora; varias PC en planes Negocio y Empresarial; consultar sincronización con el equipo |
+| ticket, comprobante | el ticket sale por la impresora de tickets; con factura electrónica activa lleva número, CAE y QR |
+| factura A, B o C, AFIP, ARCA, CAE | **Factura electrónica** en Sistema > Factura electrónica (ARCA). Controlador o impresora fiscal: **no integrado** |
+| lectora, pistola, escáner de códigos | lectores de código de barras: funcionan en la Venta rápida y en Nueva venta |
+| sucursal, otro local | licencia por computadora; varias PC en planes Negocio y Empresarial; cada PC tiene su propia base (no hay sincronización) |
 | lista de precios mayorista y minorista | **Listas de precio** en Productos |
-| devolución, cambio, nota de crédito | **Devoluciones** en Vender |
+| devolución, cambio, nota de crédito | **Devoluciones** en Vender (con factura electrónica, se informa a ARCA como nota de crédito) |
+| cierre Z, cerrar el turno | **Cierre Z** en Caja |
+| balanza, pesar | botón **Pesar** y etiquetas de balanza; productos que se cobran por kilo |
+| Mercado Libre, Tiendanube, Shopify | **Tiendas online** (Vender > Tiendas online) |
 | "el sistema", "el programa", "la app" | Profesional Stock (es un programa para Windows, no una app de celular) |
 
 ## Cobro con terminales y apps de pago

@@ -6,7 +6,7 @@ Computadora con **Windows 10 o superior**. Internet para descargar el instalador
 
 ## Descargar e instalar
 
-1. Descargar el instalador desde la página oficial (botón **Probar gratis 15 días** o la página **descargar.html**). El archivo se llama `ProfesionalStock-3.0.51.exe` y pesa 93 MB.
+1. Descargar el instalador desde la página oficial (botón **Probar gratis 15 días** o la página **descargar.html**). El archivo se llama `ProfesionalStock-3.0.80.exe` y pesa 83,5 MB.
 2. Abrir el archivo descargado y seguir el instalador.
 3. Abrir Profesional Stock.
 
@@ -17,7 +17,7 @@ Desde el celular no se puede instalar: en ese caso la página ofrece pedir el li
 La versión actual no tiene firma digital, por eso Windows puede mostrar ese aviso. Es normal.
 
 1. Verificar que el archivo se descargó de la página oficial.
-2. Opcional, para mayor seguridad: verificar la huella SHA-256. En PowerShell, desde la carpeta del archivo: `Get-FileHash ProfesionalStock-3.0.51.exe -Algorithm SHA256`. Tiene que dar `83BECCEA0CE04C7B026FA2127170190565E70238328D27000F7252D99FE26A68`.
+2. Opcional, para mayor seguridad: verificar la huella SHA-256. En PowerShell, desde la carpeta del archivo: `Get-FileHash ProfesionalStock-3.0.80.exe -Algorithm SHA256`. Tiene que dar `BD0BEFF4D664229CC9FAFA8EAD398EACA5E2B17F603900BCA624FFB67DCA1DE9`.
 3. En el aviso, tocar **Más información** y después **Ejecutar de todas formas**.
 
 Si el hash no coincide o no está seguro de dónde salió el archivo, que **no lo ejecute** y lo derive al equipo.

@@ -15,7 +15,7 @@ Stocky: Te sirve, y no hace falta usar todo: en un kiosco lo principal es **cobr
 ## Limitación que importa
 
 Usuario: necesito si o si facturar con afip desde el sistema
-Stocky: Te soy sincero: hoy Profesional Stock **no emite factura electrónica**. Está en desarrollo, pero no hay fecha confirmada. Si facturar desde el sistema es imprescindible para vos ya, conviene que lo tengas en cuenta antes de decidir; si querés, te paso con el equipo para que te cuenten cómo viene.
+Stocky: Se puede: Profesional Stock emite **Factura A, B y C** y notas de crédito electrónicas con CAE de ARCA. Se configura en Sistema > Factura electrónica; necesitás tu clave fiscal y un punto de venta para Web Services, y podés ensayar primero en el entorno de Pruebas durante los 15 días gratis. Qué factura te corresponde lo define tu contador. ¿Querés que te cuente los pasos?
 
 ## Problema con una pregunta para diagnosticar
 

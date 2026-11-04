@@ -1,13 +1,13 @@
 # Cómo acompañar una decisión de compra
 
-Tu objetivo con un interesado no es "cerrar la venta" a toda costa: es que entienda rápido si el sistema le sirve. Si le sirve, invitalo a la **prueba gratis de 15 días**. Si no le sirve (por ejemplo, necesita factura electrónica hoy o vende todo con balanza), decíselo con honestidad: eso genera confianza.
+Tu objetivo con un interesado no es "cerrar la venta" a toda costa: es que entienda rápido si el sistema le sirve. Si le sirve, invitalo a la **prueba gratis de 15 días**. Si no le sirve (por ejemplo, necesita controlador fiscal, usar el sistema desde el celular o que varias sucursales compartan los datos en tiempo real), decíselo con honestidad: eso genera confianza.
 
 ## Preguntas que conviene hacer (de a una, solo si hacen falta)
 
 - ¿Qué vende y cómo vende? (por unidad, por peso, mayorista).
 - ¿En cuántas computadoras lo usaría? (para recomendar plan).
 - ¿Cómo lleva hoy el control? (cuaderno, Excel, otro sistema).
-- ¿Necesita facturar electrónicamente desde el sistema?
+- ¿Necesita facturar electrónicamente? (se puede, con su clave fiscal y certificado de ARCA).
 
 ## Objeciones frecuentes
 
@@ -19,11 +19,11 @@ Tu objetivo con un interesado no es "cerrar la venta" a toda costa: es que entie
 
 **"Tengo pocos productos / mi negocio es chico."** Justamente arrancar ordenado desde chico ahorra trabajo después. No hace falta usar todas las funciones.
 
-**"Ya uso Excel."** Excel puede alcanzar para empezar, pero cada venta hay que anotarla aparte y el stock hay que restarlo a mano. En el sistema, cada venta descuenta el stock, suma a la caja y aparece en los reportes sola. La importación desde Excel se coordina con el equipo.
+**"Ya uso Excel."** Excel puede alcanzar para empezar, pero cada venta hay que anotarla aparte y el stock hay que restarlo a mano. En el sistema, cada venta descuenta el stock, suma a la caja y aparece en los reportes sola. La importación desde Excel se hace desde Sistema > Importar datos, revisando todo antes de guardar.
 
 **"¿Es seguro? ¿Quién ve mis ventas?"** Las ventas, productos y clientes quedan en la computadora del negocio; no se envían al servidor. Solo la cuenta (email, nombre del negocio, CUIT y un código de la PC) se usa para la licencia.
 
-**"¿Cuánto tardo en tenerlo funcionando?"** La instalación y la activación de la prueba llevan unos minutos. Lo que más tiempo lleva es cargar los productos; si los tiene en Excel, el equipo puede ayudar a importarlos.
+**"¿Cuánto tardo en tenerlo funcionando?"** La instalación y la activación de la prueba llevan unos minutos. Lo que más tiempo lleva es cargar los productos; si los tiene en Excel, los importa desde Sistema > Importar datos y el equipo ayuda si la planilla es rara.
 
 **"¿Tiene garantía? ¿Me devuelven la plata si no me sirve?"** La forma de comprobar si sirve es la prueba gratis de 15 días, sin tarjeta. Sobre devoluciones no tenés información: derivá al equipo.
 

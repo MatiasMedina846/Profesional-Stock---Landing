@@ -5,7 +5,7 @@ Usá estas guías en orden. Si después de seguirlas el problema sigue, derivá 
 ## Windows no deja abrir el instalador
 - Es el aviso de SmartScreen: **Más información** → **Ejecutar de todas formas** (ver la guía de instalación).
 - Si el antivirus lo bloquea o lo borra: verificar que el archivo vino de la página oficial y el SHA-256. Si coincide, se puede permitir en el antivirus. Si no está seguro, derivar.
-- Si la descarga quedó incompleta (el archivo pesa mucho menos de 93 MB), volver a descargarlo.
+- Si la descarga quedó incompleta (el archivo pesa mucho menos de 83 MB), volver a descargarlo.
 
 ## El programa no abre o se cierra solo
 1. Reiniciar la computadora y volver a abrirlo.
@@ -54,8 +54,11 @@ Si el sistema calcula mal algo concreto, derivar con un ejemplo.
 2. Revisar en **Productos** si existe y si no está dado de baja (opción **Ver dados de baja**).
 3. Si no existe, darlo de alta con **Agregar**.
 
-## El lector de código de barras o la impresora no funcionan
-No hay integración con lectores, impresoras fiscales, cierres Z ni balanzas por ahora. Explicalo con claridad y, si es importante para su negocio, derivá para que el equipo le cuente las alternativas.
+## El lector de código de barras, la balanza o la impresora no funcionan
+- Lector: tiene que escribir como teclado y terminar con Enter. Probalo abriendo el Bloc de notas: si ahí escribe el código, funciona en el programa. Escanear en la Venta rápida agrega el producto; si el código no está cargado, avisa. Si el producto no existe, darlo de alta con su código.
+- Impresora de tickets: en Sistema > Configuración > Impresora de tickets elegí la impresora y tocá **Imprimir prueba**. Si no se elige ninguna, sale por la predeterminada de Windows, que muchas veces no es la térmica.
+- Balanza: en Venta rápida, clic derecho en **Pesar** > Configurar balanza (puerto y datos) y **Probar balanza**. Si la balanza imprime etiquetas, se configuran en Configuración > Etiquetas de balanza con los datos de su manual.
+- Si sigue sin andar o es un modelo puntual, derivá con el modelo y qué pasa exactamente. No hay integración con impresoras ni controladores fiscales.
 
 ## Quiero importar mis productos desde Excel
 Se puede, pero depende del formato de la planilla: el equipo la revisa antes de migrar. Derivar pidiendo que tenga la planilla a mano para mandarla por WhatsApp.
