@@ -9,7 +9,7 @@
 
 ## Responsables y privacidad
 - Responsables: Matías Germán Medina (CUIT 23-44606383-9) y Mateo Benites (CUIT 20-47280878-9).
-- Para crear la cuenta se pide email, contraseña, nombre del negocio y CUIT, y se asocia un código de la computadora.
+- Para crear la cuenta se pide usuario y PIN (en la computadora), y para la licencia nombre del negocio, CUIT y email, y se asocia un código de la computadora.
 - Los datos de ventas, productos y clientes quedan en la computadora del negocio. Cuidarlos y hacer copias es responsabilidad del usuario.
 - El sitio usa Google Analytics para medir visitas y Google Forms para el formulario de contacto. Los pagos los procesa Mercado Pago.
 - Para pedir acceso, corrección o borrado de datos: escribir a soporte.profesionalstock@gmail.com.

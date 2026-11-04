@@ -187,7 +187,12 @@
     "tema": "activar",
     "pregunta": "como activo la prueba gratis?",
     "incluye": [
-      "activar ahora"
+      "pin",
+      "código",
+      "codigo",
+      "crear cuenta",
+      "crear su cuenta",
+      "usuario"
     ],
     "deriva": false
   },
@@ -215,9 +220,18 @@
     "deriva": true
   },
   {
-    "tema": "olvidé contraseña",
-    "pregunta": "me olvide la contraseña de la cuenta",
-    "deriva": true
+    "tema": "olvidé el PIN",
+    "pregunta": "me olvide el pin para entrar al programa",
+    "incluye": [
+      "olvidó",
+      "olvido",
+      "recuper"
+    ],
+    "no_incluye": [
+      "decime tu pin",
+      "pasame tu pin"
+    ],
+    "deriva": false
   },
   {
     "tema": "cambio de pc",

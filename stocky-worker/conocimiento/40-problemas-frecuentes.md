@@ -14,20 +14,21 @@ Usá estas guías en orden. Si después de seguirlas el problema sigue, derivá 
 
 ## No puedo activar la prueba
 - **Sin internet**: la activación necesita conexión en ese momento. Revisar la conexión y reintentar.
-- **El email ya tiene una cuenta**: elegir **Ya tengo cuenta** en vez de "Crear una cuenta nueva".
-- **La contraseña no se acepta al crearla**: tiene que tener al menos 8 caracteres y coincidir en los dos campos.
-- **Olvidó la contraseña**: derivar al equipo con el email de la cuenta (no tenés información de un "olvidé mi contraseña" en el programa).
+- **El email ya tiene una cuenta**: elegir la pestaña **Ya tengo cuenta** en vez de Crear cuenta.
+- **No llega el código por email**: revisar el correo no deseado (spam), esperar un minuto y pedir otro, o usar **Cambiar el email** si la dirección estaba mal.
+- **El PIN no se acepta al crearlo**: tiene que tener de 4 a 6 números y coincidir en los dos campos.
+- **Olvidó el PIN**: tocar su cuenta y **¿Olvidó su PIN?**. Puede recuperarlo con un código que le llega por email, con el **código de recuperación** de 16 caracteres que se mostró al crear la cuenta (sirve sin internet) o, si es empleado, con otro administrador. Después de 5 intentos fallidos el ingreso se frena 5 minutos. Si no puede por ningún camino, derivar al equipo con el email de la cuenta; nunca pidas el PIN ni el código de recuperación.
 - Si aparece otro mensaje de error: pedir el texto exacto y derivar.
 
 ## El programa no me deja cargar ventas ni modificar nada
 Está en **modo de solo lectura**. Pasa cuando:
-- Todavía no se activó la prueba → activarla desde **Activar ahora** o **Sistema > Licencia**.
+- Todavía no se activó la prueba → activarla desde **Sistema > Licencia** (o creando la cuenta al abrir el programa).
 - Terminaron los 15 días de prueba → hay que comprar una licencia (ver Precios). Los datos se conservan.
 - Ya compró y sigue en solo lectura → derivar con el nombre del negocio y el email de la cuenta para habilitar la licencia.
 
 ## Cambio de computadora, formateo o reinstalación
 1. **Antes** de cambiar o formatear: hacer una copia de seguridad desde el programa y guardarla fuera de la computadora (pendrive, disco externo o la nube personal).
-2. Instalar el programa en la computadora nueva e ingresar con **Ya tengo cuenta**.
+2. Instalar el programa en la computadora nueva. En la pantalla de entrada, ¿No puede entrar? > **Cambié de computadora** permite **Restaurar una copia** (vuelven los datos y los usuarios con su PIN) y después se activa con el email; sin copia, **Entrar con mi email** trae la cuenta y la licencia, pero no los datos.
 3. Restaurar la copia y mover la licencia a la nueva computadora lo hace el equipo: derivar el caso.
 
 Si ya formateó sin copia de seguridad, decile con empatía que los datos estaban solo en esa computadora y derivá para que el equipo vea si se puede hacer algo, sin prometer recuperarlos.
