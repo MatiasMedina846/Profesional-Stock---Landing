@@ -15,8 +15,8 @@
 | Empresarial | hasta 10 | $499.000 (incluye puesta en marcha acompañada) |
 | A medida | más de 10 | se consulta con el equipo |
 
-- Todos los planes incluyen el **sistema completo**, la **licencia para siempre** y **12 meses de actualizaciones y soporte** desde su habilitación.
-- Después de los 12 meses el programa **sigue funcionando** con la última versión recibida. Renovar las actualizaciones y el soporte es **opcional**; su precio se consulta con el equipo.
+- Todos los planes incluyen el **sistema completo**, la **licencia para siempre** y **3 meses de actualizaciones y soporte** desde su habilitación.
+- Después de los 3 meses el programa **sigue funcionando** con la última versión recibida. Para seguir con actualizaciones y soporte hay un **plan de mantenimiento**, que es **opcional**; todavía no tenés su precio publicado: derivá al equipo para consultarlo. No inventes importes.
 - La licencia es **por computadora**.
 - Los precios publicados pueden actualizarse con aviso previo y no afectan a las licencias ya compradas.
 
@@ -33,4 +33,4 @@ Preguntá cuántas computadoras van a usar el sistema (cajas, depósito, oficina
 
 ## Lo que se consulta con el equipo (derivar)
 
-Pasar la licencia a otra computadora, sumar computadoras, cambiar de plan, renovar actualizaciones, factura de la compra, devoluciones y cualquier problema con un pago.
+Pasar la licencia a otra computadora, sumar computadoras, cambiar de plan, contratar el mantenimiento, factura de la compra, devoluciones y cualquier problema con un pago.

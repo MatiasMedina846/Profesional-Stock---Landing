@@ -82,7 +82,7 @@
         },
         {
           "@type": "Question",
-          "name": "¿Funciona con lector de código de barras, balanza, impresora y cierre Z?",
+          "name": "¿Funciona con lector, balanza e impresora de tickets?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Sí con lectores de código de barras, balanzas electrónicas, impresoras de tickets y cierre Z. No se integra con impresoras fiscales ni con controladores fiscales."
@@ -125,7 +125,7 @@
           "name": "¿Hay capacitación o soporte para aprender a usar el sistema?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "El sistema incluye un manual y todos los planes incluyen 12 meses de soporte por WhatsApp y email, de lunes a sábado, de 9 a 18 h. El tiempo de respuesta puede variar según la consulta y la demanda."
+            "text": "El sistema incluye un manual y todos los planes incluyen 3 meses de soporte por WhatsApp y email, de lunes a sábado, de 9 a 18 h. El tiempo de respuesta puede variar según la consulta y la demanda."
           }
         },
         {
@@ -146,10 +146,10 @@
         },
         {
           "@type": "Question",
-          "name": "¿Qué pasa después de los 12 meses?",
+          "name": "¿Qué pasa después de los 3 meses?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "El programa sigue funcionando para siempre con la versión que tengas. Si querés seguir recibiendo versiones nuevas y soporte, podés renovar las actualizaciones; es opcional."
+            "text": "El programa sigue funcionando para siempre con la versión que tengas. Para seguir recibiendo versiones nuevas y soporte, se contrata un plan de mantenimiento; es opcional. Consultanos el valor vigente."
           }
         }
       ]
@@ -284,7 +284,6 @@
     .faq-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-top: 20px; }
     .faq-contact-note { color: var(--muted); font-size: 11px; }
 
-    .final-cta { padding: 85px 0; text-align: center; }
     .cta-card { position: relative; overflow: hidden; padding: 58px 24px; border-radius: 18px; background: var(--brand-soft); }
     .cta-card::before, .cta-card::after { position: absolute; width: 250px; height: 250px; border: 1px solid #17301a14; border-radius: 50%; content: ""; }
     .cta-card::before { top: -170px; left: -90px; }
@@ -351,8 +350,8 @@
     }
     @media (max-width: 1080px) {
       .menu-toggle { display: inline-flex; padding: 8px; }
-      .nav-cta { display: none; }
-      .nav-links .nav-mobile-cta { display: inline-flex; justify-content: center; margin-top: 6px; }
+      .nav-cta { margin-left: auto; min-height: 36px; padding-inline: 14px; }
+      .nav-links .nav-mobile-cta { display: none; }
       .menu-toggle svg { width: 22px; height: 22px; }
       .nav-links { position: absolute; z-index: 5; top: calc(100% + 8px); right: 0; left: auto; display: none; width: min(320px, calc(100vw - 32px)); align-items: stretch; gap: 0; padding: 9px; border: 1px solid var(--line); border-radius: 12px; background: white; box-shadow: 0 15px 35px #1c30251c; }
       .nav-links.open { display: flex; flex-direction: column; }
@@ -398,7 +397,6 @@
       .feature { padding: 17px; }
       .rubros-grid { grid-template-columns: 1fr; gap: 10px; }
       .faq-section { padding: 64px 0; }
-      .final-cta { padding: 62px 0; }
       .cta-card { padding: 44px 20px; }
       .email-capture { padding-bottom: 52px; }
       .email-capture-card { gap: 8px; padding: 18px; }
@@ -467,16 +465,6 @@
     .link:hover { text-decoration: underline; }
     .button-wa { color: #fff; background: var(--wa); }
     .button-wa:hover { background: #15803d; }
-    .more-section { padding: 88px 0; background: #fff; }
-    .more-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-    .more-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: #fff; box-shadow: 0 10px 30px #0f172a0a; transition: transform .25s ease, box-shadow .25s ease; }
-    .more-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px #0f172a14; }
-    .more-shot { margin: 0; padding: 14px; background: #eef3f9; border-bottom: 1px solid var(--line); }
-    .more-shot img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); background: #fff; }
-    .more-copy { padding: 20px 22px 24px; }
-    .more-copy h3 { margin: 0 0 8px; font: 800 18px/1.3 var(--display); letter-spacing: -.4px; }
-    .more-copy p { margin: 0; color: var(--muted); font-size: 13.5px; line-height: 1.7; }
-    .more-tag { display: inline-block; margin-bottom: 10px; padding: 3px 10px; border-radius: 999px; color: var(--brand); background: #2563eb14; font-size: 11px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; }
     @media (max-width: 900px) { .more-grid { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; } .more-section { padding: 64px 0; } }
     /* Galería real */
     .gal-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0 auto 24px; max-width: 900px; }
@@ -493,54 +481,9 @@
     .gal-view img.swap { opacity: 0; }
     .gal-cap { min-height: 52px; max-width: 640px; margin: 20px auto 0; color: var(--muted); font-size: 14.5px; line-height: 1.7; text-align: center; }
     /* Tiendas online (banda azul noche) */
-    .shops-section { padding: 96px 0; color: #e2e8f0; background: radial-gradient(900px 420px at 80% -10%, #1d4ed833, transparent 60%), linear-gradient(180deg, #081426, #0c1e3c); }
-    .shops-section .section-head h2 { color: #fff; }
-    .shops-section .section-head p { color: #a9b8d0; }
-    .shops-section .eyebrow { color: #7fb0ff; }
-    .shops-section .eyebrow-dot { background: #7fb0ff; box-shadow: 0 0 0 4px #7fb0ff26; }
-    .shops-flow { display: grid; grid-template-columns: 1fr minmax(120px, 220px) 1fr; align-items: center; gap: 8px; max-width: 860px; margin: 0 auto 44px; }
-    .sf-shops { display: grid; gap: 10px; justify-items: end; }
-    .sf-chip { display: inline-block; min-width: 150px; padding: 12px 18px; border: 1px solid #ffffff1f; border-radius: 12px; color: #fff; background: #ffffff0f; font: 700 14px var(--sans); text-align: center; backdrop-filter: blur(4px); }
-    .sf-link { display: grid; gap: 22px; }
-    .sf-arrow { position: relative; display: grid; justify-items: center; gap: 6px; }
-    .sf-arrow small { color: #8fb4ee; font-size: 11px; font-weight: 700; letter-spacing: .4px; }
-    .sf-arrow i { position: relative; display: block; width: 100%; height: 2px; overflow: hidden; border-radius: 2px; background: #ffffff1a; }
-    .sf-arrow i::after { content: ""; position: absolute; inset: 0 auto 0 -40%; width: 40%; background: linear-gradient(90deg, transparent, #60a5fa, transparent); animation: sf-run 2.6s linear infinite; }
-    .sf-out i::after { animation-direction: reverse; animation-delay: -1.2s; }
     @keyframes sf-run { to { left: 100%; } }
-    .sf-pc { display: grid; justify-items: start; gap: 4px; padding: 22px 24px; border: 1px solid #60a5fa55; border-radius: 18px; background: linear-gradient(160deg, #12305c, #0d2347); box-shadow: 0 0 60px #2563eb33; }
-    .sf-pc img { border-radius: 12px; margin-bottom: 6px; }
-    .sf-pc strong { color: #fff; font: 800 18px var(--display); }
-    .sf-pc span { color: #a9b8d0; font-size: 13px; }
-    .shops-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0 0 44px; padding: 0; list-style: none; }
-    .shops-steps li { display: flex; gap: 14px; padding: 20px; border: 1px solid #ffffff17; border-radius: 16px; background: #ffffff0a; }
-    .shops-steps b { flex: none; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; color: #0c1e3c; background: #7fb0ff; font: 800 14px var(--display); }
-    .shops-steps h3 { margin: 0 0 6px; color: #fff; font: 800 16px/1.3 var(--display); }
-    .shops-steps p { margin: 0; color: #a9b8d0; font-size: 13.5px; line-height: 1.65; }
-    .shops-bottom { display: grid; grid-template-columns: 1.25fr 1fr; gap: 28px; align-items: center; }
-    .shops-shot { margin: 0; padding: 12px; border: 1px solid #ffffff1f; border-radius: 16px; background: #ffffff0d; box-shadow: 0 30px 70px #00000055; }
-    .shops-shot img { display: block; width: 100%; height: auto; border-radius: 9px; }
-    .shops-notes h3 { margin: 0 0 14px; color: #fff; font: 800 20px var(--display); letter-spacing: -.4px; }
-    .shops-notes ul { display: grid; gap: 12px; margin: 0 0 22px; padding: 0; list-style: none; }
-    .shops-notes li { position: relative; padding-left: 22px; color: #b6c3d9; font-size: 14px; line-height: 1.65; }
-    .shops-notes li::before { content: ""; position: absolute; left: 0; top: 9px; width: 8px; height: 8px; border-radius: 50%; background: #60a5fa; }
-    .shops-notes li b { color: #fff; }
     /* Prueba gratis */
-    .trial-section { padding: 88px 0; background: linear-gradient(180deg, var(--paper), #fff); }
-    .trial-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-bottom: 34px; }
-    .trial-card { padding: 22px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 8px 24px #0f172a08; }
-    .trial-n { display: grid; place-items: center; width: 30px; height: 30px; margin-bottom: 14px; border-radius: 50%; color: #fff; background: var(--brand-dark); font: 800 14px var(--display); }
-    .trial-card h3 { margin: 0 0 8px; font: 800 16px/1.3 var(--display); }
-    .trial-card p { margin: 0; color: var(--muted); font-size: 13.5px; line-height: 1.7; }
-    .trial-card a { color: var(--brand-dark); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
-    .trial-actions { justify-content: center; }
     @media (max-width: 900px) {
-      .shops-section, .trial-section { padding: 64px 0; }
-      .shops-flow { grid-template-columns: 1fr; justify-items: center; gap: 18px; }
-      .sf-shops { display: flex; flex-wrap: wrap; justify-content: center; }
-      .sf-link { width: 70%; }
-      .shops-steps, .shops-bottom { grid-template-columns: 1fr; }
-      .trial-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .gal-tabs { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; padding-bottom: 6px; scrollbar-width: none; }
       .gal-tabs::-webkit-scrollbar { display: none; }
       .gal-tabs button { flex: none; }
@@ -1230,6 +1173,119 @@
       .mascot { right: auto; left: max(12px, env(safe-area-inset-left)); }
       .mascot .assistant { right: 8px; left: 8px; }
     }
+    /* Versión minimalista */
+    .composer-mail summary { cursor: pointer; list-style: none; }
+    .composer-mail summary::-webkit-details-marker { display: none; }
+    .composer-mail summary:hover { color: var(--brand); }
+    .composer-mail[open] summary { margin-bottom: 18px; }
+    .nav-links a.active:not(.button) { color: var(--brand); box-shadow: inset 0 -2px 0 var(--brand); }
+    html { scroll-padding-top: 76px; }
+    .screen-section, .ba-section, .shops-section, .rubros-section, .plans-section, .faq-section, .hablemos { padding-top: 72px; padding-bottom: 72px; }
+    .to-top { position: fixed; z-index: 29; right: max(18px, env(safe-area-inset-right)); bottom: 92px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line); border-radius: 50%; color: var(--brand); background: #fff; box-shadow: 0 8px 24px #0f172a26; cursor: pointer; opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .2s, transform .2s, visibility .2s, background .2s; }
+    .to-top.visible { opacity: 1; visibility: visible; transform: none; }
+    .to-top:hover { background: var(--brand); color: #fff; }
+    .to-top svg { width: 20px; height: 20px; }
+    .fn-section { padding: 72px 0; background: #fff; }
+    .plan-desc, .shops-steps p, .plan-box small { display: none; }
+    .plan-box small { display: block; }
+    .fx-defs { position: absolute; }
+    .fx-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
+    .fx { position: relative; display: block; width: 100%; height: 100%; padding: 0; overflow: hidden; border: 1px solid #ffffff14; border-radius: 20px; color: #fff; background: linear-gradient(165deg, #0f2a5a, #081426 70%); text-align: left; font: inherit; cursor: pointer; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; -webkit-tap-highlight-color: transparent; }
+    .fx:hover, .fx.open { transform: translateY(-5px); border-color: #60a5fa88; box-shadow: 0 22px 48px #2563eb40; }
+    .fx:focus-visible { outline: 3px solid #93c5fd; outline-offset: 2px; }
+    .fx-art { position: relative; display: block; height: 150px; background: radial-gradient(circle at 78% 12%, #2563eb66, transparent 58%), linear-gradient(#60a5fa14 1px, transparent 1px) 0 0 / 100% 20px, linear-gradient(90deg, #60a5fa14 1px, transparent 1px) 0 0 / 20px 100%; }
+    .fx-art svg { display: block; width: 100%; height: 100%; transition: transform .4s ease; }
+    .fx:hover .fx-art svg, .fx.open .fx-art svg { transform: scale(1.06); }
+    .fx-tag { position: absolute; z-index: 1; top: 14px; left: 16px; padding: 3px 9px; border: 1px solid #60a5fa44; border-radius: 999px; color: #93c5fd; background: #2563eb26; font: 700 10px/1.4 var(--display); letter-spacing: 1.1px; text-transform: uppercase; }
+    .fx-art .g { fill: #ffffff12; stroke: #ffffff2e; stroke-width: 1; } .fx-art .gb { fill: #2563eb; } .fx-art .g.gb2 { fill: #2563eb55; stroke: #60a5fa88; }
+    .fx-art .gok { fill: #34d3991f; stroke: #34d39966; } .fx-art .gw2 { fill: #fbbf241f; stroke: #fbbf2466; }
+    .fx-art .gt { fill: #fff; } .fx-art .gd { fill: #94a8c8; } .fx-art .gl { fill: #60a5fa; } .fx-art .gg { fill: #34d399; } .fx-art .gg2 { fill: #34d399; } .fx-art .gw { fill: #fbbf24; }
+    .fx-art .gm { fill: #ffffff2b; } .fx-art .gline { stroke: #ffffff26; stroke-width: 1; } .fx-art .gline2 { fill: none; stroke: #93c5fd; stroke-width: 2.5; stroke-linecap: round; }
+    .fx-art .gbr { fill: none; stroke: #60a5fa; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .fx-art .paper { fill: #f1f5f9; } .fx-art .pm { fill: #cbd5e1; } .fx-art .pk { fill: #0f2a5a; } .fx-art .pk2 { fill: #dbeafe; } .fx-art text.pk { fill: #0f2a5a; }
+    .fx-art .link { fill: none; stroke: #60a5fa; stroke-width: 1.8; stroke-dasharray: 4 4; stroke-linecap: round; }
+    .fx-art text { font-family: var(--display), sans-serif; }
+    .fx-art .laser { transform-origin: center; } .fx-art .dots, .fx-art .pd { opacity: .55; }
+    .fx:hover .laser, .fx.open .laser { animation: fx-laser 1.2s ease-in-out infinite alternate; }
+    .fx:hover .link, .fx.open .link { animation: fx-flow .9s linear infinite; }
+    .fx:hover .dots, .fx.open .dots, .fx:hover .pd, .fx.open .pd { animation: fx-blink 1s ease-in-out infinite; }
+    .fx-art .d2 { animation-delay: .2s !important; } .fx-art .d3 { animation-delay: .4s !important; }
+    @keyframes fx-laser { from { transform: translateY(-14px); } to { transform: translateY(32px); } }
+    @keyframes fx-flow { to { stroke-dashoffset: -16; } }
+    @keyframes fx-blink { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+    .fx-body { display: block; padding: 6px 20px 20px; }
+    .fx-body b { display: block; font: 800 17px/1.25 var(--display); letter-spacing: -.4px; }
+    .fx-body small { display: block; margin-top: 4px; color: #93a9c9; font-size: 13px; }
+    .fx-plus { position: absolute; top: 12px; right: 12px; width: 28px; height: 28px; border: 1px solid #ffffff26; border-radius: 50%; background: #ffffff14; transition: opacity .2s; }
+    .fx-plus::before, .fx-plus::after { position: absolute; top: 50%; left: 50%; width: 11px; height: 1.8px; margin: -.9px 0 0 -5.5px; border-radius: 2px; background: #fff; content: ""; }
+    .fx-plus::after { transform: rotate(90deg); }
+    .fx-info { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 24px; color: #fff; background: radial-gradient(circle at 100% 0, #60a5fa55, transparent 60%), linear-gradient(155deg, #2563eb, #1e3a8a); transform: translateY(101%); transition: transform .4s cubic-bezier(.2,.8,.2,1); }
+    .fx-info b { font: 800 19px/1.2 var(--display); letter-spacing: -.4px; }
+    .fx-info span { font-size: 14.5px; line-height: 1.6; color: #e0ecff; }
+    .fx:hover .fx-info, .fx.open .fx-info, .fx:focus-visible .fx-info { transform: none; }
+    .fx:hover .fx-plus, .fx.open .fx-plus { opacity: 0; }
+    @media (max-width: 1000px) { .fx-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 680px) { .fx-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .fx-art { height: 112px; } .fx-tag { top: 9px; left: 10px; font-size: 8.5px; padding: 2px 7px; } .fx-plus { top: 8px; right: 8px; width: 24px; height: 24px; } .fx-body { padding: 2px 12px 14px; } .fx-body b { font-size: 14px; } .fx-body small { font-size: 11.5px; } .fx-info { padding: 14px; gap: 6px; } .fx-info b { font-size: 15px; } .fx-info span { font-size: 12.5px; line-height: 1.45; } }
+    @media (prefers-reduced-motion: reduce) { .fx, .fx-info, .fx-art svg { transition: none; } .fx .laser, .fx .link, .fx .dots, .fx .pd { animation: none !important; } }
+    /* Minimal fx */
+    .fx { background: #0c1e3c; border-color: #ffffff0f; }
+    .fx-art { height: 136px; background: radial-gradient(circle at 50% 0, #2563eb40, transparent 65%); }
+    .fx-tag, .fx-art .gd, .fx-art .gline, .fx-art .gbr { display: none; }
+    .fx-art svg { padding: 6px 0 0; }
+    .fx-body { padding: 4px 20px 22px; }
+    .fx-body b { font-size: 16px; }
+    .fx-body small { color: #7f94b5; }
+    .fx-plus { top: auto; bottom: 20px; right: 18px; width: 24px; height: 24px; border-color: #ffffff1f; background: transparent; }
+    .fx:hover, .fx.open { box-shadow: 0 18px 40px #2563eb33; }
+    .gal-hint { display: inline-flex; align-items: center; gap: 8px; margin-top: 4px !important; padding: 7px 14px; border-radius: 999px; color: var(--brand-dark) !important; background: #dbeafe; font-weight: 700; font-size: 13px !important; }
+    .gal-hint svg { width: 18px; height: 18px; animation: gal-tap 1.6s ease-in-out infinite; }
+    @keyframes gal-tap { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+    .gal-tabs { gap: 10px; }
+    .gal-tabs button { padding: 11px 20px; border-width: 1.5px; font-size: 14px; box-shadow: 0 2px 6px #0f172a0f; }
+    .gal-tabs button[aria-selected="true"] { box-shadow: 0 8px 20px #1d4ed84d; }
+    .gal:not(.touched) .gal-tabs button[aria-selected="false"] { animation: gal-ring 2.4s ease-out infinite; }
+    .gal:not(.touched) .gal-tabs button:nth-child(2n)[aria-selected="false"] { animation-delay: .6s; }
+    @keyframes gal-ring { 0% { box-shadow: 0 0 0 0 #2563eb40; } 70%, 100% { box-shadow: 0 0 0 9px #2563eb00; } }
+    .gal-count { margin-left: auto; padding: 2px 9px; border-radius: 999px; color: #bfdbfe; background: #ffffff1f; font-weight: 700; font-size: 11px; }
+    .gal-progress { height: 3px; background: #0f2a52; }
+    .gal-progress i { display: block; width: 0; height: 100%; background: #60a5fa; }
+    .gal-progress i.run { animation: gal-run var(--gal-ms, 5000ms) linear forwards; }
+    @keyframes gal-run { to { width: 100%; } }
+    .gal-view { position: relative; }
+    .gal-nav { position: absolute; z-index: 2; top: 50%; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; margin-top: -22px; border: 1px solid #e2e8f0; border-radius: 50%; color: var(--brand-dark); background: #ffffffeb; box-shadow: 0 8px 22px #0f172a2e; cursor: pointer; transition: transform .2s, background .2s, color .2s; }
+    .gal-nav:hover { color: #fff; background: var(--brand); transform: scale(1.08); }
+    .gal-nav svg { width: 22px; height: 22px; }
+    .gal-prev { left: 12px; } .gal-next { right: 12px; }
+    @media (max-width: 680px) { .gal-nav { width: 38px; height: 38px; margin-top: -19px; } .gal-prev { left: 6px; } .gal-next { right: 6px; } .gal-tabs button { padding: 10px 16px; } }
+    @media (prefers-reduced-motion: reduce) { .gal-hint svg, .gal:not(.touched) .gal-tabs button { animation: none !important; } .gal-progress { display: none; } }
+    .faq-section { padding-top: 56px; padding-bottom: 56px; }
+    .faq-section .faq-grid { grid-template-columns: 1fr; gap: 20px; align-items: start; }
+    .faq-intro { display: grid; grid-template-columns: 1fr auto; column-gap: 24px; align-items: center; }
+    .faq-intro .eyebrow { grid-column: 1; }
+    .faq-intro h2 { grid-column: 1; margin: 8px 0 0; font-size: clamp(26px, 3vw, 32px); letter-spacing: -1.2px; }
+    .faq-intro .faq-contact { grid-column: 2; grid-row: 1 / span 2; margin: 0; }
+    .faq-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 44px; align-items: start; }
+    .faq-list summary { padding: 14px 30px 14px 0; font-size: 14px; }
+    .faq-list summary::after { top: 11px; }
+    .faq-list details p { margin: -2px 0 14px; font-size: 13.5px; line-height: 1.65; }
+    @media (max-width: 760px) { .faq-list { grid-template-columns: 1fr; } .faq-intro { grid-template-columns: 1fr; row-gap: 12px; } .faq-intro .faq-contact { grid-column: 1; grid-row: auto; } }
+    /* Contacto simple */
+    .hablemos .contact-grid { grid-template-columns: 1fr; max-width: 640px; margin: 0 auto; gap: 16px; }
+    .composer-sub, .composer-name, .wa-preview, .composer h3 { display: none; }
+    .composer { text-align: center; }
+    .composer .pick { justify-content: center; }
+    .composer .wa-send { width: 100%; justify-content: center; margin-top: 6px; }
+    .channels { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 560px) { .channels { grid-template-columns: 1fr; } }
+    /* Animación */
+    .grad-text { background-size: 200% auto; animation: grad-move 6s ease-in-out infinite alternate; }
+    @keyframes grad-move { to { background-position: 100% center; } }
+    .section-head h2::after { display: block; width: 0; height: 3px; margin: 14px auto 0; border-radius: 3px; background: linear-gradient(90deg, var(--brand), #60a5fa); content: ""; transition: width .9s .25s cubic-bezier(.2,.7,.2,1); }
+    .section-head.visible h2::after { width: 44px; }
+    .plan { transition: transform .3s ease, box-shadow .3s ease; }
+    .plan:hover { transform: translateY(-6px); box-shadow: 0 22px 48px #2563eb26; }
+    .rubro-chip:hover, .marquee span:hover { transform: translateY(-2px); }
+    @media (prefers-reduced-motion: reduce) { .grad-text { animation: none; } .section-head h2::after { width: 44px; transition: none; } }
   </style>
 </head>
 <body>
@@ -1275,14 +1331,13 @@
       <div class="nav-links" id="nav-links">
         <a href="#inicio">Módulos</a>
         <a href="#presentacion">El programa</a>
-        <a href="#tiendas">Tiendas</a>
         <a href="#rubros">Rubros</a>
         <a href="prueba.html" target="_blank" rel="noopener">Cómo activar <svg class="ext" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M9 3h4v4M13 3 7 9M11 9.5V13H3V5h3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <a href="#planes">Precios</a>
         <a href="#preguntas">Preguntas</a>
-        <a class="button nav-mobile-cta" href="ProfesionalStock-3.0.80.exe" download="ProfesionalStock-3.0.80.exe" data-download><span data-download-label>Descargar prueba gratis</span></a>
+        <a class="button nav-mobile-cta" href="ProfesionalStock-3.0.80.exe" download="ProfesionalStock-3.0.80.exe" data-download><span data-download-label>Descargar</span></a>
       </div>
-      <a class="button nav-cta" href="ProfesionalStock-3.0.80.exe" download="ProfesionalStock-3.0.80.exe" data-download><span data-download-label>Descargar prueba gratis</span></a>
+      <a class="button nav-cta" href="ProfesionalStock-3.0.80.exe" download="ProfesionalStock-3.0.80.exe" data-download><span data-download-label>Descargar</span></a>
     </nav>
   </header>
 
@@ -1294,7 +1349,7 @@
           <h1>Tu negocio, <span>bajo control.</span></h1>
           <p class="hero-copy">Ventas, stock y caja en un solo programa para tu PC. Funciona sin internet.</p>
           <div class="hero-actions">
-            <a class="button button-lg" href="ProfesionalStock-3.0.80.exe" download="ProfesionalStock-3.0.80.exe" data-download><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-download-label>Probar gratis 15 días</span></a>
+            <a class="button button-lg" href="ProfesionalStock-3.0.80.exe" download="ProfesionalStock-3.0.80.exe" data-download><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-download-label>Descargar</span></a>
             <a class="button button-light button-lg hero-wa" href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20Profesional%20Stock" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Consultar</a>
           </div>
           <ul class="hero-checks">
@@ -1387,7 +1442,7 @@
         <div class="section-head">
           <div class="eyebrow"><span class="eyebrow-dot"></span> El programa</div>
           <h2>Mirá cómo se usa, sin descargarlo.</h2>
-          <p>Capturas reales de Profesional Stock, con datos de ejemplo de un kiosco.</p>
+          <p class="gal-hint"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 11V5a2 2 0 1 1 4 0v5l5 1a2 2 0 0 1 1.5 2.4L18.3 19a2 2 0 0 1-2 1.5H11a2 2 0 0 1-1.6-.8L5 13.5a1.6 1.6 0 0 1 2.4-2L9 13" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Tocá cada opción para ver esa pantalla</p>
         </div>
         <div class="gal" id="gal">
           <div class="gal-tabs" role="tablist" aria-label="Pantallas del programa">
@@ -1401,8 +1456,11 @@
           <button type="button" role="tab" id="gal-tab-7" aria-selected="false" aria-controls="gal-panel" tabindex="-1" data-src="img/programa/ingreso-pin.png" data-w="900" data-h="600" data-alt="Pantalla de ingreso con usuario y PIN" data-cap="Cada persona entra con su PIN y ve solo lo que su rol permite.">Ingreso con PIN</button>
           </div>
           <div class="gal-window">
-            <div class="gal-bar"><img src="profesional-stock-icon.png" width="16" height="16" alt=""><b id="gal-title">Profesional Stock · Inicio</b></div>
+            <div class="gal-bar"><img src="profesional-stock-icon.png" width="16" height="16" alt=""><b id="gal-title">Profesional Stock · Inicio</b><span class="gal-count" id="gal-count">1 / 8</span></div>
+            <div class="gal-progress" aria-hidden="true"><i id="gal-progress"></i></div>
             <div class="gal-view" id="gal-panel" role="tabpanel" aria-labelledby="gal-tab-0">
+              <button type="button" class="gal-nav gal-prev" id="gal-prev" aria-label="Pantalla anterior"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m15 5-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <button type="button" class="gal-nav gal-next" id="gal-next" aria-label="Pantalla siguiente"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 5 7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
               <img id="gal-img" src="img/programa/inicio.png" width="1280" height="720" decoding="async" alt="Pantalla de inicio con las ventas de hoy, la caja, los productos para reponer y los horarios de más movimiento">
             </div>
           </div>
@@ -1410,6 +1468,91 @@
         </div>
       </div>
     </section>
+    <section class="fn-section" id="funciones">
+      <svg class="fx-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs><linearGradient id="fxg-beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#60a5fa" stop-opacity="0"/><stop offset=".5" stop-color="#60a5fa" stop-opacity=".55"/><stop offset="1" stop-color="#60a5fa" stop-opacity="0"/></linearGradient><linearGradient id="fxg-area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#60a5fa" stop-opacity=".45"/><stop offset="1" stop-color="#60a5fa" stop-opacity="0"/></linearGradient></defs></svg>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> Todo incluido</div>
+          <h2>Todo lo que tu local necesita.</h2>
+          <p>Pasá el mouse o tocá cada tarjeta.</p>
+        </div>
+        <ul class="fx-grid">
+          <li><button class="fx" type="button" aria-expanded="false">
+            <span class="fx-art" aria-hidden="true"><span class="fx-tag">Ventas</span><svg viewBox="0 0 240 118" role="presentation"><rect class="g" x="70" y="20" width="100" height="68" rx="10"/><rect class="gt" x="83" y="32" width="3" height="34" rx=".4"/><rect class="gt" x="87.5" y="32" width="1.5" height="34" rx=".4"/><rect class="gt" x="90.5" y="32" width="4" height="34" rx=".4"/><rect class="gt" x="96" y="32" width="2" height="34" rx=".4"/><rect class="gt" x="99.5" y="32" width="1.5" height="34" rx=".4"/><rect class="gt" x="102.5" y="32" width="3" height="34" rx=".4"/><rect class="gt" x="107" y="32" width="2" height="34" rx=".4"/><rect class="gt" x="110.5" y="32" width="4" height="34" rx=".4"/><rect class="gt" x="116" y="32" width="1.5" height="34" rx=".4"/><rect class="gt" x="119" y="32" width="2" height="34" rx=".4"/><rect class="gt" x="122.5" y="32" width="3" height="34" rx=".4"/><rect class="gt" x="127" y="32" width="1.5" height="34" rx=".4"/><rect class="gt" x="130" y="32" width="4" height="34" rx=".4"/><rect class="gt" x="135.5" y="32" width="2" height="34" rx=".4"/><rect class="gt" x="139" y="32" width="3" height="34" rx=".4"/><rect class="gt" x="143.5" y="32" width="1.5" height="34" rx=".4"/><rect class="gt" x="146.5" y="32" width="2" height="34" rx=".4"/><rect class="gt" x="150" y="32" width="4" height="34" rx=".4"/><rect class="gt" x="155.5" y="32" width="1.5" height="34" rx=".4"/><rect class="gt" x="158.5" y="32" width="3" height="34" rx=".4"/><text class="gd" x="120" y="78" font-size="7" text-anchor="middle" letter-spacing="1">7 79123 45678 0</text><path class="gbr" d="M62 24V12H74"/><path class="gbr" d="M178 24V12h-12"/><path class="gbr" d="M62 84v12h12"/><path class="gbr" d="M178 84v12h-12"/><rect class="glow laser" x="60" y="42" width="120" height="14" fill="url(#fxg-beam)"/><rect class="laser" x="60" y="48.5" width="120" height="2" rx="1" fill="#93c5fd"/><rect class="g gb2" x="82" y="98" width="76" height="16" rx="8"/><text class="gt" x="120" y="109" font-size="7.5" text-anchor="middle" font-weight="700">✓ Yerba · $4.950</text></svg></span>
+            <span class="fx-body"><b>Código de barras</b><small>Escaneás y vendés</small></span>
+            <span class="fx-plus" aria-hidden="true"></span>
+            <span class="fx-info"><b>Código de barras</b><span>Pasá el producto por el lector y se suma solo a la venta. Funciona con lectores de código de barras.</span></span>
+          </button></li>
+          <li><button class="fx" type="button" aria-expanded="false">
+            <span class="fx-art" aria-hidden="true"><span class="fx-tag">Hardware</span><svg viewBox="0 0 240 118" role="presentation"><rect class="g" x="50" y="14" width="140" height="92" rx="12"/><rect class="gl" x="62" y="24" width="1.6" height="9" rx=".8"/><rect class="gl" x="69.1" y="27" width="1.6" height="6" rx=".8"/><rect class="gl" x="76.2" y="27" width="1.6" height="6" rx=".8"/><rect class="gl" x="83.3" y="27" width="1.6" height="6" rx=".8"/><rect class="gl" x="90.4" y="24" width="1.6" height="9" rx=".8"/><rect class="gl" x="97.5" y="27" width="1.6" height="6" rx=".8"/><rect class="gl" x="104.6" y="27" width="1.6" height="6" rx=".8"/><rect class="gl" x="111.69999999999999" y="27" width="1.6" height="6" rx=".8"/><rect class="gl" x="118.8" y="24" width="1.6" height="9" rx=".8"/><rect class="gl" x="125.9" y="27" width="1.6" height="6" rx=".8"/><rect class="gl" x="133" y="27" width="1.6" height="6" rx=".8"/><rect class="gm" x="140.1" y="27" width="1.6" height="6" rx=".8"/><rect class="gm" x="147.2" y="24" width="1.6" height="9" rx=".8"/><rect class="gm" x="154.3" y="27" width="1.6" height="6" rx=".8"/><rect class="gm" x="161.39999999999998" y="27" width="1.6" height="6" rx=".8"/><rect class="gm" x="168.5" y="27" width="1.6" height="6" rx=".8"/><rect class="gm" x="175.6" y="24" width="1.6" height="9" rx=".8"/><text class="gt" x="62" y="66" font-size="30" font-weight="800" letter-spacing="-1">1,250</text><text class="gl" x="150" y="66" font-size="13" font-weight="700">kg</text><rect class="gm" x="62" y="78" width="116" height="5" rx="2.5"/><rect class="gb" x="62" y="78" width="72" height="5" rx="2.5"/><text class="gd" x="62" y="98" font-size="7.5" >Precio por kg</text><text class="gt" x="178" y="98" font-size="9.5" text-anchor="end" font-weight="800">$3.125</text></svg></span>
+            <span class="fx-body"><b>Balanza</b><small>Pesás en pantalla</small></span>
+            <span class="fx-plus" aria-hidden="true"></span>
+            <span class="fx-info"><b>Balanza</b><span>Para productos por peso: la balanza envía el peso y el precio se calcula solo.</span></span>
+          </button></li>
+          <li><button class="fx" type="button" aria-expanded="false">
+            <span class="fx-art" aria-hidden="true"><span class="fx-tag">Hardware</span><svg viewBox="0 0 240 118" role="presentation"><path class="paper" d="M82 8h76v88l-9.5-6-9.5 6-9.5-6-9.5 6-9.5-6-9.5 6-9.5-6-9.5 6z"/><text class="pk" x="120" y="24" font-size="8" text-anchor="middle" font-weight="800" letter-spacing="1.5">KIOSCO</text><rect class="pm" x="92" y="32" width="36" height="4" rx="2"/><rect class="pm" x="92" y="41" width="50" height="4" rx="2"/><rect class="pm" x="92" y="50" width="42" height="4" rx="2"/><rect class="pm" x="92" y="59" width="46" height="4" rx="2"/><rect class="pk2" x="92" y="68" width="56" height="9" rx="3"/><text class="gt" x="144" y="75" font-size="6.5" text-anchor="end" font-weight="800">$15.550</text><g class="pk"><rect x="92" y="82" width="5" height="5"/><rect x="99" y="82" width="5" height="5"/><rect x="92" y="89" width="5" height="3"/></g><rect class="g gb2" x="146" y="66" width="72" height="22" rx="11"/><circle class="gl dots" cx="158" cy="77" r="2.2"/><circle class="gl dots d2" cx="166" cy="77" r="2.2"/><circle class="gl dots d3" cx="174" cy="77" r="2.2"/><text class="gt" x="182" y="80" font-size="6.5" font-weight="700">Imprimiendo</text><rect class="gb" x="60" y="8" width="120" height="8" rx="4"/></svg></span>
+            <span class="fx-body"><b>Ticket</b><small>Impresora térmica</small></span>
+            <span class="fx-plus" aria-hidden="true"></span>
+            <span class="fx-info"><b>Ticket</b><span>Imprimí el ticket al cobrar en tu impresora de tickets.</span></span>
+          </button></li>
+          <li><button class="fx" type="button" aria-expanded="false">
+            <span class="fx-art" aria-hidden="true"><span class="fx-tag">ARCA</span><svg viewBox="0 0 240 118" role="presentation"><rect class="g" x="62" y="10" width="116" height="100" rx="12"/><text class="gl" x="76" y="28" font-size="8.5" font-weight="800" letter-spacing="1.4">FACTURA B</text><text class="gd" x="76" y="39" font-size="7" >N° 0001-00000128</text><line class="gline" x1="76" y1="46" x2="164" y2="46"/><rect class="gm" x="76" y="54" width="52" height="4" rx="2"/><rect class="gm" x="76" y="63" width="40" height="4" rx="2"/><rect class="gm" x="76" y="72" width="58" height="4" rx="2"/><text class="gt" x="164" y="61" font-size="9" text-anchor="end" font-weight="800">$15.550</text><g class="gt" opacity=".92"><rect x="76" y="84" width="6" height="6"/><rect x="84" y="84" width="6" height="6"/><rect x="76" y="92" width="6" height="6"/><rect x="87" y="95" width="3" height="3"/></g><rect class="g gok" x="112" y="84" width="58" height="18" rx="9"/><text class="gg" x="141" y="96" font-size="8.5" text-anchor="middle" font-weight="800">CAE ✓</text></svg></span>
+            <span class="fx-body"><b>Factura electrónica</b><small>Con CAE y código QR</small></span>
+            <span class="fx-plus" aria-hidden="true"></span>
+            <span class="fx-info"><b>Factura electrónica</b><span>Factura A, B y C y notas de crédito con CAE y código QR. El programa te guía para conectarlo.</span></span>
+          </button></li>
+          <li><button class="fx" type="button" aria-expanded="false">
+            <span class="fx-art" aria-hidden="true"><span class="fx-tag">Caja</span><svg viewBox="0 0 240 118" role="presentation"><rect class="g" x="44" y="10" width="152" height="98" rx="12"/><text class="gt" x="58" y="28" font-size="10" font-weight="800">Cierre Z</text><text class="gd" x="182" y="28" font-size="8" text-anchor="end">Hoy</text><line class="gline" x1="58" y1="35" x2="182" y2="35"/><text class="gd" x="58" y="49" font-size="8" >Efectivo</text><text class="gt" x="182" y="49" font-size="8.5" text-anchor="end" font-weight="700">$152.300</text><text class="gd" x="58" y="62" font-size="8" >Tarjeta</text><text class="gt" x="182" y="62" font-size="8.5" text-anchor="end" font-weight="700">$41.800</text><text class="gd" x="58" y="75" font-size="8" >Transferencia</text><text class="gt" x="182" y="75" font-size="8.5" text-anchor="end" font-weight="700">$15.800</text><rect class="gb" x="54" y="84" width="132" height="18" rx="9"/><text class="gt" x="64" y="96" font-size="8.5" font-weight="700">Total</text><text class="gt" x="176" y="96" font-size="10" text-anchor="end" font-weight="800">$209.900</text></svg></span>
+            <span class="fx-body"><b>Cierre Z</b><small>Cerrás la caja</small></span>
+            <span class="fx-plus" aria-hidden="true"></span>
+            <span class="fx-info"><b>Cierre Z</b><span>Cerrá el día con el resumen de ventas y el efectivo que tiene que haber en caja.</span></span>
+          </button></li>
+          <li><button class="fx" type="button" aria-expanded="false">
+            <span class="fx-art" aria-hidden="true"><span class="fx-tag">Stock</span><svg viewBox="0 0 240 118" role="presentation"><rect class="g" x="44" y="10" width="152" height="98" rx="12"/><text class="gt" x="58" y="28" font-size="8.5" font-weight="700">Café 250 g</text><rect class="gm" x="58" y="34" width="124" height="5" rx="2.5"/><rect class="gw" x="58" y="34" width="22" height="5" rx="2.5"/><rect class="g gw2" x="138" y="17" width="44" height="14" rx="7"/><text class="gw" x="160" y="27" font-size="7" text-anchor="middle" font-weight="800">Quedan 2</text><text class="gt" x="58" y="55" font-size="8.5" font-weight="700">Yerba mate 1 kg</text><rect class="gm" x="58" y="61" width="124" height="5" rx="2.5"/><rect class="gb" x="58" y="61" width="96" height="5" rx="2.5"/><text class="gt" x="58" y="82" font-size="8.5" font-weight="700">Leche 1 L</text><rect class="gm" x="58" y="88" width="124" height="5" rx="2.5"/><rect class="gb" x="58" y="88" width="70" height="5" rx="2.5"/></svg></span>
+            <span class="fx-body"><b>Stock bajo</b><small>Te avisa a tiempo</small></span>
+            <span class="fx-plus" aria-hidden="true"></span>
+            <span class="fx-info"><b>Stock bajo</b><span>Ves qué productos reponer antes de quedarte sin ellos.</span></span>
+          </button></li>
+          <li><button class="fx" type="button" aria-expanded="false">
+            <span class="fx-art" aria-hidden="true"><span class="fx-tag">Clientes</span><svg viewBox="0 0 240 118" role="presentation"><rect class="g" x="44" y="10" width="152" height="98" rx="12"/><circle class="gb" cx="68" cy="32" r="11"/><text class="gt" x="68" y="36" font-size="9" text-anchor="middle" font-weight="800">JP</text><text class="gt" x="86" y="30" font-size="8.5" font-weight="700">Juan Pérez</text><text class="gd" x="86" y="40" font-size="7" >Hace 3 días</text><rect class="g gw2" x="142" y="22" width="44" height="18" rx="9"/><text class="gw" x="164" y="34" font-size="8.5" text-anchor="middle" font-weight="800">$8.400</text><line class="gline" x1="58" y1="50" x2="182" y2="50"/><circle class="gm" cx="68" cy="68" r="11"/><text class="gt" x="68" y="72" font-size="9" text-anchor="middle" font-weight="800">ML</text><text class="gt" x="86" y="66" font-size="8.5" font-weight="700">María López</text><text class="gd" x="86" y="76" font-size="7" >Pagó hoy</text><rect class="g gok" x="142" y="58" width="44" height="18" rx="9"/><text class="gg" x="164" y="70" font-size="8.5" text-anchor="middle" font-weight="800">Al día</text><rect class="g" x="58" y="86" width="124" height="14" rx="7"/><text class="gl" x="120" y="96" font-size="8" text-anchor="middle" font-weight="700">Registrar pago</text></svg></span>
+            <span class="fx-body"><b>Cuenta corriente</b><small>Quién te debe</small></span>
+            <span class="fx-plus" aria-hidden="true"></span>
+            <span class="fx-info"><b>Cuenta corriente</b><span>Anotá lo que debe cada cliente y registrá sus pagos.</span></span>
+          </button></li>
+          <li><button class="fx" type="button" aria-expanded="false">
+            <span class="fx-art" aria-hidden="true"><span class="fx-tag">Análisis</span><svg viewBox="0 0 240 118" role="presentation"><rect class="g" x="40" y="10" width="160" height="98" rx="12"/><text class="gd" x="54" y="28" font-size="7.5" >Ventas de hoy</text><text class="gt" x="54" y="46" font-size="19" font-weight="800" letter-spacing="-.5">$209.900</text><rect class="g gok" x="150" y="18" width="36" height="16" rx="8"/><text class="gg" x="168" y="29" font-size="8" text-anchor="middle" font-weight="800">+12%</text><path d="M54 98 L54 84 C70 82 78 70 94 72 S118 58 132 60 S160 40 186 36 V98Z" fill="url(#fxg-area)"/><path class="gline2" d="M54 84 C70 82 78 70 94 72 S118 58 132 60 S160 40 186 36"/><circle class="glow" cx="186" cy="36" r="8" fill="#60a5fa" opacity=".35"/><circle cx="186" cy="36" r="3.5" fill="#fff"/></svg></span>
+            <span class="fx-body"><b>Reportes</b><small>Ventas y ganancias</small></span>
+            <span class="fx-plus" aria-hidden="true"></span>
+            <span class="fx-info"><b>Reportes</b><span>Mirá cuánto vendés, cuánto ganás y en qué horarios hay más movimiento.</span></span>
+          </button></li>
+          <li><button class="fx" type="button" aria-expanded="false">
+            <span class="fx-art" aria-hidden="true"><span class="fx-tag">Datos</span><svg viewBox="0 0 240 118" role="presentation"><rect class="g" x="44" y="12" width="120" height="82" rx="11"/><path class="gb" d="M44 23a11 11 0 0 1 11-11h98a11 11 0 0 1 11 11v8H44z"/><text class="gt" x="56" y="25" font-size="7" font-weight="700">Producto</text><text class="gt" x="94" y="25" font-size="7" font-weight="700">Precio</text><text class="gt" x="132" y="25" font-size="7" font-weight="700">Stock</text><rect class="gm" x="56" y="50" width="28" height="4" rx="2"/><rect class="gm" x="94" y="50" width="23" height="4" rx="2"/><rect class="gm" x="132" y="50" width="18" height="4" rx="2"/><rect class="gm" x="56" y="63" width="23" height="4" rx="2"/><rect class="gm" x="94" y="63" width="18" height="4" rx="2"/><rect class="gm" x="132" y="63" width="28" height="4" rx="2"/><rect class="gm" x="56" y="76" width="18" height="4" rx="2"/><rect class="gm" x="94" y="76" width="28" height="4" rx="2"/><rect class="gm" x="132" y="76" width="23" height="4" rx="2"/><rect class="g gok" x="128" y="78" width="88" height="28" rx="14"/><circle class="gg2" cx="145" cy="92" r="7"/><path d="m141.5 92 2.5 2.5 5-5.5" fill="none" stroke="#06210f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text class="gt" x="158" y="90" font-size="8" font-weight="800">38 filas</text><text class="gg" x="158" y="99" font-size="7" >listas</text></svg></span>
+            <span class="fx-body"><b>Importar Excel</b><small>Traé tus datos</small></span>
+            <span class="fx-plus" aria-hidden="true"></span>
+            <span class="fx-info"><b>Importar Excel</b><span>Cargá productos, clientes y proveedores desde Excel o CSV. Revisás antes de guardar.</span></span>
+          </button></li>
+          <li><button class="fx" type="button" aria-expanded="false">
+            <span class="fx-art" aria-hidden="true"><span class="fx-tag">Online</span><svg viewBox="0 0 240 118" role="presentation"><g class="flowg"><path class="link" d="M62 30 C90 30 96 56 112 56"/><path class="link" d="M62 88 C90 88 96 62 112 62"/><path class="link" d="M178 59 H128"/></g><rect class="g" x="14" y="18" width="62" height="22" rx="11"/><text class="gt" x="45" y="32" font-size="7.5" text-anchor="middle" font-weight="700">Mercado Libre</text><rect class="g" x="14" y="78" width="62" height="22" rx="11"/><text class="gt" x="45" y="92" font-size="7.5" text-anchor="middle" font-weight="700">Tiendanube</text><rect class="g" x="178" y="48" width="52" height="22" rx="11"/><text class="gt" x="204" y="62" font-size="7.5" text-anchor="middle" font-weight="700">Shopify</text><circle class="glow" cx="120" cy="59" r="26" fill="#2563eb" opacity=".35"/><rect class="gb node" x="104" y="43" width="32" height="32" rx="9"/><path d="M112 53h16l-1.5 6h-13zM113 59v10h14V59" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text class="gl" x="120" y="92" font-size="7.5" text-anchor="middle" font-weight="700">Tu PC</text></svg></span>
+            <span class="fx-body"><b>Tiendas online</b><small>Mercado Libre y más</small></span>
+            <span class="fx-plus" aria-hidden="true"></span>
+            <span class="fx-info"><b>Tiendas online</b><span>Los pedidos pagados de Mercado Libre, Tiendanube y Shopify entran como ventas. Es una función nueva.</span></span>
+          </button></li>
+          <li><button class="fx" type="button" aria-expanded="false">
+            <span class="fx-art" aria-hidden="true"><span class="fx-tag">Seguridad</span><svg viewBox="0 0 240 118" role="presentation"><text class="gd" x="120" y="14" font-size="8" text-anchor="middle">Ingresá tu PIN</text><circle class="gl pd" cx="105" cy="26" r="4.5"/><circle class="gl pd d2" cx="117" cy="26" r="4.5"/><circle class="gl pd d3" cx="129" cy="26" r="4.5"/><circle class="gm" cx="141" cy="26" r="4.5"/><circle class="g" cx="92" cy="48" r="9"/><text class="gt" x="92" y="51.4" font-size="9.5" text-anchor="middle" font-weight="700">1</text><circle class="g" cx="120" cy="48" r="9"/><text class="gt" x="120" y="51.4" font-size="9.5" text-anchor="middle" font-weight="700">2</text><circle class="g" cx="148" cy="48" r="9"/><text class="gt" x="148" y="51.4" font-size="9.5" text-anchor="middle" font-weight="700">3</text><circle class="g" cx="92" cy="70" r="9"/><text class="gt" x="92" y="73.4" font-size="9.5" text-anchor="middle" font-weight="700">4</text><circle class="g" cx="120" cy="70" r="9"/><text class="gt" x="120" y="73.4" font-size="9.5" text-anchor="middle" font-weight="700">5</text><circle class="g" cx="148" cy="70" r="9"/><text class="gt" x="148" y="73.4" font-size="9.5" text-anchor="middle" font-weight="700">6</text><circle class="g" cx="92" cy="92" r="9"/><text class="gt" x="92" y="95.4" font-size="9.5" text-anchor="middle" font-weight="700">7</text><circle class="g" cx="120" cy="92" r="9"/><text class="gt" x="120" y="95.4" font-size="9.5" text-anchor="middle" font-weight="700">8</text><circle class="g" cx="148" cy="92" r="9"/><text class="gt" x="148" y="95.4" font-size="9.5" text-anchor="middle" font-weight="700">9</text></svg></span>
+            <span class="fx-body"><b>PIN por persona</b><small>Cada uno, su acceso</small></span>
+            <span class="fx-plus" aria-hidden="true"></span>
+            <span class="fx-info"><b>PIN por persona</b><span>Cada empleado entra con su PIN y ve solo lo que su rol permite.</span></span>
+          </button></li>
+          <li><button class="fx" type="button" aria-expanded="false">
+            <span class="fx-art" aria-hidden="true"><span class="fx-tag">Sin internet</span><svg viewBox="0 0 240 118" role="presentation"><rect class="g" x="40" y="14" width="120" height="80" rx="12"/><rect class="gm" x="52" y="28" width="40" height="5" rx="2.5"/><rect class="gm" x="52" y="40" width="64" height="5" rx="2.5"/><rect class="gm" x="52" y="52" width="50" height="5" rx="2.5"/><rect class="gb" x="52" y="68" width="96" height="16" rx="8"/><text class="gt" x="100" y="79" font-size="8" text-anchor="middle" font-weight="800">Cobrar</text><rect class="g gw2" x="138" y="22" width="80" height="20" rx="10"/><path d="M149 34a8 8 0 0 1 12 0M152 37a4 4 0 0 1 6 0" fill="none" stroke="#fbbf24" stroke-width="1.6" stroke-linecap="round"/><line x1="147" y1="28" x2="163" y2="40" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round"/><text class="gw" x="171" y="35" font-size="7.5" font-weight="800">Sin conexión</text><rect class="g gok" x="138" y="80" width="80" height="20" rx="10"/><circle class="gg2" cx="150" cy="90" r="5"/><path d="m147.6 90 1.8 1.8 3.3-3.8" fill="none" stroke="#06210f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><text class="gg" x="160" y="93" font-size="8" font-weight="800">Vendiendo</text></svg></span>
+            <span class="fx-body"><b>Funciona siempre</b><small>Aunque se caiga internet</small></span>
+            <span class="fx-plus" aria-hidden="true"></span>
+            <span class="fx-info"><b>Funciona siempre</b><span>Tus datos están en tu PC. Seguís vendiendo aunque se caiga la conexión.</span></span>
+          </button></li>
+        </ul>
+      </div>
+    </section>
+
     <section class="ba-section" id="antes-despues">
       <div class="wrap">
         <div class="section-head">
@@ -1449,87 +1592,6 @@
         <div class="section-cta">
           <a class="button button-lg" href="ProfesionalStock-3.0.80.exe" download="ProfesionalStock-3.0.80.exe" data-download><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-download-label>Probar gratis 15 días</span></a>
           <span>15 días gratis · sin tarjeta · <a class="link" href="prueba.html" target="_blank" rel="noopener">¿Cómo se activa?</a></span>
-        </div>
-      </div>
-    </section>
-
-    <section class="more-section" id="extras">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="eyebrow"><span class="eyebrow-dot"></span> Y además</div>
-          <h2>Cosas que antes pedían otro sistema.</h2>
-          <p>Capturas reales del programa, versión 3.0.80.</p>
-        </div>
-        <div class="more-grid">
-          <article class="more-card" data-reveal>
-            <figure class="more-shot"><img src="img/programa/factura-electronica.png" width="1100" height="700" loading="lazy" decoding="async" alt="Pantalla de factura electrónica de ARCA con los datos, el certificado y la prueba de conexión"></figure>
-            <div class="more-copy">
-              <span class="more-tag">ARCA</span>
-              <h3>Factura electrónica</h3>
-              <p>Emití Factura A, B y C y notas de crédito con CAE. El programa arma el pedido del certificado y te guía paso a paso, con un entorno de pruebas para ensayar antes.</p>
-            </div>
-          </article>
-          <article class="more-card" data-reveal>
-            <figure class="more-shot"><img src="img/programa/importar-datos.png" width="1130" height="640" loading="lazy" decoding="async" alt="Pantalla para revisar fila por fila los productos antes de importarlos"></figure>
-            <div class="more-copy">
-              <span class="more-tag">Migrá sin sufrir</span>
-              <h3>Importá tus datos</h3>
-              <p>Traé productos, clientes y proveedores desde Excel, CSV u otros programas. Revisás fila por fila antes de guardar y el sistema hace una copia de seguridad.</p>
-            </div>
-          </article>
-          <article class="more-card" data-reveal>
-            <figure class="more-shot"><img src="img/programa/ingreso-pin.png" width="900" height="600" loading="lazy" decoding="async" alt="Pantalla de ingreso al programa con el PIN de cada persona"></figure>
-            <div class="more-copy">
-              <span class="more-tag">Orden y seguridad</span>
-              <h3>Cada persona, con su PIN</h3>
-              <p>Tus empleados entran con su propio PIN y ven solo lo que su rol permite. Si alguien olvida el suyo, lo recupera sin llamarte.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="shops-section" id="tiendas">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="eyebrow"><span class="eyebrow-dot"></span> Tiendas online</div>
-          <h2>Tu local y tus tiendas online, en el mismo lugar.</h2>
-          <p>Profesional Stock sigue siendo un programa de tu computadora. Si además vendés por internet, lo conectás con tus tiendas y las ventas llegan al sistema.</p>
-        </div>
-        <div class="shops-flow" role="img" aria-label="Esquema: Mercado Libre, Tiendanube y Shopify envían los pedidos pagados a Profesional Stock, que corre en tu computadora y publica tu stock">
-          <div class="sf-shops">
-            <span class="sf-chip">Mercado Libre</span>
-            <span class="sf-chip">Tiendanube</span>
-            <span class="sf-chip">Shopify</span>
-          </div>
-          <div class="sf-link" aria-hidden="true">
-            <span class="sf-arrow sf-in"><i></i><small>Pedidos pagados</small></span>
-            <span class="sf-arrow sf-out"><i></i><small>Stock actualizado</small></span>
-          </div>
-          <div class="sf-pc">
-            <img src="profesional-stock-icon.png" width="56" height="56" alt="" loading="lazy">
-            <strong>Profesional Stock</strong>
-            <span>en tu computadora</span>
-          </div>
-        </div>
-        <ol class="shops-steps">
-          <li><b>1</b><div><h3>Conectás tu tienda</h3><p>Desde Vender &gt; Tiendas online. El programa te guía para crear la conexión con tu propia cuenta.</p></div></li>
-          <li><b>2</b><div><h3>Las ventas entran solas</h3><p>Cada pedido pagado se registra como venta y descuenta el stock. Si cancelan, queda registrada la devolución.</p></div></li>
-          <li><b>3</b><div><h3>Publicás tu stock (opcional)</h3><p>Antes de activarlo, el programa te muestra qué cambiaría en cada publicación.</p></div></li>
-        </ol>
-        <div class="shops-bottom">
-          <figure class="shops-shot"><img src="img/programa/tiendas-online.png" width="1130" height="640" loading="lazy" decoding="async" alt="Pantalla de tiendas online con Mercado Libre conectada y la lista de pedidos"></figure>
-          <div class="shops-notes">
-            <h3>Cómo funciona, sin vueltas</h3>
-            <ul>
-              <li><b>Tus datos siguen en tu PC.</b> Ventas, productos y clientes se guardan en tu computadora. Solo se intercambian pedidos y stock con las tiendas que vos conectes.</li>
-              <li><b>Se revisa cada pocos minutos</b> mientras el programa está abierto. Si estaba cerrado, los pedidos entran al abrirlo.</li>
-              <li><b>Lo dudoso queda «Para revisar».</b> Por ejemplo, un producto sin vincular: el programa te avisa y lo resolvés con un clic.</li>
-              <li><b>Los precios no se sincronizan:</b> cada tienda mantiene los suyos.</li>
-              <li><b>Es una función nueva.</b> Si querés conectarla, te acompañamos en la primera vez.</li>
-            </ul>
-            <a class="button button-light" href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20conectar%20mi%20tienda%20online%20con%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Quiero conectar mi tienda</a>
-          </div>
         </div>
       </div>
     </section>
@@ -1592,32 +1654,12 @@
       </div>
     </section>
 
-    <section class="trial-section" id="prueba-gratis">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="eyebrow"><span class="eyebrow-dot"></span> Prueba gratis</div>
-          <h2>15 días para probarlo con tu negocio.</h2>
-          <p>Sin tarjeta y sin compromiso. Si no te sirve, no pagás nada.</p>
-        </div>
-        <div class="trial-grid">
-          <article class="trial-card"><span class="trial-n">1</span><h3>Qué incluye</h3><p>El programa completo, con todas sus funciones, durante 15 días. Una prueba por cuenta.</p></article>
-          <article class="trial-card"><span class="trial-n">2</span><h3>Qué necesitás</h3><p>Una computadora con Windows 10 o superior, un email y conexión a internet solo para activar.</p></article>
-          <article class="trial-card"><span class="trial-n">3</span><h3>Cómo se activa</h3><p>Instalás, creás tu usuario con un PIN y escribís el código que te llega por email. <a href="prueba.html" target="_blank" rel="noopener">Ver los pasos con capturas</a>.</p></article>
-          <article class="trial-card"><span class="trial-n">4</span><h3>Cuando termina</h3><p>El programa pasa a solo lectura: podés mirar y exportar tus datos, pero no cargar ventas. No se borra nada. Para seguir, comprás la licencia desde el programa.</p></article>
-        </div>
-        <div class="cta-actions trial-actions">
-          <a class="button button-lg" href="ProfesionalStock-3.0.80.exe" download="ProfesionalStock-3.0.80.exe" data-download><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-download-label>Descargar prueba gratis</span></a>
-          <a class="button button-light button-lg" href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20consultar%20por%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
-        </div>
-      </div>
-    </section>
-
     <section class="plans-section" id="planes">
       <div class="wrap">
         <div class="section-head plans-head">
           <div class="eyebrow"><span class="eyebrow-dot"></span> Precios</div>
           <h2><span class="grad-text">Pagás una vez.</span><br>Es tuyo para siempre.</h2>
-          <p>Elegí el plan según cuántas computadoras usás. Sin cuotas ni vencimientos, y con 15 días de prueba gratis antes de decidir.</p>
+          <p>Elegí cuántas computadoras usás. 15 días de prueba gratis.</p>
         </div>
         <div class="plans-grid">
           <article class="plan">
@@ -1629,9 +1671,7 @@
               <span><b>1 computadora</b><small>licencia para siempre</small></span>
             </div>
             <ul class="plan-list">
-              <li>Todo el sistema</li>
-              <li>12 meses de actualizaciones</li>
-              <li>12 meses de soporte por WhatsApp y email</li>
+              <li>3 meses de actualizaciones y soporte</li>
               <li>Funciona sin internet</li>
             </ul>
             <a class="button button-light plan-cta" data-pay="basico" href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20comprar%20el%20plan%20B%C3%A1sico%20de%20Profesional%20Stock%20(1%20computadora)" target="_blank" rel="noopener noreferrer">Elegir Básico</a>
@@ -1646,9 +1686,7 @@
               <span><b>Hasta 3 computadoras</b><small>menos de $100.000 por equipo</small></span>
             </div>
             <ul class="plan-list">
-              <li>Todo el sistema</li>
-              <li>12 meses de actualizaciones</li>
-              <li>12 meses de soporte por WhatsApp y email</li>
+              <li>3 meses de actualizaciones y soporte</li>
               <li>Te ayudamos a instalarlo en cada equipo</li>
             </ul>
             <a class="button plan-cta" data-pay="negocio" href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20comprar%20el%20plan%20Negocio%20de%20Profesional%20Stock%20(hasta%203%20computadoras)" target="_blank" rel="noopener noreferrer">Elegir Negocio</a>
@@ -1663,9 +1701,7 @@
               <span><b>Hasta 10 computadoras</b><small>menos de $50.000 por equipo</small></span>
             </div>
             <ul class="plan-list">
-              <li>Todo el sistema</li>
-              <li>12 meses de actualizaciones</li>
-              <li>12 meses de soporte por WhatsApp y email</li>
+              <li>3 meses de actualizaciones y soporte</li>
               <li>Puesta en marcha acompañada</li>
             </ul>
             <a class="button button-light plan-cta" data-pay="empresarial" href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20comprar%20el%20plan%20Empresarial%20de%20Profesional%20Stock%20(hasta%2010%20computadoras)" target="_blank" rel="noopener noreferrer">Elegir Empresarial</a>
@@ -1676,25 +1712,24 @@
           <p><b>¿Más de 10 computadoras?</b> Armamos un plan a medida para tu empresa.</p>
           <a class="button button-light" href="https://wa.me/5493534778891?text=Hola%2C%20necesito%20un%20plan%20para%20m%C3%A1s%20de%2010%20computadoras%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Hablar con nosotros</a>
         </div>
-        <p class="plans-foot"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.3"/></svg>Pago seguro con Mercado Pago: tarjeta, transferencia o efectivo en Rapipago. Precios en pesos argentinos. Pasados los 12 meses, el programa sigue funcionando y la renovación de actualizaciones es opcional. <a href="terminos.html">Ver condiciones</a></p>
+        <p class="plans-foot"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" stroke="currentColor" stroke-width="1.3"/></svg>Pago seguro con Mercado Pago: tarjeta, transferencia o efectivo en Rapipago. Precios en pesos argentinos. Pasados los 3 meses, el programa sigue funcionando; las actualizaciones y el soporte continúan con un plan de mantenimiento opcional. <a href="terminos.html">Ver condiciones</a></p>
       </div>
     </section>
 
     <section class="faq-section" id="preguntas">
       <div class="faq-grid wrap">
         <div class="faq-intro">
-          <div class="eyebrow"><span class="eyebrow-dot"></span> Preguntas frecuentes</div>
-          <h2>Lo importante, claro desde el principio.</h2>
-          <p>Lo que conviene saber antes de empezar. ¿No encontrás tu respuesta? Preguntale a Stocky, abajo a la derecha.</p>
+          <div class="eyebrow"><span class="eyebrow-dot"></span> Dudas</div>
+          <h2>Preguntas frecuentes</h2>
           <div class="faq-contact">
             <button class="button button-light button-stocky" type="button" data-open-assistant><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#stocky"/></svg>Preguntale a Stocky</button>
-            <span class="faq-contact-note">Nuestro asistente virtual te responde al instante.</span>
+            
           </div>
         </div>
         <div class="faq-list">
           <details>
             <summary>¿Cuánto cuesta?</summary>
-            <p>Los primeros 15 días son gratis. Después pagás una sola vez según cuántas computadoras usás: <strong>Básico $129.000 ARS</strong> (1 computadora), <strong>Negocio $299.000 ARS</strong> (hasta 3) o <strong>Empresarial $499.000 ARS</strong> (hasta 10). Todos incluyen el sistema completo, la licencia para siempre y 12 meses de actualizaciones y soporte. Para más de 10 computadoras armamos un plan a medida. <a href="#planes">Ver planes</a>.</p>
+            <p>Los primeros 15 días son gratis. Después pagás una sola vez según cuántas computadoras usás: <strong>Básico $129.000 ARS</strong> (1 computadora), <strong>Negocio $299.000 ARS</strong> (hasta 3) o <strong>Empresarial $499.000 ARS</strong> (hasta 10). Todos incluyen el sistema completo, la licencia para siempre y 3 meses de actualizaciones y soporte. Para más de 10 computadoras armamos un plan a medida. <a href="#planes">Ver planes</a>.</p>
           </details>
           <details>
             <summary>¿Puedo probarlo antes de pagar?</summary>
@@ -1705,12 +1740,12 @@
             <p>Sí. Emite <b>Factura A, B y C</b> y <b>notas de crédito electrónicas</b> con CAE de ARCA, y el comprobante lleva su código QR. Se configura desde <b>Sistema &gt; Factura electrónica (ARCA)</b>: el programa arma el pedido del certificado y te guía paso a paso; podés ensayar primero en el entorno de pruebas. Necesitás la clave fiscal del titular y un punto de venta para Web Services. <a href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20consultar%20por%20la%20facturaci%C3%B3n%20electr%C3%B3nica%20en%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">Consultanos si necesitás ayuda con ARCA</a>.</p>
           </details>
           <details>
-            <summary>¿Funciona con lector de código de barras, balanza, impresora y cierre Z?</summary>
+            <summary>¿Funciona con lector, balanza e impresora de tickets?</summary>
             <p>Sí, con casi todo: funciona con <b>lectores de código de barras</b>, <b>balanzas electrónicas</b> (botón Pesar y etiquetas de balanza), <b>impresoras de tickets</b> y tiene <b>Cierre Z</b> de caja. Lo que no tiene es integración con <b>impresoras o controladores fiscales</b>: la factura se emite de forma electrónica con ARCA.</p>
           </details>
           <details>
             <summary>¿Necesito internet para usarlo?</summary>
-            <p>Necesitás internet para crear o activar la cuenta de prueba y para pagar o renovar la licencia. Una vez activado, podés trabajar sin conexión: los datos se guardan en una base local.</p>
+            <p>Necesitás internet para crear o activar la cuenta de prueba y para pagar la licencia. Una vez activado, podés trabajar sin conexión: los datos se guardan en una base local.</p>
           </details>
           <details>
             <summary>¿Puedo importar mis productos desde Excel u otro sistema?</summary>
@@ -1734,15 +1769,15 @@
           </details>
           <details>
             <summary>¿Hay capacitación o soporte para aprender a usarlo?</summary>
-            <p>El sistema incluye un manual y todos los planes incluyen 12 meses de soporte por WhatsApp y email, de lunes a sábado, de 9 a 18 h. El tiempo de respuesta puede variar según la consulta y la demanda. Escribinos al <a href="https://wa.me/5493534778891?text=Hola%2C%20necesito%20soporte%20para%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">WhatsApp +54 9 3534 778891</a> o a <!-- TODO: migrar a un correo con dominio propio cuando esté disponible. --><a href="mailto:soporte.profesionalstock@gmail.com">soporte.profesionalstock@gmail.com</a>.</p>
+            <p>El sistema incluye un manual y todos los planes incluyen 3 meses de soporte por WhatsApp y email, de lunes a sábado, de 9 a 18 h. El tiempo de respuesta puede variar según la consulta y la demanda. Escribinos al <a href="https://wa.me/5493534778891?text=Hola%2C%20necesito%20soporte%20para%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">WhatsApp +54 9 3534 778891</a> o a <!-- TODO: migrar a un correo con dominio propio cuando esté disponible. --><a href="mailto:soporte.profesionalstock@gmail.com">soporte.profesionalstock@gmail.com</a>.</p>
           </details>
           <details>
             <summary>¿Dónde se guardan mis datos? ¿Puedo cambiar de computadora?</summary>
             <p>Los datos se guardan en tu computadora. Desde el programa podés generar una copia de seguridad y elegir dónde guardarla. Hacé copias con regularidad y antes de cambiar de equipo; guardalas también fuera de la computadora, como en una unidad externa. Para restaurarlas en otra PC, <a href="https://wa.me/5493534778891?text=Hola%2C%20necesito%20ayuda%20para%20restaurar%20una%20copia%20de%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">escribinos por WhatsApp</a>.</p>
           </details>
           <details>
-            <summary>¿Qué pasa después de los 12 meses?</summary>
-            <p>El programa sigue funcionando para siempre con la versión que tengas. Si querés seguir recibiendo versiones nuevas y soporte, podés renovar las actualizaciones; es opcional.</p>
+            <summary>¿Qué pasa después de los 3 meses?</summary>
+            <p>El programa sigue funcionando para siempre con la versión que tengas. Para seguir recibiendo versiones nuevas y soporte, se contrata un plan de mantenimiento; es opcional. Consultanos el valor vigente.</p>
           </details>
         </div>
       </div>
@@ -1753,7 +1788,7 @@
         <div class="section-head">
           <div class="eyebrow"><span class="eyebrow-dot"></span> Contacto</div>
           <h2 id="hablemos-title">¿Tenés dudas? Hablemos.</h2>
-          <p>Te responden quienes programan el sistema, de lunes a sábado de 9 a 18 h.</p>
+          <p>Lunes a sábado, de 9 a 18 h.</p>
         </div>
         <div class="contact-grid">
           <div class="card composer">
@@ -1777,7 +1812,8 @@
             <p class="wa-bubble" id="wa-bubble"><span id="wa-text">Hola, quiero saber más sobre Profesional Stock.</span><small>ahora ✓✓</small></p>
           </div>
           <a class="button button-wa wa-send" id="wa-send" href="https://wa.me/5493534778891" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Enviar por WhatsApp</a>
-            <p class="composer-divider">o dejanos tu email y te escribimos</p>
+            <details class="composer-mail">
+            <summary class="composer-divider">o dejanos tu email y te escribimos</summary>
             <div class="email-capture" id="actualizaciones">
         <form
           class="email-capture-form"
@@ -1796,6 +1832,7 @@
         </form>
         <iframe class="google-form-target" name="google-form-response" title="Respuesta del formulario de contacto" aria-hidden="true" tabindex="-1"></iframe>
             </div>
+            </details>
           </div>
           <div class="channels">
             <a class="card channel" href="https://wa.me/5493534778891?text=Hola%2C%20quiero%20consultar%20sobre%20Profesional%20Stock" target="_blank" rel="noopener noreferrer">
@@ -1813,18 +1850,9 @@
       </div>
     </section>
 
-    <section class="final-cta" id="contacto">
-      <div class="cta-card wrap">
-        <h2>Tu negocio ordenado, desde hoy.</h2>
-        <p>Descargá Profesional Stock y usalo gratis durante 15 días. Sin tarjeta y sin compromiso: si no te sirve, no pagás nada.</p>
-        <div class="cta-actions">
-          <a class="button button-lg" href="ProfesionalStock-3.0.80.exe" download="ProfesionalStock-3.0.80.exe" data-download><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v3h14v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-download-label>Descargar prueba gratis</span></a>
-          <a class="button button-light button-lg" href="#planes">Ver planes y precios</a>
-        </div>
-        <p class="cta-guide">¿Primera vez? <a href="prueba.html" target="_blank" rel="noopener">Mirá cómo activar la prueba en 3 pasos <svg class="ext" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M9 3h4v4M13 3 7 9M11 9.5V13H3V5h3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
-      </div>
-    </section>
   </main>
+
+  <button class="to-top" id="to-top" type="button" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 
   <aside class="sticky-cta" id="sticky-cta" aria-label="Acceso rápido a prueba gratis y contacto por WhatsApp" aria-hidden="true">
     <div class="sticky-cta-copy">
@@ -2037,7 +2065,7 @@
         link.href = `https://wa.me/5493534778891?text=${mobileDownloadText}`;
         link.target = "_blank";
         link.rel = "noopener noreferrer";
-        link.querySelector("[data-download-label]").textContent = "Pedir el link para mi PC";
+        link.querySelector("[data-download-label]").textContent = link.closest(".topbar") ? "Pedir link" : "Pedir el link para mi PC";
         const icon = link.querySelector("svg");
         if (icon) icon.innerHTML = '<path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>';
       });
@@ -2049,7 +2077,6 @@
 
     const getLinkPlacement = (link) => {
       if (link.closest(".hero-actions")) return "hero";
-      if (link.closest(".final-cta")) return "final";
       if (link.closest(".section-cta")) return "section";
       if (link.closest(".sticky-cta")) return "sticky";
       if (link.closest(".nav-links")) return "navigation";
@@ -2121,8 +2148,12 @@
       "#funciones .feature",
       "#planes .plan-card",
       "#preguntas .faq-intro",
+      ".section-head",
+      "#funciones .fx-grid li",
+      "#presentacion .gal-window",
+      "#presentacion .gal-tabs",
+      "#rubros .rubros-marquee, #rubros .marquee",
       "#preguntas .faq-list details",
-      "#contacto .cta-card",
       "#actualizaciones .email-capture-card",
       "#antes-despues .section-cta",
       "#antes-despues .ba",
@@ -2135,7 +2166,7 @@
       document.querySelectorAll(selector).forEach((element) => element.classList.add("reveal"));
     });
 
-    [".steps-grid", ".launch-grid", ".plans-grid", ".faq-list", ".channels"].forEach((selector) => {
+    [".steps-grid", ".launch-grid", ".plans-grid", ".faq-list", ".channels", ".fx-grid"].forEach((selector) => {
       document.querySelectorAll(selector).forEach((group) => {
         [...group.children].forEach((element, index) => {
           element.style.setProperty("--reveal-delay", `${Math.min(index * 80, 320)}ms`);
@@ -2160,7 +2191,7 @@
     const stickyCta = document.querySelector("#sticky-cta");
     const heroSection = document.querySelector("#inicio");
     const plansSection = document.querySelector("#planes");
-    const contactSection = document.querySelector("#contacto");
+    const contactSection = document.querySelector("#hablemos");
     const emailCaptureSection = document.querySelector("#actualizaciones");
     const footerSection = document.querySelector("footer");
     let heroIsVisible = true;
@@ -2257,7 +2288,7 @@
     const ASSISTANT_TOPICS = [
       { id: "precio", chip: "¿Cuánto cuesta?",
         keys: ["precio", "precios", "cuesta", "cuanto sale", "cuanto vale", "costo", "valor", "planes", "plan", "pago unico", "comprar", "cobran", "barato", "caro"],
-        answer: "Pagás <b>una sola vez</b> y es tuyo para siempre: <b>Básico $129.000</b> (1 computadora), <b>Negocio $299.000</b> (hasta 3) y <b>Empresarial $499.000</b> (hasta 10). Todos incluyen 12 meses de actualizaciones y soporte.",
+        answer: "Pagás <b>una sola vez</b> y es tuyo para siempre: <b>Básico $129.000</b> (1 computadora), <b>Negocio $299.000</b> (hasta 3) y <b>Empresarial $499.000</b> (hasta 10). Todos incluyen 3 meses de actualizaciones y soporte.",
         actions: [{ label: "Ver planes", href: "#planes" }] },
       { id: "prueba", chip: "¿Hay prueba gratis?",
         keys: ["prueba", "probar", "gratis", "gratuita", "demo", "15 dias", "trial", "descargar", "descarga", "instalar", "activar", "activacion"],
@@ -2295,9 +2326,9 @@
       { id: "pagos", chip: "¿Cómo se paga?",
         keys: ["mercado pago", "mercadopago", "tarjeta", "transferencia", "efectivo", "rapipago", "cuotas", "medios de pago", "debito", "credito", "como pago", "se paga"],
         answer: "Con <b>Mercado Pago</b>: tarjeta de crédito, débito, transferencia o efectivo en Rapipago." },
-      { id: "renovar", chip: "¿Qué pasa después del año?",
-        keys: ["vence", "vencimiento", "renovar", "renovacion", "despues del ano", "12 meses", "actualizaciones", "actualizacion", "para siempre", "caduca"],
-        answer: "El programa <b>sigue funcionando para siempre</b>. Lo que dura 12 meses son las actualizaciones y el soporte incluidos; renovarlos es opcional." },
+      { id: "renovar", chip: "¿Qué pasa después de los 3 meses?",
+        keys: ["vence", "vencimiento", "renovar", "renovacion", "despues de los 3 meses", "3 meses", "mantenimiento", "actualizaciones", "actualizacion", "para siempre", "caduca"],
+        answer: "El programa <b>sigue funcionando para siempre</b>. Lo que dura 3 meses son las actualizaciones y el soporte incluidos; después se continúan con un plan de mantenimiento opcional (consultanos el valor)." },
       { id: "sistema", chip: "¿Funciona en Mac o celular?",
         keys: ["windows", "mac", "macbook", "linux", "celular", "android", "iphone", "tablet", "telefono", "requisitos", "sistema operativo"],
         answer: "Por ahora funciona en <b>Windows 10 o superior</b>. No hay versión para Mac, Linux ni celular." },
@@ -2632,8 +2663,30 @@
     const galCap = document.querySelector("#gal-cap");
     const galTitle = document.querySelector("#gal-title");
     const galPanel = document.querySelector("#gal-panel");
+    const galBox = document.querySelector("#gal");
+    const galCount = document.querySelector("#gal-count");
+    const galProg = document.querySelector("#gal-progress");
+    const GAL_MS = 5000;
+    let galCur = 0;
+    let galTimer = null;
+    let galAuto = !reduceMotion;
+    const galStartTimer = () => {
+      window.clearTimeout(galTimer);
+      galProg.classList.remove("run");
+      if (!galAuto) return;
+      void galProg.offsetWidth;
+      galProg.style.setProperty("--gal-ms", GAL_MS + "ms");
+      galProg.classList.add("run");
+      galTimer = window.setTimeout(() => galShow((galCur + 1) % galTabs.length, false), GAL_MS);
+    };
+    const galStop = () => { galAuto = false; galBox.classList.add("touched"); window.clearTimeout(galTimer); galProg.classList.remove("run"); };
     const galShow = (index, track) => {
       const tab = galTabs[index];
+      galCur = index;
+      galCount.textContent = (index + 1) + " / " + galTabs.length;
+      const strip = tab.parentElement;
+      if (strip.scrollWidth > strip.clientWidth) strip.scrollTo({ left: tab.offsetLeft - (strip.clientWidth - tab.offsetWidth) / 2, behavior: "smooth" });
+      galStartTimer();
       galTabs.forEach((t, i) => { t.setAttribute("aria-selected", String(i === index)); t.tabIndex = i === index ? 0 : -1; });
       galImg.classList.add("swap");
       window.setTimeout(() => {
@@ -2648,14 +2701,25 @@
       }, reduceMotion ? 0 : 140);
       if (track) trackLandingEvent("gallery_tab", { tab: tab.textContent });
     };
+    document.querySelector("#gal-prev").addEventListener("click", () => { galStop(); galShow((galCur - 1 + galTabs.length) % galTabs.length, true); });
+    document.querySelector("#gal-next").addEventListener("click", () => { galStop(); galShow((galCur + 1) % galTabs.length, true); });
+    document.querySelector(".gal-window").addEventListener("click", (e) => { if (!e.target.closest(".gal-nav")) { galStop(); } });
+    if (galAuto && "IntersectionObserver" in window) {
+      galProg.classList.remove("run");
+      new IntersectionObserver((entries) => {
+        if (!galAuto) return;
+        if (entries[0].isIntersecting) galStartTimer(); else { window.clearTimeout(galTimer); galProg.classList.remove("run"); }
+      }, { threshold: 0.15 }).observe(galBox);
+    }
     galTabs.forEach((tab, i) => {
-      tab.addEventListener("click", () => galShow(i, true));
+      tab.addEventListener("click", () => { galStop(); galShow(i, true); });
       tab.addEventListener("keydown", (event) => {
         const step = event.key === "ArrowRight" ? 1 : event.key === "ArrowLeft" ? -1 : 0;
         if (!step) return;
         event.preventDefault();
         const next = (i + step + galTabs.length) % galTabs.length;
         galTabs[next].focus();
+        galStop();
         galShow(next, true);
       });
     });
@@ -2741,6 +2805,72 @@
     });
     updateComposer(false);
 
+  
+    /* Menú: marca la sección que estás viendo */
+    (() => {
+      const links = [...document.querySelectorAll(".nav-links a[href^='#']")];
+      const map = new Map(links.map((a) => [a.getAttribute("href").slice(1), a]));
+      if (!map.size || !("IntersectionObserver" in window)) return;
+      const spy = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          links.forEach((a) => a.classList.remove("active"));
+          const a = map.get(e.target.id);
+          if (a) a.classList.add("active");
+        });
+      }, { rootMargin: "-45% 0px -50% 0px" });
+      document.querySelectorAll("main section[id]").forEach((sec) => spy.observe(sec));
+    })();
+  
+    const toTop = document.querySelector("#to-top");
+    const toTopUpdate = () => toTop.classList.toggle("visible", window.scrollY > 600);
+    window.addEventListener("scroll", toTopUpdate, { passive: true });
+    toTopUpdate();
+    toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }));
+  
+    /* Tarjetas de funciones: pasar el mouse o tocar */
+    (() => {
+      const cards = [...document.querySelectorAll(".fx")];
+      const canHover = window.matchMedia("(hover: hover)");
+      const close = (c) => { c.classList.remove("open"); c.setAttribute("aria-expanded", "false"); };
+      cards.forEach((c) => {
+        c.addEventListener("click", () => {
+          const willOpen = !c.classList.contains("open");
+          cards.forEach(close);
+          if (willOpen) { c.classList.add("open"); c.setAttribute("aria-expanded", "true"); }
+        });
+        c.addEventListener("mouseleave", () => { if (canHover.matches) close(c); });
+      });
+      document.addEventListener("click", (e) => { if (!e.target.closest(".fx")) cards.forEach(close); });
+    })();
+  
+    /* Precios: cuentan hasta su valor al aparecer */
+    (() => {
+      if (reduceMotion || !("IntersectionObserver" in window)) return;
+      const fmt = (n) => "$" + Math.round(n).toLocaleString("es-AR");
+      const prices = [...document.querySelectorAll(".plan-price")].map((el) => {
+        const node = [...el.childNodes].find((n) => n.nodeType === 3 && /\$[\d.]+/.test(n.textContent));
+        if (!node) return null;
+        const target = Number(node.textContent.match(/\$([\d.]+)/)[1].replace(/\./g, ""));
+        return { el, node, target, tail: node.textContent.replace(/\$[\d.]+/, "") };
+      }).filter(Boolean);
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          io.unobserve(e.target);
+          const p = prices.find((x) => x.el === e.target);
+          const t0 = performance.now();
+          const tick = (now) => {
+            const k = Math.min(1, (now - t0) / 1100);
+            const eased = 1 - Math.pow(1 - k, 3);
+            p.node.textContent = fmt(p.target * eased) + p.tail;
+            if (k < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        });
+      }, { threshold: 0.6 });
+      prices.forEach((p) => io.observe(p.el));
+    })();
   </script>
 </body>
 </html>

@@ -5,7 +5,7 @@ Estos ejemplos muestran el tono, el largo y la forma de razonar que se espera. N
 ## Interesado que pregunta el precio
 
 Usuario: cuanto sale?
-Stocky: Se paga **una sola vez** y es tuyo para siempre: **Básico $129.000** para 1 computadora, **Negocio $299.000** hasta 3 y **Empresarial $499.000** hasta 10. Todos incluyen 12 meses de actualizaciones y soporte. ¿En cuántas computadoras lo usarías? Así te digo cuál te conviene.
+Stocky: Se paga **una sola vez** y es tuyo para siempre: **Básico $129.000** para 1 computadora, **Negocio $299.000** hasta 3 y **Empresarial $499.000** hasta 10. Todos incluyen 3 meses de actualizaciones y soporte. ¿En cuántas computadoras lo usarías? Así te digo cuál te conviene.
 
 ## Interesado con dudas de rubro
 

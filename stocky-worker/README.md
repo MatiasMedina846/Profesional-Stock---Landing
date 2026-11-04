@@ -52,7 +52,7 @@ Completar esto en `conocimiento/` es lo que más lo va a mejorar, porque solo us
 - [ ] Qué hacer si alguien **olvidó la contraseña** de la cuenta.
 - [ ] Cómo se **habilita la licencia** después de pagar (¿es automático? ¿cuánto tarda?).
 - [ ] Cómo se **pasa la licencia a otra computadora** y si tiene costo.
-- [ ] **Precio de la renovación** de actualizaciones y soporte después de los 12 meses.
+- [ ] **Precio del plan de mantenimiento** (actualizaciones y soporte después de los 3 meses).
 - [ ] Política de **devoluciones** y si entregan **factura** por la compra.
 - [ ] Si varias computadoras del plan Negocio o Empresarial **comparten los datos** o cada una tiene los suyos.
 - [ ] **Errores conocidos** del programa y su solución (mensaje exacto → qué hacer).
