@@ -1372,7 +1372,7 @@
 
     /* Transición entre secciones: cada bloque entra y sale deslizándose */
     @supports (animation-timeline: view()) {
-      @media (prefers-reduced-motion: no-preference) {
+      @media (prefers-reduced-motion: no-preference) and (min-width: 901px) {
         main > section:not(#inicio) > div { animation: sec-flow linear both; animation-timeline: view(); animation-range: cover 0% cover 100%; }
         @keyframes sec-flow {
           0% { opacity: 0; transform: translateY(70px) scale(.97); filter: blur(8px); }
@@ -1545,6 +1545,7 @@
       .bx-chart { grid-row: 4; } .bx-big strong { font-size: 28px; } .bx-card strong { font-size: 22px; }
       .bx-check { width: 34px; height: 34px; }
       .ba-handle span { width: 46px; height: 46px; margin: -23px 0 0 -23px; }
+      .ba { cursor: default; }
     }
     /* Acabado: gráficos y coherencia de color */
     footer { background: #081226; }
@@ -1570,7 +1571,6 @@
     /* Gráficos en capas, fondo de puntos y Stocky a la derecha */
     .fn-section::before { display: none; }
     .fn-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; -webkit-mask-image: radial-gradient(ellipse 75% 85% at 78% 8%, #000 10%, transparent 78%); mask-image: radial-gradient(ellipse 75% 85% at 78% 8%, #000 10%, transparent 78%); }
-    .bn { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
     .il3d { display: block; perspective: 720px; }
     .il3d-in { position: relative; display: block; width: 100%; height: 100%; transform-style: preserve-3d; transform: rotateX(var(--rx, 9deg)) rotateY(var(--ry, -16deg)); transition: transform .6s cubic-bezier(.16, 1, .3, 1); animation: il-float 6s ease-in-out infinite; }
     .bn:nth-child(even) .il3d-in { animation-delay: -3s; }
@@ -2970,6 +2970,12 @@
     };
     const baTouch = () => { if (!baTouched) { baTouched = true; trackLandingEvent("before_after_drag"); } };
     ba.addEventListener("pointerdown", (event) => {
+      /* Con el dedo, solo se arrastra desde la manija: tocar otra parte deja hacer scroll */
+      if (event.pointerType !== "mouse") {
+        const r = ba.getBoundingClientRect();
+        const handleX = r.left + (Number(baRange.value) / 100) * r.width;
+        if (Math.abs(event.clientX - handleX) > 40) return;
+      }
       baDragging = true;
       baTouch();
       ba.setPointerCapture(event.pointerId);
